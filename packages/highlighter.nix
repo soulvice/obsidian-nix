@@ -20,7 +20,7 @@ pkgs.stdenv.mkDerivation rec {
   };
 
   stylesCss = pkgs.fetchurl {
-    url = "${repo}/releases/download/${version}/style.css";
+    url = "${repo}/releases/download/${version}/styles.css";
     sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
   };
 
