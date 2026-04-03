@@ -1,0 +1,150 @@
+name: 'verify sha256 hashes'
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 0 * * 1' # weekly on Monday at midnight
+  workflow_dispatch:
+
+jobs:
+  verify-hashes:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/determinate-nix-action@v3
+
+      - name: Verify and fix sha256 hashes
+        id: hash_check
+        run: |
+          python3 <<'EOF'
+          import re
+          import subprocess
+          import json
+          import sys
+          from pathlib import Path
+
+          PLACEHOLDER_HASHES = {
+              "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+              "sha256-0000000000000000000000000000000000000000000=",
+              "",
+          }
+
+          def resolve_vars(template, variables):
+              result = template
+              for key, value in variables.items():
+                  result = result.replace(f"${{{key}}}", value)
+              return result
+
+          def get_sri_hash(url):
+              result = subprocess.run(
+                  ["nix", "store", "prefetch-file", "--json", "--hash-type", "sha256", url],
+                  capture_output=True, text=True
+              )
+              if result.returncode != 0:
+                  print(f"  ERROR fetching {url}: {result.stderr.strip()}", file=sys.stderr)
+                  return None
+              return json.loads(result.stdout)["hash"]
+
+          changed_files = []
+
+          for nix_file in sorted(Path("packages").glob("*.nix")):
+              content = nix_file.read_text()
+              original = content
+
+              # Extract simple string-only variable assignments (no interpolation)
+              variables = {}
+              for m in re.finditer(r'^\s*(\w+)\s*=\s*"([^"$\n]+)"', content, re.MULTILINE):
+                  variables[m.group(1)] = m.group(2)
+
+              # Match fetchurl blocks: find url = "...", then sha256 = "..." nearby
+              # Pattern handles both orderings and optional whitespace
+              block_pattern = re.compile(
+                  r'(url\s*=\s*"([^"]+)"[^;]*;)'
+                  r'([\s\S]*?)'
+                  r'(sha256\s*=\s*"([^"]*)"[^;]*;)',
+                  re.MULTILINE
+              )
+
+              def patch_block(m):
+                  url_template = m.group(2)
+                  between = m.group(3)
+                  sha256_line = m.group(4)
+                  existing_hash = m.group(5)
+
+                  url = resolve_vars(url_template, variables)
+                  if "${" in url:
+                      print(f"  SKIP unresolved URL: {url}")
+                      return m.group(0)
+
+                  if existing_hash and existing_hash not in PLACEHOLDER_HASHES:
+                      # Verify the existing hash
+                      correct = get_sri_hash(url)
+                      if correct is None:
+                          return m.group(0)
+                      if correct == existing_hash:
+                          print(f"  OK   {url}")
+                          return m.group(0)
+                      print(f"  FIX  {url}")
+                      print(f"       old: {existing_hash}")
+                      print(f"       new: {correct}")
+                      new_sha256_line = sha256_line.replace(existing_hash, correct)
+                  else:
+                      # Hash is missing or a placeholder — compute it
+                      correct = get_sri_hash(url)
+                      if correct is None:
+                          return m.group(0)
+                      print(f"  ADD  {url} -> {correct}")
+                      new_sha256_line = sha256_line.replace(existing_hash, correct)
+
+                  return m.group(1) + between + new_sha256_line
+
+              print(f"\n{nix_file}:")
+              new_content = block_pattern.sub(patch_block, content)
+
+              if new_content != original:
+                  nix_file.write_text(new_content)
+                  changed_files.append(str(nix_file))
+
+          import os
+          github_output = os.environ.get("GITHUB_OUTPUT", "/dev/null")
+
+          if changed_files:
+              print("\nChanged files: " + ", ".join(changed_files))
+              with open(github_output, "a") as f:
+                  f.write("changed=true\n")
+                  f.write("files=" + " ".join(changed_files) + "\n")
+          else:
+              print("\nAll hashes are correct.")
+              with open(github_output, "a") as f:
+                  f.write("changed=false\n")
+          EOF
+
+      - name: Create pull request with hash fixes
+        if: steps.hash_check.outputs.changed == 'true' && github.event_name != 'pull_request'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GH_PAT }}
+          commit-message: "fix: update sha256 hashes for packages"
+          branch: fix/sha256-hashes
+          delete-branch: true
+          title: "Fix sha256 hashes for Obsidian plugin packages"
+          body: |
+            One or more `sha256` hashes in `packages/*.nix` were incorrect or missing.
+            This PR was auto-generated by the `verify-hashes` workflow.
+
+            **Changed files:**
+            ${{ steps.hash_check.outputs.files }}
+          labels: |
+            automated
+            dependencies
+
+      - name: Fail on pull_request if hashes are wrong
+        if: steps.hash_check.outputs.changed == 'true' && github.event_name == 'pull_request'
+        run: |
+          echo "::error::One or more sha256 hashes are incorrect. Run the verify-hashes workflow on main to auto-fix them."
+          exit 1
