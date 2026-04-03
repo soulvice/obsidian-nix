@@ -37,7 +37,7 @@ jobs:
           def resolve_vars(template, variables):
               result = template
               for key, value in variables.items():
-                  result = result.replace(f"${{{key}}}", value)
+                  result = result.replace("${" + key + "}", value)
               return result
 
           def get_sri_hash(url):
