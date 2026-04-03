@@ -1,0 +1,68 @@
+name: 'update plugins and themes data'
+
+on:
+  workflow_dispatch:
+    inputs:
+      plugin_ids:
+        description: 'Space-separated plugin IDs to add/update (empty = all)'
+        required: false
+        default: ''
+      theme_ids:
+        description: 'Space-separated theme IDs to add/update (empty = all)'
+        required: false
+        default: ''
+  schedule:
+    - cron: '0 1 * * 1' # weekly Monday 1am
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/determinate-nix-action@v3
+
+      - name: Update plugins-data.json
+        id: plugins
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -n "${{ github.event.inputs.plugin_ids }}" ]; then
+            python3 scripts/update_plugins_data.py ${{ github.event.inputs.plugin_ids }}
+          else
+            python3 scripts/update_plugins_data.py
+          fi
+
+      - name: Update themes-data.json
+        id: themes
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -n "${{ github.event.inputs.theme_ids }}" ]; then
+            python3 scripts/update_themes_data.py ${{ github.event.inputs.theme_ids }}
+          else
+            python3 scripts/update_themes_data.py
+          fi
+
+      - name: Create pull request
+        if: steps.plugins.outputs.changed == 'true' || steps.themes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b update/obsidian-data
+          git add plugins-data.json themes-data.json
+          git commit -m "chore: update plugins and themes data"
+          git push origin update/obsidian-data --force-with-lease
+          gh pr create \
+            --title "Update Obsidian plugins and themes data" \
+            --body "Auto-generated update to plugins-data.json and/or themes-data.json." \
+            --base main \
+            --head update/obsidian-data \
+          || echo "PR already exists"

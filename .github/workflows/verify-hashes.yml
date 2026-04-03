@@ -42,15 +42,23 @@ jobs:
                   result = result.replace("${" + key + "}", value)
               return result
 
-          def get_sri_hash(url):
-              result = subprocess.run(
-                  ["nix", "store", "prefetch-file", "--json", "--hash-type", "sha256", url],
-                  capture_output=True, text=True
-              )
+          def get_sri_hash(url, unpack=False):
+              cmd = ["nix", "store", "prefetch-file", "--json", "--hash-type", "sha256", url]
+              if unpack:
+                  cmd.append("--unpack")
+              result = subprocess.run(cmd, capture_output=True, text=True)
               if result.returncode != 0:
                   print(f"  ERROR fetching {url}: {result.stderr.strip()}", file=sys.stderr)
                   return None
               return json.loads(result.stdout)["hash"]
+
+          def patch_hash_attr(block, attr, existing_hash, correct):
+              """Replace attr = "existing" with attr = "correct" in block."""
+              return block.replace(
+                  attr + ' = "' + existing_hash + '"',
+                  attr + ' = "' + correct + '"',
+                  1,
+              )
 
           changed_files = []
 
@@ -62,17 +70,22 @@ jobs:
               variables = {}
               for m in re.finditer(r'^\s*(\w+)\s*=\s*"([^"$\n]+)"', content, re.MULTILINE):
                   variables[m.group(1)] = m.group(2)
+              # Also capture bare word assignments (e.g. rev = version;)
+              bare_vars = {}
+              for m in re.finditer(r'^\s*(\w+)\s*=\s*(\w+)\s*;', content, re.MULTILINE):
+                  key, val = m.group(1), m.group(2)
+                  if val in variables:
+                      bare_vars[key] = variables[val]
 
-              # Match fetchurl blocks: find url = "...", then sha256 = "..." nearby
-              # Pattern handles both orderings and optional whitespace
-              block_pattern = re.compile(
+              # ── fetchurl: url = "..." + sha256 = "..." ──────────────────────
+              fetchurl_pattern = re.compile(
                   r'(url\s*=\s*"([^"]+)"[^;]*;)'
                   r'([\s\S]*?)'
                   r'(sha256\s*=\s*"([^"]*)"[^;]*;)',
                   re.MULTILINE
               )
 
-              def patch_block(m):
+              def patch_fetchurl(m):
                   url_template = m.group(2)
                   between = m.group(3)
                   sha256_line = m.group(4)
@@ -84,19 +97,14 @@ jobs:
                       return m.group(0)
 
                   if existing_hash and existing_hash not in PLACEHOLDER_HASHES:
-                      # Verify the existing hash
                       correct = get_sri_hash(url)
-                      if correct is None:
+                      if correct is None or correct == existing_hash:
+                          if correct == existing_hash:
+                              print(f"  OK   {url}")
                           return m.group(0)
-                      if correct == existing_hash:
-                          print(f"  OK   {url}")
-                          return m.group(0)
-                      print(f"  FIX  {url}")
-                      print(f"       old: {existing_hash}")
-                      print(f"       new: {correct}")
+                      print(f"  FIX  {url}\n       old: {existing_hash}\n       new: {correct}")
                       new_sha256_line = sha256_line.replace(existing_hash, correct)
                   else:
-                      # Hash is missing or a placeholder — compute it
                       correct = get_sri_hash(url)
                       if correct is None:
                           return m.group(0)
@@ -105,8 +113,56 @@ jobs:
 
                   return m.group(1) + between + new_sha256_line
 
+              # ── fetchFromGitHub: owner/repo/rev + hash = "..." ──────────────
+              fetch_gh_pattern = re.compile(
+                  r'fetchFromGitHub\s*\{([^}]*)\}',
+                  re.DOTALL
+              )
+
+              def patch_fetch_from_github(m):
+                  inner = m.group(1)
+
+                  def attr(name):
+                      # quoted string
+                      q = re.search(r'\b' + name + r'\s*=\s*"([^"]*)"', inner)
+                      if q:
+                          return q.group(1)
+                      # bare word resolved via variables
+                      b = re.search(r'\b' + name + r'\s*=\s*(\w+)\s*;', inner)
+                      if b:
+                          return variables.get(b.group(1)) or bare_vars.get(b.group(1))
+                      return None
+
+                  owner = attr("owner")
+                  repo  = attr("repo")
+                  rev   = attr("rev")
+                  existing_hash = attr("hash") or ""
+
+                  if not all([owner, repo, rev]):
+                      print(f"  SKIP fetchFromGitHub: could not resolve owner/repo/rev")
+                      return m.group(0)
+
+                  url = "https://github.com/" + owner + "/" + repo + "/archive/" + rev + ".tar.gz"
+
+                  if existing_hash and existing_hash not in PLACEHOLDER_HASHES:
+                      correct = get_sri_hash(url, unpack=True)
+                      if correct is None or correct == existing_hash:
+                          if correct == existing_hash:
+                              print(f"  OK   {owner}/{repo}@{rev}")
+                          return m.group(0)
+                      print(f"  FIX  {owner}/{repo}@{rev}\n       old: {existing_hash}\n       new: {correct}")
+                  else:
+                      correct = get_sri_hash(url, unpack=True)
+                      if correct is None:
+                          return m.group(0)
+                      print(f"  ADD  {owner}/{repo}@{rev} -> {correct}")
+
+                  new_inner = patch_hash_attr(inner, "hash", existing_hash, correct)
+                  return "fetchFromGitHub {" + new_inner + "}"
+
               print(f"\n{nix_file}:")
-              new_content = block_pattern.sub(patch_block, content)
+              new_content = fetchurl_pattern.sub(patch_fetchurl, content)
+              new_content = fetch_gh_pattern.sub(patch_fetch_from_github, new_content)
 
               if new_content != original:
                   nix_file.write_text(new_content)
