@@ -12,7 +12,7 @@ pkgs.stdenv.mkDerivation rec {
     owner = "catppuccin";
     repo = "obsidian";
     rev = version;
-    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    hash = "sha256-9fSFj9Tzc2aN9zpG5CyDMngVcwYEppf7MF1ZPUWFyz4=";
   };
 
   phases = [ "installPhase" ];
