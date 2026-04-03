@@ -14,8 +14,12 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
       - uses: DeterminateSystems/determinate-nix-action@v3
 
       - name: Verify and fix sha256 hashes
