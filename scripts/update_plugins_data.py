@@ -6,7 +6,7 @@ Usage:
     python3 scripts/update_plugins_data.py [plugin_id ...]
 
     With no arguments, processes every plugin in community-plugins.json.
-    Pass one or more plugin IDs to only update those (useful for adding a single plugin).
+    Pass one or more plugin IDs to only update those.
 
 Environment:
     GH_TOKEN  GitHub token for API requests (avoids rate limiting)
@@ -14,11 +14,13 @@ Environment:
 Output (plugins-data.json schema):
     {
       "<plugin-id>": {
-        "repo":      "owner/repo",
-        "version":   "1.2.3",
-        "mainJs":    "sha256-...",
-        "manifest":  "sha256-...",
-        "stylesCss": "sha256-..."   // only present if styles.css exists in the release
+        "repo":        "owner/repo",
+        "name":        "Display Name",
+        "description": "What the plugin does.",
+        "version":     "1.2.3",
+        "mainJs":      "sha256-...",
+        "manifest":    "sha256-...",
+        "stylesCss":   "sha256-..."   // only present if styles.css exists in the release
       },
       ...
     }
@@ -41,13 +43,12 @@ COMMUNITY_PLUGINS_URL = (
     "/master/community-plugins.json"
 )
 GH_TOKEN = os.environ.get("GH_TOKEN", "")
-# Parallel workers for nix prefetch (GitHub API calls stay sequential)
 HASH_WORKERS = 8
 
 
 # ── HTTP / GitHub API ─────────────────────────────────────────────────────────
 
-def _fetch(url, github_api=False):
+def _fetch(url: str, github_api: bool = False) -> object:
     req = urllib.request.Request(url)
     req.add_header("User-Agent", "obsidian-nix/update-plugins")
     if github_api:
@@ -66,20 +67,30 @@ def _fetch(url, github_api=False):
         return json.loads(r.read())
 
 
-def get_latest_release(owner_repo):
+def fetch_manifest_content(url: str) -> dict:
+    """Download and parse a manifest.json. Returns {} on any error."""
+    try:
+        req = urllib.request.Request(url)
+        req.add_header("User-Agent", "obsidian-nix/update-plugins")
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.loads(r.read())
+    except Exception:
+        return {}
+
+
+def get_latest_release(owner_repo: str) -> dict | None:
     url = f"https://api.github.com/repos/{owner_repo}/releases/latest"
     try:
         return _fetch(url, github_api=True)
     except urllib.error.HTTPError as e:
         if e.code == 404:
-            return None  # no releases yet
+            return None
         raise
 
 
 # ── Nix hashing ───────────────────────────────────────────────────────────────
 
-def nix_hash(url):
-    """Return the SRI sha256 hash of a URL using nix store prefetch-file."""
+def nix_hash(url: str) -> str | None:
     result = subprocess.run(
         ["nix", "store", "prefetch-file", "--json", "--hash-type", "sha256", url],
         capture_output=True,
@@ -91,9 +102,14 @@ def nix_hash(url):
     return json.loads(result.stdout)["hash"]
 
 
-def hash_release_files(owner_repo, version, asset_names):
-    """Download and hash all release files for a plugin. Returns a partial data dict."""
+# ── Per-plugin processing ─────────────────────────────────────────────────────
+
+def hash_release_files(owner_repo: str, version: str, asset_names: set) -> dict:
+    """Fetch hashes and manifest metadata for a release. Raises on hash failure."""
     base = f"https://github.com/{owner_repo}/releases/download/{version}"
+
+    # Fetch manifest content for name/description (cheap urllib call)
+    manifest_content = fetch_manifest_content(f"{base}/manifest.json")
 
     main_js_hash = nix_hash(f"{base}/main.js")
     if not main_js_hash:
@@ -104,10 +120,12 @@ def hash_release_files(owner_repo, version, asset_names):
         raise RuntimeError("failed to hash manifest.json")
 
     data = {
-        "repo": owner_repo,
-        "version": version,
-        "mainJs": main_js_hash,
-        "manifest": manifest_hash,
+        "repo":        owner_repo,
+        "name":        manifest_content.get("name", ""),
+        "description": manifest_content.get("description", ""),
+        "version":     version,
+        "mainJs":      main_js_hash,
+        "manifest":    manifest_hash,
     }
 
     if "styles.css" in asset_names:
@@ -118,13 +136,18 @@ def hash_release_files(owner_repo, version, asset_names):
     return data
 
 
-# ── Per-plugin processing ─────────────────────────────────────────────────────
+def fetch_metadata_only(owner_repo: str, version: str) -> dict:
+    """Download manifest.json content only — no nix hashing. Used to backfill metadata."""
+    base = f"https://github.com/{owner_repo}/releases/download/{version}"
+    manifest_content = fetch_manifest_content(f"{base}/manifest.json")
+    return {
+        "name":        manifest_content.get("name", ""),
+        "description": manifest_content.get("description", ""),
+    }
 
-def process_plugin(plugin_id, owner_repo, cached):
-    """
-    Return (plugin_id, new_data, error_str).
-    new_data is None on error or if nothing changed.
-    """
+
+def process_plugin(plugin_id: str, owner_repo: str, cached: dict):
+    """Return (plugin_id, new_data_or_None, error_str_or_None)."""
     try:
         release = get_latest_release(owner_repo)
     except Exception as e:
@@ -135,19 +158,26 @@ def process_plugin(plugin_id, owner_repo, cached):
 
     version = release["tag_name"]
     asset_names = {a["name"] for a in release.get("assets", [])}
+    has_styles = "styles.css" in asset_names
 
-    # Skip re-hashing if version and all expected files are unchanged
-    if cached.get("version") == version:
-        has_styles = "styles.css" in asset_names
-        cache_complete = (
-            cached.get("mainJs")
-            and cached.get("manifest")
-            and (not has_styles or cached.get("stylesCss"))
-        )
-        if cache_complete:
-            # Ensure repo field is current
-            return plugin_id, {**cached, "repo": owner_repo}, None
+    hashes_current = (
+        cached.get("version") == version
+        and cached.get("mainJs")
+        and cached.get("manifest")
+        and (not has_styles or cached.get("stylesCss"))
+    )
+    metadata_current = "name" in cached
 
+    if hashes_current and metadata_current:
+        # Fully cached — just keep it with updated repo field
+        return plugin_id, {**cached, "repo": owner_repo}, None
+
+    if hashes_current and not metadata_current:
+        # Hashes are fine but we're missing name/description (old schema)
+        meta = fetch_metadata_only(owner_repo, version)
+        return plugin_id, {**cached, "repo": owner_repo, **meta}, None
+
+    # Version changed or hashes missing — full update
     try:
         data = hash_release_files(owner_repo, version, asset_names)
     except Exception as e:
@@ -161,7 +191,6 @@ def process_plugin(plugin_id, owner_repo, cached):
 def main():
     filter_ids = set(sys.argv[1:])
 
-    # Fetch the full plugin index
     print("Fetching community-plugins.json ...")
     plugins_list = _fetch(COMMUNITY_PLUGINS_URL)
     if filter_ids:
@@ -172,15 +201,14 @@ def main():
 
     print(f"Processing {len(plugins_list)} plugins ...\n")
 
-    # Load cached data
     existing: dict = {}
     if DATA_FILE.exists():
         existing = json.loads(DATA_FILE.read_text())
 
-    # Phase 1: fetch latest release metadata sequentially (respects rate limits)
+    # Phase 1: fetch release metadata sequentially (respects rate limits)
     print("Phase 1: fetching release metadata ...")
-    release_info: list[tuple] = []  # (plugin_id, owner_repo, version, asset_names, cached)
-    skipped = []
+    needs_hash: list[tuple] = []
+    updated_data = dict(existing)
 
     for i, plugin in enumerate(plugins_list, 1):
         plugin_id = plugin["id"]
@@ -192,38 +220,39 @@ def main():
             release = get_latest_release(owner_repo)
         except Exception as e:
             print(f"  ERROR: {e}")
-            skipped.append((plugin_id, str(e)))
             continue
 
         if not release:
             print("  (no releases)")
-            skipped.append((plugin_id, "no releases"))
             continue
 
         version = release["tag_name"]
         asset_names = {a["name"] for a in release.get("assets", [])}
         has_styles = "styles.css" in asset_names
-        cache_hit = (
+
+        hashes_current = (
             cached.get("version") == version
             and cached.get("mainJs")
             and cached.get("manifest")
             and (not has_styles or cached.get("stylesCss"))
         )
+        metadata_current = "name" in cached
 
-        if cache_hit:
+        if hashes_current and metadata_current:
             print(f"  cached @ {version}")
-            # Ensure repo is up-to-date even on cache hits
-            existing[plugin_id] = {**cached, "repo": owner_repo}
+            updated_data[plugin_id] = {**cached, "repo": owner_repo}
+        elif hashes_current and not metadata_current:
+            print(f"  backfilling metadata @ {version}")
+            meta = fetch_metadata_only(owner_repo, version)
+            updated_data[plugin_id] = {**cached, "repo": owner_repo, **meta}
         else:
             print(f"  needs update -> {version}")
-            release_info.append((plugin_id, owner_repo, version, asset_names))
+            needs_hash.append((plugin_id, owner_repo, version, asset_names))
 
     # Phase 2: hash files in parallel
-    updated_data = dict(existing)
-    errors = list(skipped)
-
-    if release_info:
-        print(f"\nPhase 2: hashing {len(release_info)} updated plugin(s) ...")
+    errors = []
+    if needs_hash:
+        print(f"\nPhase 2: hashing {len(needs_hash)} plugin(s) ...")
 
         def _hash_one(args):
             plugin_id, owner_repo, version, asset_names = args
@@ -234,19 +263,18 @@ def main():
                 return plugin_id, None, str(e)
 
         with ThreadPoolExecutor(max_workers=HASH_WORKERS) as pool:
-            futures = {pool.submit(_hash_one, args): args[0] for args in release_info}
+            futures = {pool.submit(_hash_one, args): args[0] for args in needs_hash}
             done = 0
             for future in as_completed(futures):
                 done += 1
                 plugin_id, data, error = future.result()
                 if error:
-                    print(f"  [{done}/{len(release_info)}] FAIL  {plugin_id}: {error}")
+                    print(f"  [{done}/{len(needs_hash)}] FAIL  {plugin_id}: {error}")
                     errors.append((plugin_id, error))
                 else:
-                    print(f"  [{done}/{len(release_info)}] OK    {plugin_id} @ {data['version']}")
+                    print(f"  [{done}/{len(needs_hash)}] OK    {plugin_id} @ {data['version']}")
                     updated_data[plugin_id] = data
 
-    # Write output
     changed = updated_data != existing
     if changed:
         sorted_data = dict(sorted(updated_data.items()))

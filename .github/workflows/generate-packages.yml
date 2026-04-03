@@ -49,6 +49,10 @@ jobs:
             python3 scripts/update_themes_data.py
           fi
 
+      - name: Generate PACKAGES.md
+        if: steps.plugins.outputs.changed == 'true' || steps.themes.outputs.changed == 'true'
+        run: python3 scripts/generate_docs.py
+
       - name: Create pull request
         if: steps.plugins.outputs.changed == 'true' || steps.themes.outputs.changed == 'true'
         env:
@@ -57,12 +61,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b update/obsidian-data
-          git add plugins-data.json themes-data.json
-          git commit -m "chore: update plugins and themes data"
+          git add plugins-data.json themes-data.json PACKAGES.md
+          git commit -m "chore: update plugins, themes, and package docs"
           git push origin update/obsidian-data --force-with-lease
           gh pr create \
             --title "Update Obsidian plugins and themes data" \
-            --body "Auto-generated update to plugins-data.json and/or themes-data.json." \
+            --body "Auto-generated update to plugins-data.json, themes-data.json, and PACKAGES.md." \
             --base main \
             --head update/obsidian-data \
           || echo "PR already exists"

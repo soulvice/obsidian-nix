@@ -17,9 +17,11 @@ Environment:
 Output (themes-data.json schema):
     {
       "<theme-id>": {
-        "repo":  "owner/repo",
-        "rev":   "<tag or commit SHA>",
-        "hash":  "sha256-..."    // hash of the unpacked repo archive
+        "repo":        "owner/repo",
+        "name":        "Display Name",
+        "description": "What the theme looks like.",
+        "rev":         "<tag or commit SHA>",
+        "hash":        "sha256-..."
       },
       ...
     }
@@ -72,16 +74,27 @@ def _fetch(url: str, github_api: bool = False) -> object:
         return json.loads(r.read())
 
 
+def fetch_manifest_content(owner: str, repo: str, rev: str) -> dict:
+    """Download and parse manifest.json from the raw repo at a specific rev."""
+    url = f"https://raw.githubusercontent.com/{owner}/{repo}/{rev}/manifest.json"
+    try:
+        req = urllib.request.Request(url)
+        req.add_header("User-Agent", "obsidian-nix/update-themes")
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.loads(r.read())
+    except Exception:
+        return {}
+
+
 def get_latest_rev(owner: str, repo: str) -> str | None:
     """
-    Return the best available rev for a theme repo, in preference order:
+    Return the best available rev in preference order:
       1. Latest release tag
       2. Latest git tag
       3. Latest commit SHA on the default branch
     """
     base = f"https://api.github.com/repos/{owner}/{repo}"
 
-    # 1. Latest release
     try:
         release = _fetch(f"{base}/releases/latest", github_api=True)
         return release["tag_name"]
@@ -89,7 +102,6 @@ def get_latest_rev(owner: str, repo: str) -> str | None:
         if e.code not in (404, 403):
             raise
 
-    # 2. Latest tag
     try:
         tags = _fetch(f"{base}/tags?per_page=1", github_api=True)
         if tags:
@@ -97,15 +109,16 @@ def get_latest_rev(owner: str, repo: str) -> str | None:
     except urllib.error.HTTPError:
         pass
 
-    # 3. Latest commit on default branch
     try:
-        branch_info = _fetch(f"{base}", github_api=True)
-        default_branch = branch_info.get("default_branch", "main")
-        commit_info = _fetch(f"{base}/commits/{default_branch}?per_page=1", github_api=True)
-        return commit_info["sha"]
+        repo_info = _fetch(base, github_api=True)
+        default_branch = repo_info.get("default_branch", "main")
+        commit = _fetch(f"{base}/commits/{default_branch}?per_page=1", github_api=True)
+        return commit["sha"]
     except urllib.error.HTTPError:
         return None
 
+
+# ── Nix hashing ───────────────────────────────────────────────────────────────
 
 def nix_hash_archive(owner: str, repo: str, rev: str) -> str | None:
     """Hash the unpacked GitHub archive — matches what fetchFromGitHub produces."""
@@ -127,27 +140,21 @@ def nix_hash_archive(owner: str, repo: str, rev: str) -> str | None:
 
 # ── Per-theme processing ──────────────────────────────────────────────────────
 
-def process_theme(tid: str, owner_repo: str, cached: dict):
-    """Return (tid, new_data, error_str). new_data is None if unchanged or on error."""
-    owner, repo = owner_repo.split("/", 1)
-
-    try:
-        rev = get_latest_rev(owner, repo)
-    except Exception as e:
-        return tid, None, f"rev lookup failed: {e}"
-
-    if not rev:
-        return tid, None, "could not determine latest rev"
-
-    # Cache hit: same rev and hash already present
-    if cached.get("rev") == rev and cached.get("hash"):
-        return tid, {**cached, "repo": owner_repo, "rev": rev}, None
-
+def full_update(owner: str, repo: str, owner_repo: str, rev: str) -> dict:
+    """Hash the archive and fetch manifest metadata. Raises on hash failure."""
     hash_val = nix_hash_archive(owner, repo, rev)
     if not hash_val:
-        return tid, None, f"failed to hash archive @ {rev}"
+        raise RuntimeError(f"failed to hash archive @ {rev}")
 
-    return tid, {"repo": owner_repo, "rev": rev, "hash": hash_val}, None
+    manifest = fetch_manifest_content(owner, repo, rev)
+
+    return {
+        "repo":        owner_repo,
+        "name":        manifest.get("name", ""),
+        "description": manifest.get("description", ""),
+        "rev":         rev,
+        "hash":        hash_val,
+    }
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────
@@ -157,8 +164,6 @@ def main():
 
     print("Fetching community-css-themes.json ...")
     themes_list = _fetch(COMMUNITY_THEMES_URL)
-
-    # Build id → entry mapping
     themes = {theme_id(t["name"]): t for t in themes_list}
 
     if filter_ids:
@@ -175,14 +180,14 @@ def main():
 
     updated_data = dict(existing)
 
-    # Phase 1: get latest rev for each theme (sequential, respects rate limits)
+    # Phase 1: fetch latest rev for each theme (sequential, respects rate limits)
     print("Phase 1: fetching latest revs ...")
-    needs_hash: list[tuple] = []  # (tid, owner_repo, rev, cached)
+    needs_hash: list[tuple] = []
 
     for i, (tid, theme) in enumerate(themes.items(), 1):
         owner_repo = theme["repo"]
-        cached = existing.get(tid, {})
         owner, repo = owner_repo.split("/", 1)
+        cached = existing.get(tid, {})
         print(f"  [{i}/{len(themes)}] {tid}", end="", flush=True)
 
         try:
@@ -195,12 +200,24 @@ def main():
             print("  (no rev found)")
             continue
 
-        if cached.get("rev") == rev and cached.get("hash"):
+        hash_current = cached.get("rev") == rev and cached.get("hash")
+        metadata_current = "name" in cached
+
+        if hash_current and metadata_current:
             print(f"  cached @ {rev}")
             updated_data[tid] = {**cached, "repo": owner_repo}
+        elif hash_current and not metadata_current:
+            print(f"  backfilling metadata @ {rev}")
+            manifest = fetch_manifest_content(owner, repo, rev)
+            updated_data[tid] = {
+                **cached,
+                "repo":        owner_repo,
+                "name":        manifest.get("name", ""),
+                "description": manifest.get("description", ""),
+            }
         else:
             print(f"  needs update -> {rev}")
-            needs_hash.append((tid, owner_repo, rev))
+            needs_hash.append((tid, owner_repo, owner, repo, rev))
 
     # Phase 2: hash archives in parallel
     errors = []
@@ -208,12 +225,12 @@ def main():
         print(f"\nPhase 2: hashing {len(needs_hash)} archive(s) ...")
 
         def _hash_one(args):
-            tid, owner_repo, rev = args
-            owner, repo = owner_repo.split("/", 1)
-            hash_val = nix_hash_archive(owner, repo, rev)
-            if not hash_val:
-                return tid, None, f"hash failed"
-            return tid, {"repo": owner_repo, "rev": rev, "hash": hash_val}, None
+            tid, owner_repo, owner, repo, rev = args
+            try:
+                data = full_update(owner, repo, owner_repo, rev)
+                return tid, data, None
+            except Exception as e:
+                return tid, None, str(e)
 
         with ThreadPoolExecutor(max_workers=HASH_WORKERS) as pool:
             futures = {pool.submit(_hash_one, args): args[0] for args in needs_hash}
