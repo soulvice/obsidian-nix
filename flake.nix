@@ -2,11 +2,40 @@
   description = "Nix packages for all Obsidian community plugins and themes";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs.treefmt-nix.url = "github:numtide/treefmt-nix";
 
   outputs =
-    { self, nixpkgs }:
+    {
+      self,
+      nixpkgs,
+      treefmt-nix,
+    }:
     let
       lib = nixpkgs.lib;
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
+      forAllSystems = lib.genAttrs systems;
+      treefmtEval = forAllSystems (
+        system:
+        treefmt-nix.lib.evalModule nixpkgs.legacyPackages.${system} {
+          projectRootFile = "flake.nix";
+          programs.nixfmt.enable = true;
+          programs.prettier = {
+            enable = true;
+            includes = [ "*.json" ];
+            excludes = [
+              "plugins-data.json"
+              "themes-data.json"
+              "broken-plugins.json"
+              "broken-themes.json"
+            ];
+          };
+        }
+      );
 
       pluginsData = builtins.fromJSON (builtins.readFile ./plugins-data.json);
       themesData = builtins.fromJSON (builtins.readFile ./themes-data.json);
@@ -19,23 +48,22 @@
           hasStyles = plugin ? stylesCss;
           base = "https://github.com/${plugin.repo}/releases/download/${plugin.version}";
 
-          files =
-            {
-              mainJs = pkgs.fetchurl {
-                url = "${base}/main.js";
-                sha256 = plugin.mainJs;
-              };
-              manifest = pkgs.fetchurl {
-                url = "${base}/manifest.json";
-                sha256 = plugin.manifest;
-              };
-            }
-            // lib.optionalAttrs hasStyles {
-              stylesCss = pkgs.fetchurl {
-                url = "${base}/styles.css";
-                sha256 = plugin.stylesCss;
-              };
+          files = {
+            mainJs = pkgs.fetchurl {
+              url = "${base}/main.js";
+              sha256 = plugin.mainJs;
             };
+            manifest = pkgs.fetchurl {
+              url = "${base}/manifest.json";
+              sha256 = plugin.manifest;
+            };
+          }
+          // lib.optionalAttrs hasStyles {
+            stylesCss = pkgs.fetchurl {
+              url = "${base}/styles.css";
+              sha256 = plugin.stylesCss;
+            };
+          };
         in
         pkgs.stdenv.mkDerivation (
           files
@@ -45,15 +73,14 @@
 
             phases = [ "installPhase" ];
 
-            installPhase =
-              ''
-                mkdir -p $out
-                cp $mainJs $out/main.js
-                cp $manifest $out/manifest.json
-              ''
-              + lib.optionalString hasStyles ''
-                cp $stylesCss $out/styles.css
-              '';
+            installPhase = ''
+              mkdir -p $out
+              cp $mainJs $out/main.js
+              cp $manifest $out/manifest.json
+            ''
+            + lib.optionalString hasStyles ''
+              cp $stylesCss $out/styles.css
+            '';
           }
         );
 
@@ -87,6 +114,8 @@
         };
     in
     {
+      formatter = forAllSystems (system: treefmtEval.${system}.config.build.wrapper);
+
       # Overlay — the ergonomic way to consume plugins/themes without spelling out ${system}.
       # Add to nixpkgs.overlays in your NixOS or home-manager config, then use:
       #
@@ -97,7 +126,7 @@
       # named obsidianPlugins / obsidianThemes to avoid that collision.
       overlays.default = final: _prev: {
         obsidianPlugins = lib.mapAttrs (mkPlugin final) pluginsData;
-        obsidianThemes  = lib.mapAttrs (mkTheme final) themesData;
+        obsidianThemes = lib.mapAttrs (mkTheme final) themesData;
       };
 
       # Library functions — build a one-off plugin or theme that isn't in the community list.
@@ -126,7 +155,7 @@
       #     https://github.com/myorg/obsidian-my-theme/archive/1.0.0.tar.gz
       lib = {
         mkPlugin = pkgs: { id, ... }@args: mkPlugin pkgs id (lib.removeAttrs args [ "id" ]);
-        mkTheme  = pkgs: { id, ... }@args: mkTheme  pkgs id (lib.removeAttrs args [ "id" ]);
+        mkTheme = pkgs: { id, ... }@args: mkTheme pkgs id (lib.removeAttrs args [ "id" ]);
       };
     };
 }
