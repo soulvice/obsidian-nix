@@ -218,10 +218,10 @@
   },
   "base16-default-dark": {
     "repo": "flowing-abyss/obsidian-base16-default-dark",
-    "rev": "v3.7.0",
-    "hash": "sha256-OMSAU4p3ALDDsuH5NQy+DjN1nlLvFdgeOq22pMxa1yk=",
     "name": "Base16 Default Dark",
-    "description": ""
+    "description": "",
+    "rev": "v3.7.1",
+    "hash": "sha256-jdt7CepkMJz90YlHRGxrFaOViDayrM2lBMU/cpS3whM="
   },
   "base2tone": {
     "repo": "deathau/Base2Tone-For-Obsidian.md",
@@ -1919,10 +1919,10 @@
   },
   "pln": {
     "repo": "PipeItToDevNull/PLN",
-    "rev": "v1.18.0",
-    "hash": "sha256-OlyueskvdZDk5snExY5W0eEFk1W3LG4d1PWLmIKc9AI=",
     "name": "PLN",
-    "description": ""
+    "description": "",
+    "rev": "v1.18.1",
+    "hash": "sha256-BluLMiCdeAIrwERAPwGYR0inz1PKao37zr0OC20gaXk="
   },
   "poimandres": {
     "repo": "yoGhastly/poimandres-obsidian",
