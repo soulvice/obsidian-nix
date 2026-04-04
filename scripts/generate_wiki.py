@@ -144,7 +144,7 @@ def gen_home(plugins: dict, themes: dict, stats: dict) -> str:
         key=lambda x: x[2]["downloads"],
         reverse=True,
     )[:5]
-    top5_rows = "\n".join(ranked_plugin_row(i + 1, nix_id, entry, stats) for i, (nix_id, entry, _) in enumerate(top5))
+    top5_rows = [ranked_plugin_row(i + 1, nix_id, entry, stats) for i, (nix_id, entry, _) in enumerate(top5)]
 
     return f"""\
 # Obsidian Nix Packages
@@ -167,12 +167,12 @@ nixpkgs.overlays = [ inputs.obsidian-nix.overlays.default ];
 
 ```nix
 # anywhere pkgs is in scope — no ${{system}} needed
-programs.obsidian.myVault.communityPlugins = with pkgs.obsidianPlugins; [
-  dataview
-  templater-obsidian
+programs.obsidian.vaults.<name>.settings.communityPlugins = with pkgs.obsidianPlugins; [
+  {{ enabled = true; pkg = dataview; }}
+  {{enabled = true; pkg = templater-obsidian; }}
 ];
-programs.obsidian.myVault.communityThemes = with pkgs.obsidianThemes; [
-  catppuccin
+programs.obsidian.vaults.<name>.settings.themes = with pkgs.obsidianThemes; [
+  {{enable = true; pkg = catppuccin; }}
 ];
 ```
 
