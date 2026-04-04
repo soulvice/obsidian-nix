@@ -49,6 +49,11 @@ GH_TOKEN = os.environ.get("GH_TOKEN", "")
 API_WORKERS  = 8
 HASH_WORKERS = 16
 
+# Max GitHub API requests per second (5000/hr = 1.4/s; stay well under secondary limits)
+_API_INTERVAL = 0.25   # 4 req/s
+_api_lock     = Lock()
+_api_last     = [0.0]
+
 
 # ── HTTP / GitHub API ─────────────────────────────────────────────────────────
 
@@ -60,15 +65,32 @@ def _fetch(url: str, github_api: bool = False) -> object:
         req.add_header("X-GitHub-Api-Version", "2022-11-28")
         if GH_TOKEN:
             req.add_header("Authorization", f"Bearer {GH_TOKEN}")
-    with urllib.request.urlopen(req, timeout=30) as r:
-        if github_api:
-            remaining = int(r.headers.get("X-RateLimit-Remaining", 9999))
-            if remaining < 20:
-                reset_at = int(r.headers.get("X-RateLimit-Reset", time.time() + 60))
-                wait = max(1, reset_at - time.time()) + 5
-                print(f"  [rate limit] {remaining} requests left, sleeping {wait:.0f}s")
+        # Global rate limiter — prevents concurrent burst triggering secondary limits
+        with _api_lock:
+            wait = _API_INTERVAL - (time.time() - _api_last[0])
+            if wait > 0:
                 time.sleep(wait)
-        return json.loads(r.read())
+            _api_last[0] = time.time()
+
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                if github_api:
+                    remaining = int(r.headers.get("X-RateLimit-Remaining", 9999))
+                    if remaining < 20:
+                        reset_at = int(r.headers.get("X-RateLimit-Reset", time.time() + 60))
+                        wait = max(1, reset_at - time.time()) + 5
+                        print(f"  [rate limit] {remaining} requests left, sleeping {wait:.0f}s", flush=True)
+                        time.sleep(wait)
+                return json.loads(r.read())
+        except urllib.error.HTTPError as e:
+            if e.code == 403 and github_api:
+                retry_after = int(e.headers.get("Retry-After", 60))
+                print(f"  [secondary rate limit] sleeping {retry_after}s (attempt {attempt + 1}/3)", flush=True)
+                time.sleep(retry_after)
+                continue
+            raise
+    raise RuntimeError(f"Failed after 3 retries: {url}")
 
 
 def fetch_manifest_content(url: str) -> dict:
