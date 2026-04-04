@@ -105,10 +105,12 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}"
+          git push origin --delete update/obsidian-data 2>/dev/null || true
           git checkout -b update/obsidian-data
           git add plugins-data.json themes-data.json broken-plugins.json broken-themes.json
           git commit -m "chore: update plugins and themes data"
-          git push origin update/obsidian-data --force-with-lease
+          git push origin update/obsidian-data
           gh pr create \
             --title "Update Obsidian plugins and themes data" \
             --body "Auto-generated update to plugins-data.json and themes-data.json." \
