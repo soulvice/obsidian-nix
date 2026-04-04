@@ -49,6 +49,7 @@ jobs:
   update-themes:
     runs-on: ubuntu-latest
     timeout-minutes: 120
+    needs: update-plugins
     permissions:
       contents: read
     env:

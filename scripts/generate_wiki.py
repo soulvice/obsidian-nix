@@ -318,7 +318,7 @@ def main():
     }
 
     for filename, content in pages.items():
-        (out_dir / filename).write_text(content)
+        (out_dir / filename).write_text(content, encoding="utf-8")
         print(f"  {filename}")
 
     print(f"\nDone — {len(pages)} pages written.")
