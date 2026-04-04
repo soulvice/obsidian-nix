@@ -149,12 +149,12 @@
   },
   "adamantine-pick": {
     "repo": "notlibrary/obsidian-adamantine-pick",
-    "version": "0.5.4",
-    "mainJs": "sha256-+xYc5eYufVUpQeYdvk17tI37bff7tn4emJUjMbcnuW8=",
-    "manifest": "sha256-Vf/96RvDUsHiJvPcI1Ih+lJsrx25TcWiKTQ/aYHQDTk=",
-    "stylesCss": "sha256-h2QkPK4DUevbt253DE/v/LGVb/QkINTsFZIS3HqFNe0=",
     "name": "Adamantine Pick",
-    "description": "Embeddable Pikchr(https://pikchr.org) diagrams renderer for Obsidian(https://obsidian.md)."
+    "description": "Embeddable Pikchr(https://pikchr.org) diagrams renderer for Obsidian(https://obsidian.md).",
+    "version": "0.5.5",
+    "mainJs": "sha256-JRNney4USRx+8++WBNHIaw24Z+uUFca3HzH8XhjdMFY=",
+    "manifest": "sha256-uYKC6p851nLF5Selk5r+/jNQm2a3hev0yK7pTcJTc1Y=",
+    "stylesCss": "sha256-h2QkPK4DUevbt253DE/v/LGVb/QkINTsFZIS3HqFNe0="
   },
   "adapt-to-current-view": {
     "repo": "churnish/adapt-to-current-view",
@@ -193,12 +193,12 @@
   },
   "advanced-canvas": {
     "repo": "Developer-Mike/obsidian-advanced-canvas",
-    "version": "6.0.0",
-    "mainJs": "sha256-AbvJ7VxR9SPHFiJFwQWqsO3kI6ykaYFLonFPXMO5KnU=",
-    "manifest": "sha256-R5NQ/4HA5GqdpWL93gVtdt6fFlqHd406O9U7otntm/o=",
-    "stylesCss": "sha256-jEDByv8W6Tk9/5M2uTbgtviWks5yRd63DxB6EQ1euzw=",
     "name": "Advanced Canvas",
-    "description": "Supercharge your canvas experience! Create presentations, flowcharts and more!"
+    "description": "Supercharge your canvas experience! Create presentations, flowcharts and more!",
+    "version": "6.0.1",
+    "mainJs": "sha256-+s3dyP/QF/z7Py3nAc9jFGeuHUWjAkmo7wFaMnzY+Lo=",
+    "manifest": "sha256-+1gEqqabvSrpDUEKcxI2wTskhaMe1HcACSXRKPDmM60=",
+    "stylesCss": "sha256-jEDByv8W6Tk9/5M2uTbgtviWks5yRd63DxB6EQ1euzw="
   },
   "advanced-canvas-filter": {
     "repo": "CHex0K/advanced-canvas-filter",
@@ -1929,11 +1929,11 @@
   },
   "blueprint": {
     "repo": "madx/blueprint-obsidian-plugin",
-    "version": "0.5.1",
-    "mainJs": "sha256-Ei07c4dlZ9D/bC5XUol8FNbaw7d6Osn61ZmiSKtw20o=",
-    "manifest": "sha256-nH81r4zjO9wKzP5QtZFjtoUAPXhBlkEZuOmkVHCglro=",
     "name": "Blueprint",
-    "description": "Write once, update everywhere - note templates that pull from Properties."
+    "description": "Write once, update everywhere - note templates that pull from Properties.",
+    "version": "0.6.0",
+    "mainJs": "sha256-QFGA8sQ+MPwjdwBOrWTzx9jvqh8rx59N3wlADK9pcSY=",
+    "manifest": "sha256-Bd4JSUTDIGz+lUrbAgQrAG8C767cQj6iQuDP//dVPkc="
   },
   "blueprint-renderer": {
     "repo": "goderyu/obsidian-blueprint-renderer",
@@ -4786,12 +4786,12 @@
   },
   "decks": {
     "repo": "dscherdi/decks",
-    "version": "1.4.4",
-    "mainJs": "sha256-gsc3anyHIIXkH7qRB89O9GGMfulk82cMXAyDmf8gU6Q=",
-    "manifest": "sha256-j73LN68wt0SPP2MuTBOkKN0SecC33tCmo/mIpC16p3A=",
-    "stylesCss": "sha256-6B8/Go3O5ynx3I5x4/nDGF2swIq7eCprlIEFLk8tV7U=",
     "name": "Decks",
-    "description": "Decks - Spaced repetition flashcards plugin with FSRS algorithm."
+    "description": "Decks - Spaced repetition flashcards plugin with FSRS algorithm.",
+    "version": "1.5.0",
+    "mainJs": "sha256-4XdaPyKQWNNJnsx6QtfRPdR6+AIP3v1yznttETrF0Es=",
+    "manifest": "sha256-VRoes/k0hdjgBAeHldNGKgoSp5sHlsersLMtqN7+0/Y=",
+    "stylesCss": "sha256-6Ad16DLR5IZSgSPMXifTxqbAfDimwRm2+H9Q1qeuXMQ="
   },
   "deepl": {
     "repo": "friebetill/obsidian-deepl",
@@ -5432,12 +5432,12 @@
   },
   "editing-toolbar": {
     "repo": "PKM-er/obsidian-editing-toolbar",
-    "version": "3.2.7",
-    "mainJs": "sha256-vuW2VtMmYdSP8RZlBo14Epyu/Ppq9FVj4YtyImqitXc=",
-    "manifest": "sha256-Dd+EUrXO9mVVqecBEeNJMHuVf30XYwokL3Wp5cmY1oQ=",
-    "stylesCss": "sha256-KhxwtvboDO3ptegErvwNc5+Ln6flDkeonotesFPZzhk=",
     "name": "Editing Toolbar",
-    "description": "The Obsidian Editing Toolbar is modified from cmenu, which provides more powerful customization settings and has many built-in editing commands to be a MS Word-like toolbar editing experience."
+    "description": "The Obsidian Editing Toolbar is modified from cmenu, which provides more powerful customization settings and has many built-in editing commands to be a MS Word-like toolbar editing experience.",
+    "version": "4.0.2",
+    "mainJs": "sha256-wYwsT//c2+vN2dbKog1NPCzA0Hx3tT46ticXFu4jbZE=",
+    "manifest": "sha256-3jxOUdrMP5LvasUqNnFhM63Zd8rEDQU9UZkTFElw8zw=",
+    "stylesCss": "sha256-CCCrvKj3FK84/rhBIL5rHN/JHuWbzDB/VgVEr6QKi2A="
   },
   "editor-autofocus": {
     "repo": "mgussekloo/obsidian-editor-autofocus",
@@ -12386,11 +12386,11 @@
   },
   "notes-to-strapi-export-article-ai": {
     "repo": "CinquinAndy/notes-to-strapi-export-article-ai",
-    "version": "3.0.254",
-    "mainJs": "sha256-6MQVHB9OoVhEzWXSpRlF/JZIar+62USqmAWf+wEQyWE=",
-    "manifest": "sha256-QlGPoYazgclsw7ImS2fuwZdFslsX1XTbjUmm0Mi9ooo=",
     "name": "Strapi Exporter AI",
-    "description": "Effortlessly export your notes to Strapi CMS with AI-powered handling and SEO optimization."
+    "description": "Effortlessly export your notes to Strapi CMS with AI-powered handling and SEO optimization.",
+    "version": "3.0.256",
+    "mainJs": "sha256-jbGiljT8OON2ihzjSZiNRxBJ5rsrPFTwLSxj0dxfmvk=",
+    "manifest": "sha256-C+UQCMsIPKVRQUjSmNxGrQPX2vwwbKBuLBCdZwlxHqQ="
   },
   "notes2tweets": {
     "repo": "Tej-Sharma/notes2tweets-obsidian",
@@ -16082,12 +16082,12 @@
   },
   "obsidian-vault-changelog": {
     "repo": "philoserf/obsidian-vault-changelog",
-    "version": "1.4.0",
-    "mainJs": "sha256-hqsEUyedUaVvUZ2fnidli4ZzknOiPaZUZuvLK5iNHMg=",
-    "manifest": "sha256-2mwnrY68Aes5cAdSKXpXsWdAxmEkhXv/Hf3e7bNAHa4=",
-    "stylesCss": "sha256-fcpXHSDbRTdojmO0sp6RdXuIxloqMISo+5p/Lkt6Qy8=",
     "name": "Vault Changelog",
-    "description": "Maintain a changelog of recently edited notes"
+    "description": "Maintain a changelog of recently edited notes",
+    "version": "1.5.0",
+    "mainJs": "sha256-nkU4kZbb7FdMHfNqi6jdrysSbYb2GWDtS6aaAJz6flc=",
+    "manifest": "sha256-Q8MCPUgVm/d65ObgWUHbCQoTLUWkKCWkS9Vhjo5k+7Q=",
+    "stylesCss": "sha256-fcpXHSDbRTdojmO0sp6RdXuIxloqMISo+5p/Lkt6Qy8="
   },
   "obsidian-vault-statistics-plugin": {
     "repo": "bkyle/obsidian-vault-statistics-plugin",
@@ -16287,12 +16287,12 @@
   },
   "obsidian42-strange-new-worlds": {
     "repo": "TfTHacker/obsidian42-strange-new-worlds",
-    "version": "2.3.5",
-    "mainJs": "sha256-5dUAC0u58obGCTsDwCX7YLHnGWdfBKxDS+zdX74WEZQ=",
-    "manifest": "sha256-xr+seVenhO6SWAg+3otFsXZNCwDj5h8AltsbnTxp160=",
-    "stylesCss": "sha256-AK0D5rQJVCB8nodJlNY78niBx2KmmZbohb+MpN4QjCc=",
     "name": "Strange New Worlds",
-    "description": "Help see how your vault is interconnected with visual indicators."
+    "description": "Help see how your vault is interconnected with visual indicators.",
+    "version": "2.3.7",
+    "mainJs": "sha256-I0fGMTRJ4wpZG+00CCZnobvGYqMlt3Uv/HTD8gIB9q8=",
+    "manifest": "sha256-Xj4HWzgHMEv6IGER1dh9jUvR507aNcSt+CgJ5O3DJFs=",
+    "stylesCss": "sha256-AK0D5rQJVCB8nodJlNY78niBx2KmmZbohb+MpN4QjCc="
   },
   "obsidian42-text-transporter": {
     "repo": "TfTHacker/obsidian42-text-transporter",
@@ -17589,12 +17589,12 @@
   },
   "print": {
     "repo": "marijnbent/obsidian-print",
-    "version": "0.4.1",
-    "mainJs": "sha256-qEXADzOnSF0A07hSF8hLJQNz0P0JCxTjh3NfZZtzHkA=",
-    "manifest": "sha256-MCAnHnEpX083HZwdYFBVsWkV23OAFY99oeiR/n1PCD8=",
-    "stylesCss": "sha256-QkCK/PRxUe+9gsU/NmqCK2yEOwoTj4Pb6BJpXZNZKKg=",
     "name": "Print",
-    "description": "Print notes and documents directly from your workspace."
+    "description": "Print notes and documents directly from your workspace.",
+    "version": "0.5.0",
+    "mainJs": "sha256-gi/QVNlw6PhdyEYx/LCsYyhPKH4rqQqdLtcRl7kgw6Q=",
+    "manifest": "sha256-gj6lxLNZKlgIUUl35GgM+cOk7vM7BqvccuXFpTy5Agk=",
+    "stylesCss": "sha256-QkCK/PRxUe+9gsU/NmqCK2yEOwoTj4Pb6BJpXZNZKKg="
   },
   "prioritize": {
     "repo": "Tekknoman/obsidian-prio-plugin",
@@ -20313,12 +20313,12 @@
   },
   "storyteller-suite": {
     "repo": "Maws7140/obsidian-storyteller-suite",
-    "version": "1.7.6",
-    "mainJs": "sha256-s8hFA5y/Z9zD9twExYWVLbdS44G5KnyxghJC9Y6LZGw=",
-    "manifest": "sha256-VNpxUnEsVAoFDOm4y5tGZxmwIgg58Nn6GyZa5kRMWTM=",
-    "stylesCss": "sha256-YSqNXkAS1RIMlt95PukfUpB6tJeKTw0s9x08urtGtd0=",
     "name": "Storyteller suite",
-    "description": "World-building and story management \u2014 characters, locations, events, maps, compendium, timeline, manuscript compilation, and more."
+    "description": "World-building and story management \u2014 characters, locations, events, maps, compendium, timeline, manuscript compilation, and more.",
+    "version": "1.7.7",
+    "mainJs": "sha256-vFvLCye6Ftehj08qYkgW1JUdK3yeKz4Ii9cZ6MmyrU0=",
+    "manifest": "sha256-kUmVAeZa4eG5j8UWNitp7J/HiJ5pqm1JPT/Vw+CNoG4=",
+    "stylesCss": "sha256-YSqNXkAS1RIMlt95PukfUpB6tJeKTw0s9x08urtGtd0="
   },
   "strava-sync": {
     "repo": "watsonbox/obsidian-strava-sync",
@@ -20973,12 +20973,12 @@
   },
   "task-board": {
     "repo": "tu2-atmanand/Task-Board",
-    "version": "1.9.7",
-    "mainJs": "sha256-GqwaU0Vcj3+z1fwN1mgw3MfeUV8L1Qbk7/Sle74mizE=",
-    "manifest": "sha256-Cmf3V6j5ppfa1eQSY0k3EAqTxPPZdAPqPMGdUTAk5cY=",
-    "stylesCss": "sha256-3g6VIwZIwGIm+V5u/dQ/yEyoazwET2orthuJuZewMZ8=",
     "name": "Task Board",
-    "description": "Manage all your tasks throughout your vault from a single board and much more..."
+    "description": "Manage all your tasks throughout your vault from a single board and much more...",
+    "version": "1.10.0",
+    "mainJs": "sha256-nWrBvirJqpJkDmyl6/n3tZNSfxYytti75CI6Sbv7b10=",
+    "manifest": "sha256-io/xwymfz8cp8vpeyM3KWJUCNHyFsc8/5gh6sg1HjZQ=",
+    "stylesCss": "sha256-kzzSZ1MzNzThz80mrvglbVRy87/r64RdViBUHAYC86M="
   },
   "task-director": {
     "repo": "cybertramp/obsidian-task-director",
@@ -21061,12 +21061,12 @@
   },
   "tasks-map": {
     "repo": "NicoKNL/tasks-map",
-    "version": "0.22.2",
-    "mainJs": "sha256-V19eJGe1nQoCR5t5c6HpO/7rr9pkAXpHqX03hoL9+JI=",
-    "manifest": "sha256-f0du87qrcSS91qDJfXHYTR2G+CXhxnF/SrbScdX1LDE=",
-    "stylesCss": "sha256-hur+YHrWHK/hxPwnUmqcgFaGrEco9pp+Cxrf0+apOgk=",
     "name": "Tasks Map",
-    "description": "A graph view of your tasks."
+    "description": "A graph view of your tasks.",
+    "version": "0.22.3",
+    "mainJs": "sha256-9ltcEPR1nle6i/VPWL4UQHpKWyJyIgM66uhyo/23PlQ=",
+    "manifest": "sha256-Ah1juTFurU+vpqXzMIVO09ObF+522HlCTWht8DqyRPM=",
+    "stylesCss": "sha256-hur+YHrWHK/hxPwnUmqcgFaGrEco9pp+Cxrf0+apOgk="
   },
   "tasks-packrat-plugin": {
     "repo": "therden/packrat",
@@ -21738,12 +21738,12 @@
   },
   "tmayoff-meals": {
     "repo": "tmayoff/obsidian-meals",
-    "version": "1.1.3",
-    "mainJs": "sha256-rkPX53WtdGdIydabEQbop1zZA0Z37LX8+n2S97YGnV4=",
-    "manifest": "sha256-/0OAUc5fuRqpIERqfODghHT91kqmtCk+ARtowLeCG2M=",
-    "stylesCss": "sha256-nOlTgrd4oKW8SRxc9SoP5uC14NH8GYKNVqtPJusPrrc=",
     "name": "Meal Plan",
-    "description": "Store and manage recipes, create weekly meal plans and generate shopping lists."
+    "description": "Store and manage recipes, create weekly meal plans and generate shopping lists.",
+    "version": "1.2.0",
+    "mainJs": "sha256-13HOESjzzVwAajh/Rmjmn7NIAt+iJ3z+XPi6qdmsdMg=",
+    "manifest": "sha256-AUbp1/KmDVzNMly4tI83R1/LF9fuwwioSXYO8kf97QE=",
+    "stylesCss": "sha256-nOlTgrd4oKW8SRxc9SoP5uC14NH8GYKNVqtPJusPrrc="
   },
   "todo-highlighter": {
     "repo": "heavenlygaze/obsidian-todo-highlighter",
@@ -22346,12 +22346,12 @@
   },
   "url-namer": {
     "repo": "zfei/obsidian-url-namer",
-    "version": "1.0.1",
-    "mainJs": "sha256-vlFOObfOhRt6BGHc5djnVgNBwVDG6S7jl6ApLSlKtTU=",
-    "manifest": "sha256-gVkuhphlS6KshSxn+JiI1Hp1CVJzccw78A84y67QNhU=",
-    "stylesCss": "sha256-RZSIhuWfiwpQYgUmVW/mAxEEcO4mhcNUzgTc9yW1Tas=",
     "name": "URL Namer",
-    "description": "This plugin retrieves the HTML titles to name the raw URL links."
+    "description": "This plugin retrieves the HTML title to name the unnamed URL link.",
+    "version": "1.1.0",
+    "mainJs": "sha256-aW9M+0kojKeoSQQoRiyv78rvKiXabhnsV6SSsX0cEfs=",
+    "manifest": "sha256-aswlkgDHzrc6wsO6hBi+H7W0CsSEByYEUpRaWhPquGs=",
+    "stylesCss": "sha256-RZSIhuWfiwpQYgUmVW/mAxEEcO4mhcNUzgTc9yW1Tas="
   },
   "url-webview-opener": {
     "repo": "Kieirra/obsidian-url-extension",
@@ -22717,12 +22717,12 @@
   },
   "virt-folder": {
     "repo": "gr0grig/obsidian-virt-folder",
-    "version": "1.1.17",
-    "mainJs": "sha256-FBoq9Rcsuy3y5/GwiHUWn5RWysiqG36ASnqA4LZTHLs=",
-    "manifest": "sha256-wIXioWT9NMzIxdAmUsoVGbRH1VbCsXM1P7rE6fbxE2A=",
-    "stylesCss": "sha256-Pf9WtaQAZgE37KLEuKJZZ56/paVYY2g5r9aF2CagAiY=",
     "name": "VirtFolder",
-    "description": "Creating a hierarchical structure like Luhmann's Zettelkasten"
+    "description": "Creating a hierarchical structure like Luhmann's Zettelkasten",
+    "version": "1.1.18",
+    "mainJs": "sha256-mnWBRKPzgLW5TPRwnHDxkRbgqvtJSvIs5eR7Q81Pq+4=",
+    "manifest": "sha256-9MmML/aarj6g3LhNDXTqsarS+OHe8ds9cXbAhUljHHw=",
+    "stylesCss": "sha256-Pf9WtaQAZgE37KLEuKJZZ56/paVYY2g5r9aF2CagAiY="
   },
   "virtual-footer": {
     "repo": "Signynt/virtual-content",
@@ -23429,12 +23429,12 @@
   },
   "yolo": {
     "repo": "Lapis0x0/obsidian-yolo",
-    "version": "1.5.4.2",
-    "mainJs": "sha256-LgLabugbjv2i1Wj0FShQur31wsJwbtX6HB/0II69XCc=",
-    "manifest": "sha256-Xnf6HFsmnnEFDaArYMmZ4ArH6iePUQjfNs2YrGQxZpo=",
-    "stylesCss": "sha256-FTKpGJXnBGhE+rI9/kFTkJMAwWDDK0DHjyaY1xtp3CY=",
     "name": "YOLO",
-    "description": "Agent-native AI assistant \u2014 chat, write, search, orchestrate, all in one."
+    "description": "Agent-native AI assistant \u2014 chat, write, search, orchestrate, all in one.",
+    "version": "1.5.4.3",
+    "mainJs": "sha256-CEIw2k8XXDS/lHGhi60i2m+u0Eyulov7AxSAwFmGU5E=",
+    "manifest": "sha256-zdJlGN2qUGMIneQDCd7VOchs+0KLr5BOkYzUH5+p+jM=",
+    "stylesCss": "sha256-7DM8mZW+6MMFo7uAfzHFTbdhxWusK6RhdUYR04lSf70="
   },
   "you-and-your-research": {
     "repo": "neozhang/you-and-your-research",
