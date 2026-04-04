@@ -95,13 +95,58 @@
         };
     in
     {
+      # Standard flake packages — useful for `nix build .#plugin.dataview` etc.
       packages = forAllSystems (
         system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
         in
-          lib.mapAttrs (mkPlugin pkgs) pluginsData
-          // lib.mapAttrs (mkTheme pkgs) themesData
+        {
+          plugin = lib.mapAttrs (mkPlugin pkgs) pluginsData;
+          theme  = lib.mapAttrs (mkTheme pkgs) themesData;
+        }
       );
+
+      # Overlay — the ergonomic way to consume plugins/themes without spelling out ${system}.
+      # Add to nixpkgs.overlays in your NixOS or home-manager config, then use:
+      #
+      #   with pkgs.obsidianPlugins; [ dataview templater-obsidian ]
+      #   with pkgs.obsidianThemes;  [ catppuccin ]
+      #
+      # Note: pkgs.obsidian (the app) already exists in nixpkgs — these are intentionally
+      # named obsidianPlugins / obsidianThemes to avoid that collision.
+      overlays.default = final: _prev: {
+        obsidianPlugins = lib.mapAttrs (mkPlugin final) pluginsData;
+        obsidianThemes  = lib.mapAttrs (mkTheme final) themesData;
+      };
+
+      # Library functions — build a one-off plugin or theme that isn't in the community list.
+      # Useful for private repos, forks, or unreleased plugins.
+      #
+      # mkPlugin example:
+      #   inputs.obsidian-nix.lib.mkPlugin pkgs {
+      #     id       = "my-private-plugin";
+      #     repo     = "myorg/obsidian-my-plugin";   # "owner/repo" on GitHub
+      #     version  = "1.0.0";
+      #     mainJs   = "sha256-...";
+      #     manifest = "sha256-...";
+      #     # stylesCss = "sha256-...";              # optional
+      #   }
+      #
+      # mkTheme example:
+      #   inputs.obsidian-nix.lib.mkTheme pkgs {
+      #     id   = "my-private-theme";
+      #     repo = "myorg/obsidian-my-theme";
+      #     rev  = "1.0.0";                          # tag or commit SHA
+      #     hash = "sha256-...";                     # hash of the unpacked repo archive
+      #   }
+      #
+      # Tip — get the hash without guessing:
+      #   nix store prefetch-file --unpack --hash-type sha256 \
+      #     https://github.com/myorg/obsidian-my-theme/archive/1.0.0.tar.gz
+      lib = {
+        mkPlugin = pkgs: { id, ... }@args: mkPlugin pkgs id (lib.removeAttrs args [ "id" ]);
+        mkTheme  = pkgs: { id, ... }@args: mkTheme  pkgs id (lib.removeAttrs args [ "id" ]);
+      };
     };
 }

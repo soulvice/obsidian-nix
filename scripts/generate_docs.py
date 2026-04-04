@@ -118,11 +118,30 @@ _Last updated: {today} — {len(plugins):,} plugins · {len(themes):,} themes ·
 
 ## Usage
 
-```nix
-inputs.obsidian-nix.url = "github:soulvice/obsidian-nix";
+**With the overlay** (recommended — no `${{system}}` required):
 
-inputs.obsidian-nix.packages.${{system}}.dataview
-inputs.obsidian-nix.packages.${{system}}.catppuccin
+```nix
+# flake.nix
+inputs.obsidian-nix.url = "github:soulvice/obsidian-nix";
+nixpkgs.overlays = [ inputs.obsidian-nix.overlays.default ];
+```
+
+```nix
+# anywhere pkgs is in scope
+programs.obsidian.myVault.communityPlugins = with pkgs.obsidianPlugins; [
+  dataview
+  templater-obsidian
+];
+programs.obsidian.myVault.communityThemes = with pkgs.obsidianThemes; [
+  catppuccin
+];
+```
+
+**Direct package reference** (when you need an explicit system):
+
+```nix
+inputs.obsidian-nix.packages.${{system}}.plugin.dataview
+inputs.obsidian-nix.packages.${{system}}.theme.catppuccin
 ```
 
 ---
