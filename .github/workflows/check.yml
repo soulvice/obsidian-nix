@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - uses: DeterminateSystems/determinate-nix-action@v3
-    - run: nix fmt $(find ./ -regex './[^.]*\.nix') -- --check
+    - run: nix fmt -- --ci
   check:
     name: "nix flake check"
     runs-on: ubuntu-latest
