@@ -36,10 +36,12 @@ import time
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timezone
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).parent.parent
-DATA_FILE = REPO_ROOT / "themes-data.json"
+REPO_ROOT   = Path(__file__).parent.parent
+DATA_FILE   = REPO_ROOT / "themes-data.json"
+BROKEN_FILE = REPO_ROOT / "broken-themes.json"
 COMMUNITY_THEMES_URL = (
     "https://raw.githubusercontent.com/obsidianmd/obsidian-releases"
     "/master/community-css-themes.json"
@@ -178,6 +180,17 @@ def main():
     if DATA_FILE.exists():
         existing = json.loads(DATA_FILE.read_text())
 
+    broken: dict = {}
+    if BROKEN_FILE.exists():
+        broken = json.loads(BROKEN_FILE.read_text())
+
+    def mark_broken(tid: str, owner_repo: str, error: str):
+        broken[tid] = {
+            "repo":  owner_repo,
+            "error": error,
+            "since": broken.get(tid, {}).get("since") or datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        }
+
     updated_data = dict(existing)
 
     # Phase 1: fetch latest rev for each theme (sequential, respects rate limits)
@@ -194,13 +207,18 @@ def main():
             rev = get_latest_rev(owner, repo)
         except Exception as e:
             print(f"  ERROR: {e}")
+            mark_broken(tid, owner_repo, str(e))
             continue
 
         if not rev:
             print("  (no rev found)")
+            mark_broken(tid, owner_repo, "could not determine latest rev (no releases, tags, or commits)")
             continue
 
-        hash_current = cached.get("rev") == rev and cached.get("hash")
+        # Theme is reachable — clear any previous broken entry
+        broken.pop(tid, None)
+
+        hash_current     = cached.get("rev") == rev and cached.get("hash")
         metadata_current = "name" in cached
 
         if hash_current and metadata_current:
@@ -220,7 +238,6 @@ def main():
             needs_hash.append((tid, owner_repo, owner, repo, rev))
 
     # Phase 2: hash archives in parallel
-    errors = []
     if needs_hash:
         print(f"\nPhase 2: hashing {len(needs_hash)} archive(s) ...")
 
@@ -228,35 +245,34 @@ def main():
             tid, owner_repo, owner, repo, rev = args
             try:
                 data = full_update(owner, repo, owner_repo, rev)
-                return tid, data, None
+                return tid, owner_repo, data, None
             except Exception as e:
-                return tid, None, str(e)
+                return tid, owner_repo, None, str(e)
 
         with ThreadPoolExecutor(max_workers=HASH_WORKERS) as pool:
             futures = {pool.submit(_hash_one, args): args[0] for args in needs_hash}
             done = 0
             for future in as_completed(futures):
                 done += 1
-                tid, data, error = future.result()
+                tid, owner_repo, data, error = future.result()
                 if error:
                     print(f"  [{done}/{len(needs_hash)}] FAIL  {tid}: {error}")
-                    errors.append((tid, error))
+                    mark_broken(tid, owner_repo, error)
                 else:
                     print(f"  [{done}/{len(needs_hash)}] OK    {tid} @ {data['rev']}")
                     updated_data[tid] = data
+                    broken.pop(tid, None)
 
     changed = updated_data != existing
     if changed:
-        sorted_data = dict(sorted(updated_data.items()))
-        DATA_FILE.write_text(json.dumps(sorted_data, indent=2) + "\n")
+        DATA_FILE.write_text(json.dumps(dict(sorted(updated_data.items())), indent=2) + "\n")
         print(f"\nWrote {DATA_FILE}")
     else:
         print("\nAll themes up-to-date, no changes.")
 
-    if errors:
-        print(f"\n{len(errors)} theme(s) had errors:")
-        for tid, msg in errors:
-            print(f"  {tid}: {msg}")
+    BROKEN_FILE.write_text(json.dumps(dict(sorted(broken.items())), indent=2) + "\n")
+    if broken:
+        print(f"\n{len(broken)} broken theme(s) recorded in {BROKEN_FILE.name}")
 
     github_output = os.environ.get("GITHUB_OUTPUT", "/dev/null")
     with open(github_output, "a") as f:

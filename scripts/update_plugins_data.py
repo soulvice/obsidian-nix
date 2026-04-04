@@ -34,10 +34,12 @@ import time
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timezone
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).parent.parent
-DATA_FILE = REPO_ROOT / "plugins-data.json"
+REPO_ROOT    = Path(__file__).parent.parent
+DATA_FILE    = REPO_ROOT / "plugins-data.json"
+BROKEN_FILE  = REPO_ROOT / "broken-plugins.json"
 COMMUNITY_PLUGINS_URL = (
     "https://raw.githubusercontent.com/obsidianmd/obsidian-releases"
     "/master/community-plugins.json"
@@ -205,30 +207,47 @@ def main():
     if DATA_FILE.exists():
         existing = json.loads(DATA_FILE.read_text())
 
+    broken: dict = {}
+    if BROKEN_FILE.exists():
+        broken = json.loads(BROKEN_FILE.read_text())
+
+    def mark_broken(plugin_id: str, owner_repo: str, error: str):
+        broken[plugin_id] = {
+            "repo":  owner_repo,
+            "error": error,
+            # preserve the original discovery date if already known
+            "since": broken.get(plugin_id, {}).get("since") or datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        }
+
     # Phase 1: fetch release metadata sequentially (respects rate limits)
     print("Phase 1: fetching release metadata ...")
     needs_hash: list[tuple] = []
     updated_data = dict(existing)
 
     for i, plugin in enumerate(plugins_list, 1):
-        plugin_id = plugin["id"]
+        plugin_id  = plugin["id"]
         owner_repo = plugin["repo"]
-        cached = existing.get(plugin_id, {})
+        cached     = existing.get(plugin_id, {})
         print(f"  [{i}/{len(plugins_list)}] {plugin_id}", end="", flush=True)
 
         try:
             release = get_latest_release(owner_repo)
         except Exception as e:
             print(f"  ERROR: {e}")
+            mark_broken(plugin_id, owner_repo, str(e))
             continue
 
         if not release:
             print("  (no releases)")
+            mark_broken(plugin_id, owner_repo, "no GitHub releases found")
             continue
 
-        version = release["tag_name"]
+        # Plugin is reachable — clear any previous broken entry
+        broken.pop(plugin_id, None)
+
+        version    = release["tag_name"]
         asset_names = {a["name"] for a in release.get("assets", [])}
-        has_styles = "styles.css" in asset_names
+        has_styles  = "styles.css" in asset_names
 
         hashes_current = (
             cached.get("version") == version
@@ -250,7 +269,6 @@ def main():
             needs_hash.append((plugin_id, owner_repo, version, asset_names))
 
     # Phase 2: hash files in parallel
-    errors = []
     if needs_hash:
         print(f"\nPhase 2: hashing {len(needs_hash)} plugin(s) ...")
 
@@ -258,35 +276,34 @@ def main():
             plugin_id, owner_repo, version, asset_names = args
             try:
                 data = hash_release_files(owner_repo, version, asset_names)
-                return plugin_id, data, None
+                return plugin_id, owner_repo, data, None
             except Exception as e:
-                return plugin_id, None, str(e)
+                return plugin_id, owner_repo, None, str(e)
 
         with ThreadPoolExecutor(max_workers=HASH_WORKERS) as pool:
             futures = {pool.submit(_hash_one, args): args[0] for args in needs_hash}
             done = 0
             for future in as_completed(futures):
                 done += 1
-                plugin_id, data, error = future.result()
+                plugin_id, owner_repo, data, error = future.result()
                 if error:
                     print(f"  [{done}/{len(needs_hash)}] FAIL  {plugin_id}: {error}")
-                    errors.append((plugin_id, error))
+                    mark_broken(plugin_id, owner_repo, error)
                 else:
                     print(f"  [{done}/{len(needs_hash)}] OK    {plugin_id} @ {data['version']}")
                     updated_data[plugin_id] = data
+                    broken.pop(plugin_id, None)
 
     changed = updated_data != existing
     if changed:
-        sorted_data = dict(sorted(updated_data.items()))
-        DATA_FILE.write_text(json.dumps(sorted_data, indent=2) + "\n")
+        DATA_FILE.write_text(json.dumps(dict(sorted(updated_data.items())), indent=2) + "\n")
         print(f"\nWrote {DATA_FILE}")
     else:
         print("\nAll plugins up-to-date, no changes.")
 
-    if errors:
-        print(f"\n{len(errors)} plugin(s) had errors:")
-        for plugin_id, msg in errors:
-            print(f"  {plugin_id}: {msg}")
+    BROKEN_FILE.write_text(json.dumps(dict(sorted(broken.items())), indent=2) + "\n")
+    if broken:
+        print(f"\n{len(broken)} broken plugin(s) recorded in {BROKEN_FILE.name}")
 
     github_output = os.environ.get("GITHUB_OUTPUT", "/dev/null")
     with open(github_output, "a") as f:

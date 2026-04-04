@@ -61,7 +61,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b update/obsidian-data
-          git add plugins-data.json themes-data.json PACKAGES.md
+          git add plugins-data.json themes-data.json broken-plugins.json broken-themes.json PACKAGES.md
           git commit -m "chore: update plugins, themes, and package docs"
           git push origin update/obsidian-data --force-with-lease
           gh pr create \
@@ -70,6 +70,11 @@ jobs:
             --base main \
             --head update/obsidian-data \
           || echo "PR already exists"
+
+      - name: Report broken packages
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: python3 scripts/report_broken.py
 
       # Wiki is always regenerated — stats (downloads) change independently of package versions.
       # NOTE: The wiki must be initialised first by creating at least one page in the
