@@ -6,15 +6,7 @@
   outputs =
     { self, nixpkgs }:
     let
-      systems = [
-        "x86_64-linux"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "aarch64-darwin"
-      ];
-
       lib = nixpkgs.lib;
-      forAllSystems = lib.genAttrs systems;
 
       pluginsData = builtins.fromJSON (builtins.readFile ./plugins-data.json);
       themesData = builtins.fromJSON (builtins.readFile ./themes-data.json);
@@ -95,18 +87,6 @@
         };
     in
     {
-      # Standard flake packages — useful for `nix build .#plugin.dataview` etc.
-      packages = forAllSystems (
-        system:
-        let
-          pkgs = nixpkgs.legacyPackages.${system};
-        in
-        {
-          plugin = lib.mapAttrs (mkPlugin pkgs) pluginsData;
-          theme  = lib.mapAttrs (mkTheme pkgs) themesData;
-        }
-      );
-
       # Overlay — the ergonomic way to consume plugins/themes without spelling out ${system}.
       # Add to nixpkgs.overlays in your NixOS or home-manager config, then use:
       #

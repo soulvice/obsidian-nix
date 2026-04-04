@@ -176,13 +176,6 @@ programs.obsidian.vaults.<name>.settings.themes = with pkgs.obsidianThemes; [
 ];
 ```
 
-Or via direct package reference:
-
-```nix
-inputs.obsidian-nix.packages.${{system}}.plugin.dataview
-inputs.obsidian-nix.packages.${{system}}.theme.catppuccin
-```
-
 **Custom plugins/themes** (private repos, forks, unreleased):
 
 ```nix
