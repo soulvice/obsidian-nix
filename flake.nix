@@ -100,8 +100,8 @@
         let
           pkgs = nixpkgs.legacyPackages.${system};
         in
-        lib.mapAttrs (mkPlugin pkgs) pluginsData
-        // lib.mapAttrs (mkTheme pkgs) themesData
+          lib.mapAttrs (mkPlugin pkgs) pluginsData
+          // lib.mapAttrs (mkTheme pkgs) themesData
       );
     };
 }
