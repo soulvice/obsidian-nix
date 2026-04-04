@@ -1249,11 +1249,11 @@
   },
   "auto-note-importer": {
     "repo": "uppinote20/obsidian-auto-note-importer",
-    "version": "0.7.0",
-    "mainJs": "sha256-wM9DFd38RjQGWrWDanputbnojoZeX7AWPzY6QZ7ZLSE=",
-    "manifest": "sha256-ejhZtiLZWlGYZMixK9N9kJv4Lcx/waxg86Mm/Zms+Fc=",
     "name": "Auto Note Importer",
-    "description": "Automatically import notes from an external database like Airtable into your Vault."
+    "description": "Automatically import notes from an external database like Airtable into your Vault.",
+    "version": "0.8.0",
+    "mainJs": "sha256-raUlLlDjDIRMH662E0aEOB9zunGnjq0kQiwhU0jxlp0=",
+    "manifest": "sha256-2DsN2XosFZamS/8izIyCSqIDMaWnogALsmHcwftaf3U="
   },
   "auto-note-mover": {
     "repo": "farux/obsidian-auto-note-mover",
@@ -8921,12 +8921,12 @@
   },
   "instapaper": {
     "repo": "Instapaper/obsidian-instapaper",
-    "version": "1.2.0",
-    "mainJs": "sha256-VvcKfPQPmhRsG/X4nnxsWp3zU3wkDbnt65FlZiS5B6w=",
-    "manifest": "sha256-OSRSiMJWiD7B+clsdGkXurYKLBnhgfh/SSVm9rWgAMU=",
-    "stylesCss": "sha256-0EblSle+X+NRU0AsgK50+LUa2rY1n5kAoG5i5jIa8PA=",
     "name": "Instapaper",
-    "description": "Connect Obsidian to your Instapaper account."
+    "description": "Connect Obsidian to your Instapaper account.",
+    "version": "1.2.1",
+    "mainJs": "sha256-DlY6V/vgVtQE73sRtfDjK4cIte6xJDngXosWkeVuBgQ=",
+    "manifest": "sha256-ArR2T0cBcnimAoLdDTCd4qDf5nIqXZpvmfqHI6Bn4z0=",
+    "stylesCss": "sha256-0EblSle+X+NRU0AsgK50+LUa2rY1n5kAoG5i5jIa8PA="
   },
   "intelligence": {
     "repo": "ransurf/obsidian-intelligence",
@@ -10758,12 +10758,12 @@
   },
   "mathlive": {
     "repo": "danzilberdan/obsidian-mathlive",
-    "version": "1.3.2",
-    "mainJs": "sha256-Ca5a7NXtucqdZ3SNZaVGLSy5F3x5ysqq67O+jiMOat4=",
-    "manifest": "sha256-sBi6Y3Re/OGzX1oPfeAy5TU0zRiqZLls1wo28mnIzmU=",
-    "stylesCss": "sha256-rb/I6ajTYk2kZLaSbz/dx66FkRuUmhUVsMNdR9t3SQg=",
     "name": "MathLive",
-    "description": "Faster and more intuitive MathJax editing using MathLive."
+    "description": "Faster and more intuitive MathJax editing using MathLive.",
+    "version": "1.3.4",
+    "mainJs": "sha256-KSZrJXnygtJjp4Gwd+6QL3q5jcZNh+UVEIdODxd8fvc=",
+    "manifest": "sha256-icEW1ohNmsmL6jW9XIcPE6jtmiu6LX91bcZQFNfp3OM=",
+    "stylesCss": "sha256-QPgQuMuhk6M2qYGV1mZRJIW9NiHRmWqqdNs5/iW5tp0="
   },
   "mathlive-in-editor-mode": {
     "repo": "MizarZh/mathlive-in-editor-mode",
@@ -12297,12 +12297,12 @@
   },
   "note-toolbar": {
     "repo": "chrisgurney/obsidian-note-toolbar",
-    "version": "1.30.08",
-    "mainJs": "sha256-VflWAH0zZqhBCsKtpYr+QigsCsSdadYRkEqIoLTFY+A=",
-    "manifest": "sha256-UfwW8KedvLTctVSfWGKeAPXanXxTFSVERr0E9qIJia0=",
-    "stylesCss": "sha256-oTB9j5gzg0R9CpU8RoRIQLPe41ilVezkyil76H8HflI=",
     "name": "Note Toolbar",
-    "description": "Add customizable toolbars to your notes."
+    "description": "Add customizable toolbars to your notes.",
+    "version": "1.30.09",
+    "mainJs": "sha256-YsyDfqSvHZ9YtpKLJM+0/9JhDvzPgB3eTsDUE1zDWk0=",
+    "manifest": "sha256-hf5MV9T5Lagzc32EyqLEKjrASOcsYSgOMxGal1a4GXg=",
+    "stylesCss": "sha256-oTB9j5gzg0R9CpU8RoRIQLPe41ilVezkyil76H8HflI="
   },
   "note_uid_generator": {
     "repo": "Netajam/obsidian_note_uid_generator",
@@ -18102,12 +18102,12 @@
   },
   "quran-helper": {
     "repo": "AmmarCodes/obsidian-quran-helper-plugin",
-    "version": "1.11.0",
-    "mainJs": "sha256-hhAk8AnuQtsqnZpNMrQlE/eD4bAzqsl2cq/YdgxfAp0=",
-    "manifest": "sha256-Ogp65a7V2Byw0B9yS4yKa/6z/tgZKErsI8SJXP3mbRY=",
-    "stylesCss": "sha256-3UaNZavH+ljOBYbS0uHWvN2VEmu2iW8WZMEUnrqAqz4=",
     "name": "Quran",
-    "description": "Find and insert any Quran Ayah (verse) in your notes."
+    "description": "Find and insert any Quran Ayah (verse) in your notes.",
+    "version": "1.13.0",
+    "mainJs": "sha256-okcLzAlyODTWFqlCFmeHRe+v65lQxLvlGPn+AfJFoco=",
+    "manifest": "sha256-UqpGzbVTeBdRwwB9G4Do+roHXHAnEXxEmA9Uew3xjVs=",
+    "stylesCss": "sha256-3UaNZavH+ljOBYbS0uHWvN2VEmu2iW8WZMEUnrqAqz4="
   },
   "radial-timeline": {
     "repo": "EricRhysTaylor/Radial-Timeline",
@@ -19455,12 +19455,12 @@
   },
   "simple-citations": {
     "repo": "masaki39/simple-citations",
-    "version": "1.5.0",
-    "mainJs": "sha256-IIAjNitbrd6tRlKL7HII/cy+uJoexRXTYTQdVz1L8YM=",
-    "manifest": "sha256-o3xmEQ6NMQRDbl4YW6j2EVHuWuJfU79etkz3lf9RGxg=",
-    "stylesCss": "sha256-45rDJeUGqoMmyMaOmwJr3HLrr89HateGtCG4V5ZdDcU=",
     "name": "Simple Citations",
-    "description": "Add & update simple literature notes from Zotero."
+    "description": "Add & update simple literature notes from Zotero.",
+    "version": "1.5.1",
+    "mainJs": "sha256-no/nLx3949zhpE5+7vDV+qnY8Lgu8OIoYZyCGJIsBIA=",
+    "manifest": "sha256-lQC/wMoOVKYONF3oau8ccqZt3N17JO8EULLo4y/T17c=",
+    "stylesCss": "sha256-45rDJeUGqoMmyMaOmwJr3HLrr89HateGtCG4V5ZdDcU="
   },
   "simple-code-formatter": {
     "repo": "wiop93256/Simple-Code-Formmater",
@@ -20137,12 +20137,12 @@
   },
   "spotify-link": {
     "repo": "studiowebux/obsidian-spotify-link",
-    "version": "1.14.0",
-    "mainJs": "sha256-ukeZG2MN+CJ9N1EU8QIsFO3sJQonzyHHCsSTgBkdBoM=",
-    "manifest": "sha256-wmDjJlvjp2rjKkzWXlU4g01nex4YM6eCkEvnVXjhnog=",
-    "stylesCss": "sha256-h2QkPK4DUevbt253DE/v/LGVb/QkINTsFZIS3HqFNe0=",
     "name": "Spotify Link",
-    "description": "Include the song or podcast you're currently listening to in your note."
+    "description": "Include the song or podcast you're currently listening to in your note.",
+    "version": "1.14.1",
+    "mainJs": "sha256-R7ro4u3moHRAnv1gVGoRc2OSRzjKoJOSc0gdzRdd8BE=",
+    "manifest": "sha256-jq17zCf/gt+tdlVX2ix4X6P/Ubl/iMECxoYnXKMFvMk=",
+    "stylesCss": "sha256-h2QkPK4DUevbt253DE/v/LGVb/QkINTsFZIS3HqFNe0="
   },
   "spotify-links": {
     "repo": "Cutaiar/obsidian-song-links",
@@ -21063,10 +21063,10 @@
     "repo": "NicoKNL/tasks-map",
     "name": "Tasks Map",
     "description": "A graph view of your tasks.",
-    "version": "0.22.3",
-    "mainJs": "sha256-9ltcEPR1nle6i/VPWL4UQHpKWyJyIgM66uhyo/23PlQ=",
-    "manifest": "sha256-Ah1juTFurU+vpqXzMIVO09ObF+522HlCTWht8DqyRPM=",
-    "stylesCss": "sha256-hur+YHrWHK/hxPwnUmqcgFaGrEco9pp+Cxrf0+apOgk="
+    "version": "0.24.2",
+    "mainJs": "sha256-Su2oerUnEp7V5fHvaeH2HjLZu+ikz96EGNviCPiR6Jg=",
+    "manifest": "sha256-2u+CsDBEGc7HTG+DioSfPFTGHatqyCYO7cBzc04D95Y=",
+    "stylesCss": "sha256-tym3H2YZzXSLRjEaoTh/y90mvuNXNaHGq7M/vk/nV7M="
   },
   "tasks-packrat-plugin": {
     "repo": "therden/packrat",
@@ -23431,10 +23431,10 @@
     "repo": "Lapis0x0/obsidian-yolo",
     "name": "YOLO",
     "description": "Agent-native AI assistant \u2014 chat, write, search, orchestrate, all in one.",
-    "version": "1.5.4.3",
-    "mainJs": "sha256-CEIw2k8XXDS/lHGhi60i2m+u0Eyulov7AxSAwFmGU5E=",
-    "manifest": "sha256-zdJlGN2qUGMIneQDCd7VOchs+0KLr5BOkYzUH5+p+jM=",
-    "stylesCss": "sha256-7DM8mZW+6MMFo7uAfzHFTbdhxWusK6RhdUYR04lSf70="
+    "version": "1.5.4.4",
+    "mainJs": "sha256-J4mqj16Woryl2mMzBSxWAUpP+7NPIbIelyMLGbsWjZ8=",
+    "manifest": "sha256-Jd8bZBuqxPn+wish7IostXRoPurwkszfIkSlIWckZds=",
+    "stylesCss": "sha256-BvQNjRe438kW/983QQ/HyahrlC+2iKiABX5GHqj/HXM="
   },
   "you-and-your-research": {
     "repo": "neozhang/you-and-your-research",
