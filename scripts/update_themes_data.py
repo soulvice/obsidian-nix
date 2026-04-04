@@ -38,6 +38,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
+from threading import Lock
 
 REPO_ROOT   = Path(__file__).parent.parent
 DATA_FILE   = REPO_ROOT / "themes-data.json"
@@ -47,7 +48,8 @@ COMMUNITY_THEMES_URL = (
     "/master/community-css-themes.json"
 )
 GH_TOKEN = os.environ.get("GH_TOKEN", "")
-HASH_WORKERS = 8
+API_WORKERS  = 8
+HASH_WORKERS = 16
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -184,6 +186,10 @@ def main():
     if BROKEN_FILE.exists():
         broken = json.loads(BROKEN_FILE.read_text())
 
+    state_lock   = Lock()
+    needs_hash:   list[tuple] = []
+    updated_data: dict        = dict(existing)
+
     def mark_broken(tid: str, owner_repo: str, error: str):
         broken[tid] = {
             "repo":  owner_repo,
@@ -191,51 +197,56 @@ def main():
             "since": broken.get(tid, {}).get("since") or datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         }
 
-    updated_data = dict(existing)
-
-    # Phase 1: fetch latest rev for each theme (sequential, respects rate limits)
-    print("Phase 1: fetching latest revs ...")
-    needs_hash: list[tuple] = []
-
-    for i, (tid, theme) in enumerate(themes.items(), 1):
+    def fetch_one(args):
+        tid, theme = args
         owner_repo = theme["repo"]
         owner, repo = owner_repo.split("/", 1)
         cached = existing.get(tid, {})
-        print(f"  [{i}/{len(themes)}] {tid}", end="", flush=True)
 
         try:
             rev = get_latest_rev(owner, repo)
         except Exception as e:
-            print(f"  ERROR: {e}")
-            mark_broken(tid, owner_repo, str(e))
-            continue
+            with state_lock:
+                mark_broken(tid, owner_repo, str(e))
+            return f"  {tid}  ERROR: {e}"
 
         if not rev:
-            print("  (no rev found)")
-            mark_broken(tid, owner_repo, "could not determine latest rev (no releases, tags, or commits)")
-            continue
-
-        # Theme is reachable — clear any previous broken entry
-        broken.pop(tid, None)
+            with state_lock:
+                mark_broken(tid, owner_repo, "could not determine latest rev (no releases, tags, or commits)")
+            return f"  {tid}  (no rev found)"
 
         hash_current     = cached.get("rev") == rev and cached.get("hash")
         metadata_current = "name" in cached
 
-        if hash_current and metadata_current:
-            print(f"  cached @ {rev}")
-            updated_data[tid] = {**cached, "repo": owner_repo}
-        elif hash_current and not metadata_current:
-            print(f"  backfilling metadata @ {rev}")
+        if hash_current and not metadata_current:
             manifest = fetch_manifest_content(owner, repo, rev)
-            updated_data[tid] = {
-                **cached,
-                "repo":        owner_repo,
-                "name":        manifest.get("name", ""),
-                "description": manifest.get("description", ""),
-            }
-        else:
-            print(f"  needs update -> {rev}")
-            needs_hash.append((tid, owner_repo, owner, repo, rev))
+            with state_lock:
+                broken.pop(tid, None)
+                updated_data[tid] = {
+                    **cached,
+                    "repo":        owner_repo,
+                    "name":        manifest.get("name", ""),
+                    "description": manifest.get("description", ""),
+                }
+            return f"  {tid}  backfilled metadata @ {rev}"
+
+        with state_lock:
+            broken.pop(tid, None)
+            if hash_current:
+                updated_data[tid] = {**cached, "repo": owner_repo}
+                return f"  {tid}  cached @ {rev}"
+            else:
+                needs_hash.append((tid, owner_repo, owner, repo, rev))
+                return f"  {tid}  needs update -> {rev}"
+
+    # Phase 1: fetch latest revs in parallel
+    print(f"Phase 1: fetching latest revs ({API_WORKERS} workers) ...")
+    with ThreadPoolExecutor(max_workers=API_WORKERS) as pool:
+        futures = {pool.submit(fetch_one, item): item[0] for item in themes.items()}
+        done = 0
+        for future in as_completed(futures):
+            done += 1
+            print(f"[{done}/{len(themes)}]{future.result()}", flush=True)
 
     # Phase 2: hash archives in parallel
     if needs_hash:

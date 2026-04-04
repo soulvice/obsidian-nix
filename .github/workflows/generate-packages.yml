@@ -49,9 +49,9 @@ jobs:
             python3 scripts/update_themes_data.py
           fi
 
-      - name: Generate PACKAGES.md
-        if: steps.plugins.outputs.changed == 'true' || steps.themes.outputs.changed == 'true'
-        run: python3 scripts/generate_docs.py
+      #- name: Generate PACKAGES.md
+      #  if: steps.plugins.outputs.changed == 'true' || steps.themes.outputs.changed == 'true'
+      #  run: python3 scripts/generate_docs.py
 
       - name: Create pull request
         if: steps.plugins.outputs.changed == 'true' || steps.themes.outputs.changed == 'true'

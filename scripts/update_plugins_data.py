@@ -36,6 +36,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
+from threading import Lock
 
 REPO_ROOT    = Path(__file__).parent.parent
 DATA_FILE    = REPO_ROOT / "plugins-data.json"
@@ -45,7 +46,8 @@ COMMUNITY_PLUGINS_URL = (
     "/master/community-plugins.json"
 )
 GH_TOKEN = os.environ.get("GH_TOKEN", "")
-HASH_WORKERS = 8
+API_WORKERS  = 8
+HASH_WORKERS = 16
 
 
 # ── HTTP / GitHub API ─────────────────────────────────────────────────────────
@@ -211,41 +213,35 @@ def main():
     if BROKEN_FILE.exists():
         broken = json.loads(BROKEN_FILE.read_text())
 
+    state_lock   = Lock()
+    needs_hash:   list[tuple] = []
+    updated_data: dict        = dict(existing)
+
     def mark_broken(plugin_id: str, owner_repo: str, error: str):
         broken[plugin_id] = {
             "repo":  owner_repo,
             "error": error,
-            # preserve the original discovery date if already known
             "since": broken.get(plugin_id, {}).get("since") or datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         }
 
-    # Phase 1: fetch release metadata sequentially (respects rate limits)
-    print("Phase 1: fetching release metadata ...")
-    needs_hash: list[tuple] = []
-    updated_data = dict(existing)
-
-    for i, plugin in enumerate(plugins_list, 1):
+    def fetch_one(plugin):
         plugin_id  = plugin["id"]
         owner_repo = plugin["repo"]
         cached     = existing.get(plugin_id, {})
-        print(f"  [{i}/{len(plugins_list)}] {plugin_id}", end="", flush=True)
 
         try:
             release = get_latest_release(owner_repo)
         except Exception as e:
-            print(f"  ERROR: {e}")
-            mark_broken(plugin_id, owner_repo, str(e))
-            continue
+            with state_lock:
+                mark_broken(plugin_id, owner_repo, str(e))
+            return f"  {plugin_id}  ERROR: {e}"
 
         if not release:
-            print("  (no releases)")
-            mark_broken(plugin_id, owner_repo, "no GitHub releases found")
-            continue
+            with state_lock:
+                mark_broken(plugin_id, owner_repo, "no GitHub releases found")
+            return f"  {plugin_id}  (no releases)"
 
-        # Plugin is reachable — clear any previous broken entry
-        broken.pop(plugin_id, None)
-
-        version    = release["tag_name"]
+        version     = release["tag_name"]
         asset_names = {a["name"] for a in release.get("assets", [])}
         has_styles  = "styles.css" in asset_names
 
@@ -257,16 +253,30 @@ def main():
         )
         metadata_current = "name" in cached
 
-        if hashes_current and metadata_current:
-            print(f"  cached @ {version}")
-            updated_data[plugin_id] = {**cached, "repo": owner_repo}
-        elif hashes_current and not metadata_current:
-            print(f"  backfilling metadata @ {version}")
+        if hashes_current and not metadata_current:
             meta = fetch_metadata_only(owner_repo, version)
-            updated_data[plugin_id] = {**cached, "repo": owner_repo, **meta}
-        else:
-            print(f"  needs update -> {version}")
-            needs_hash.append((plugin_id, owner_repo, version, asset_names))
+            with state_lock:
+                broken.pop(plugin_id, None)
+                updated_data[plugin_id] = {**cached, "repo": owner_repo, **meta}
+            return f"  {plugin_id}  backfilled metadata @ {version}"
+
+        with state_lock:
+            broken.pop(plugin_id, None)
+            if hashes_current:
+                updated_data[plugin_id] = {**cached, "repo": owner_repo}
+                return f"  {plugin_id}  cached @ {version}"
+            else:
+                needs_hash.append((plugin_id, owner_repo, version, asset_names))
+                return f"  {plugin_id}  needs update -> {version}"
+
+    # Phase 1: fetch release metadata in parallel
+    print(f"Phase 1: fetching release metadata ({API_WORKERS} workers) ...")
+    with ThreadPoolExecutor(max_workers=API_WORKERS) as pool:
+        futures = {pool.submit(fetch_one, p): p["id"] for p in plugins_list}
+        done = 0
+        for future in as_completed(futures):
+            done += 1
+            print(f"[{done}/{len(plugins_list)}]{future.result()}", flush=True)
 
     # Phase 2: hash files in parallel
     if needs_hash:
