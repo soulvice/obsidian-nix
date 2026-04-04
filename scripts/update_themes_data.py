@@ -38,7 +38,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
-from threading import Lock
+from threading import Event, Lock, Thread
 
 REPO_ROOT   = Path(__file__).parent.parent
 DATA_FILE   = REPO_ROOT / "themes-data.json"
@@ -240,13 +240,25 @@ def main():
                 return f"  {tid}  needs update -> {rev}"
 
     # Phase 1: fetch latest revs in parallel
-    print(f"Phase 1: fetching latest revs ({API_WORKERS} workers) ...")
+    total      = len(themes)
+    done_count = [0]
+    stop_hb    = Event()
+
+    def heartbeat():
+        while not stop_hb.wait(30):
+            print(f"  [progress] {done_count[0]}/{total} checked ...", flush=True)
+
+    print(f"Phase 1: fetching latest revs ({API_WORKERS} workers, {total} themes) ...")
+    hb = Thread(target=heartbeat, daemon=True)
+    hb.start()
+
     with ThreadPoolExecutor(max_workers=API_WORKERS) as pool:
         futures = {pool.submit(fetch_one, item): item[0] for item in themes.items()}
-        done = 0
         for future in as_completed(futures):
-            done += 1
-            print(f"[{done}/{len(themes)}]{future.result()}", flush=True)
+            done_count[0] += 1
+            print(f"  [{done_count[0]}/{total}]{future.result()}", flush=True)
+
+    stop_hb.set()
 
     # Phase 2: hash archives in parallel
     if needs_hash:
