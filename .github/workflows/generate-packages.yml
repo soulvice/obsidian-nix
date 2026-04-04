@@ -100,10 +100,8 @@ jobs:
         with:
           name: themes-data
 
-      - name: Create pull request
+      - name: Push branch
         if: needs.update-plugins.outputs.changed == 'true' || needs.update-themes.outputs.changed == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -112,6 +110,12 @@ jobs:
           git add plugins-data.json themes-data.json broken-plugins.json broken-themes.json
           git commit -m "chore: update plugins and themes data"
           git push origin update/obsidian-data
+
+      - name: Create pull request
+        if: needs.update-plugins.outputs.changed == 'true' || needs.update-themes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
           gh pr create \
             --title "Update Obsidian plugins and themes data" \
             --body "Auto-generated update to plugins-data.json and themes-data.json." \

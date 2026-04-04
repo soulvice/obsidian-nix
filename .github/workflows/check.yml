@@ -1,17 +1,21 @@
-name: 'nix flake check'
-
+name: "check"
 on:
-  pull_request:
   push:
-    branches: [main]
-
+  pull_request:
 jobs:
-  lints:
+  fmt:
+    name: "nix fmt"
     runs-on: ubuntu-latest
-    permissions:
-      id-token: "write"
-      contents: "read"
     steps:
-      - uses: actions/checkout@v4
-      - uses: DeterminateSystems/determinate-nix-action@v3
-      - run: nix flake check
+    - uses: actions/checkout@v4
+    - uses: DeterminateSystems/determinate-nix-action@v3
+    - run: nix fmt $(find ./ -regex './[^.]*\.nix') -- --check
+  check:
+    name: "nix flake check"
+    runs-on: ubuntu-latest
+    steps:
+    - name: Free Disk Space (Ubuntu)
+      uses: jlumbroso/free-disk-space@v1.3.1
+    - uses: actions/checkout@v4
+    - uses: DeterminateSystems/determinate-nix-action@v3
+    - run: nix flake check

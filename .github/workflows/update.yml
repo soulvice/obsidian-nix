@@ -3,7 +3,7 @@ name: "nix flake update"
 on:
   workflow_dispatch: # allows manual triggering
   schedule:
-    - cron: '0 23 * * 6' # runs weekly on Saturday at 23:00
+    - cron: '0 23 * * *' # runs daily at 23:00
 
 jobs:
   nix-flake-update:
@@ -12,22 +12,51 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: DeterminateSystems/determinate-nix-action@v3
+      - name: Free Disk Space (Ubuntu)
+        uses: jlumbroso/free-disk-space@v1.3.1
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v16
+
       - name: Update flake.lock
-        uses: DeterminateSystems/update-flake-lock@main
-        id: flake_update
+        id: update
+        uses: DeterminateSystems/update-flake-lock@v28
         with:
-          # Use the PAT here to trigger other workflows
-          token: ${{ secrets.GH_PAT }}
-          pr-title: "Update Nix flake inputs"
+          commit-msg: "Update flake.lock"
+          pr-title: "Update flake.lock"
+          pr-body: |
+            ```
+            {{ env.GIT_COMMIT_MESSAGE }}
+            ```
+
+            soulvice will now force-push my branch. This is also an automated action.
           pr-labels: |
             dependencies
             automated
 
-      - name: Enable auto-merge
-        if: steps.flake_update.outputs.pull-request-number != ''
-        env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
-        run: |
-          gh pr merge --auto --squash "${{ steps.flake_update.outputs.pull-request-url }}"
+
+        # This is workaround to force the cachix action to run after the update-flake-lock action.
+        # Normally, it does not occur because the PR is created by github-actions[bot]
+        # But here, we force push it with my own token, so the action runs after a push "by me".
+
+      - name: Checkout repository as soulvice
+        if: ${{ steps.update.outputs.pull-request-number }}
+        uses: actions/checkout@v4
+        with:
+            token: '${{ secrets.GH_PAT }}'
+
+      - name: Checkout CI branch
+        run: git checkout update_flake_lock_action
+        if: ${{ steps.update.outputs.pull-request-number }}
+
+
+      - name: Amend commit with human committer; ensure CI will run
+        run: git commit --amend --no-edit
+        if: ${{ steps.update.outputs.pull-request-number }}
+      
+      - name: Force push changes to CI branch
+        run: git push origin update_flake_lock_action --force
+        if: ${{ steps.update.outputs.pull-request-number }}
