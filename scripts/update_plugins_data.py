@@ -36,7 +36,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
-from threading import Event, Lock, Thread
+from threading import Event, Thread
 
 REPO_ROOT    = Path(__file__).parent.parent
 DATA_FILE    = REPO_ROOT / "plugins-data.json"
@@ -45,15 +45,8 @@ COMMUNITY_PLUGINS_URL = (
     "https://raw.githubusercontent.com/obsidianmd/obsidian-releases"
     "/master/community-plugins.json"
 )
-GH_TOKEN = os.environ.get("GH_TOKEN", "")
-API_WORKERS  = 8
+GH_TOKEN     = os.environ.get("GH_TOKEN", "")
 HASH_WORKERS = 16
-
-# Max GitHub API requests per second (5000/hr = 1.4/s; stay well under secondary limits)
-_API_INTERVAL = 0.25   # 4 req/s
-_api_lock     = Lock()
-_api_last     = [0.0]
-
 
 # ── HTTP / GitHub API ─────────────────────────────────────────────────────────
 
@@ -65,12 +58,6 @@ def _fetch(url: str, github_api: bool = False) -> object:
         req.add_header("X-GitHub-Api-Version", "2022-11-28")
         if GH_TOKEN:
             req.add_header("Authorization", f"Bearer {GH_TOKEN}")
-        # Global rate limiter — prevents concurrent burst triggering secondary limits
-        with _api_lock:
-            wait = _API_INTERVAL - (time.time() - _api_last[0])
-            if wait > 0:
-                time.sleep(wait)
-            _api_last[0] = time.time()
 
     for attempt in range(3):
         try:
@@ -235,7 +222,6 @@ def main():
     if BROKEN_FILE.exists():
         broken = json.loads(BROKEN_FILE.read_text())
 
-    state_lock   = Lock()
     needs_hash:   list[tuple] = []
     updated_data: dict        = dict(existing)
 
@@ -246,7 +232,19 @@ def main():
             "since": broken.get(plugin_id, {}).get("since") or datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         }
 
-    def fetch_one(plugin):
+    # Phase 1: fetch release metadata sequentially (API rate limits make parallelism counterproductive)
+    total   = len(plugins_list)
+    stop_hb = Event()
+
+    def heartbeat():
+        while not stop_hb.wait(30):
+            print(f"  [progress] {i}/{total} checked ...", flush=True)
+
+    print(f"Phase 1: fetching release metadata ({total} plugins) ...")
+    hb = Thread(target=heartbeat, daemon=True)
+    hb.start()
+
+    for i, plugin in enumerate(plugins_list, 1):
         plugin_id  = plugin["id"]
         owner_repo = plugin["repo"]
         cached     = existing.get(plugin_id, {})
@@ -254,15 +252,16 @@ def main():
         try:
             release = get_latest_release(owner_repo)
         except Exception as e:
-            with state_lock:
-                mark_broken(plugin_id, owner_repo, str(e))
-            return f"  {plugin_id}  ERROR: {e}"
+            print(f"  [{i}/{total}] {plugin_id}  ERROR: {e}", flush=True)
+            mark_broken(plugin_id, owner_repo, str(e))
+            continue
 
         if not release:
-            with state_lock:
-                mark_broken(plugin_id, owner_repo, "no GitHub releases found")
-            return f"  {plugin_id}  (no releases)"
+            print(f"  [{i}/{total}] {plugin_id}  (no releases)", flush=True)
+            mark_broken(plugin_id, owner_repo, "no GitHub releases found")
+            continue
 
+        broken.pop(plugin_id, None)
         version     = release["tag_name"]
         asset_names = {a["name"] for a in release.get("assets", [])}
         has_styles  = "styles.css" in asset_names
@@ -275,40 +274,16 @@ def main():
         )
         metadata_current = "name" in cached
 
-        if hashes_current and not metadata_current:
+        if hashes_current and metadata_current:
+            print(f"  [{i}/{total}] {plugin_id}  cached @ {version}", flush=True)
+            updated_data[plugin_id] = {**cached, "repo": owner_repo}
+        elif hashes_current and not metadata_current:
+            print(f"  [{i}/{total}] {plugin_id}  backfilling metadata @ {version}", flush=True)
             meta = fetch_metadata_only(owner_repo, version)
-            with state_lock:
-                broken.pop(plugin_id, None)
-                updated_data[plugin_id] = {**cached, "repo": owner_repo, **meta}
-            return f"  {plugin_id}  backfilled metadata @ {version}"
-
-        with state_lock:
-            broken.pop(plugin_id, None)
-            if hashes_current:
-                updated_data[plugin_id] = {**cached, "repo": owner_repo}
-                return f"  {plugin_id}  cached @ {version}"
-            else:
-                needs_hash.append((plugin_id, owner_repo, version, asset_names))
-                return f"  {plugin_id}  needs update -> {version}"
-
-    # Phase 1: fetch release metadata in parallel
-    total   = len(plugins_list)
-    done_count = [0]
-    stop_hb = Event()
-
-    def heartbeat():
-        while not stop_hb.wait(30):
-            print(f"  [progress] {done_count[0]}/{total} checked ...", flush=True)
-
-    print(f"Phase 1: fetching release metadata ({API_WORKERS} workers, {total} plugins) ...")
-    hb = Thread(target=heartbeat, daemon=True)
-    hb.start()
-
-    with ThreadPoolExecutor(max_workers=API_WORKERS) as pool:
-        futures = {pool.submit(fetch_one, p): p["id"] for p in plugins_list}
-        for future in as_completed(futures):
-            done_count[0] += 1
-            print(f"  [{done_count[0]}/{total}]{future.result()}", flush=True)
+            updated_data[plugin_id] = {**cached, "repo": owner_repo, **meta}
+        else:
+            print(f"  [{i}/{total}] {plugin_id}  needs update -> {version}", flush=True)
+            needs_hash.append((plugin_id, owner_repo, version, asset_names))
 
     stop_hb.set()
 

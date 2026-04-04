@@ -38,7 +38,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
-from threading import Event, Lock, Thread
+from threading import Event, Thread
 
 REPO_ROOT   = Path(__file__).parent.parent
 DATA_FILE   = REPO_ROOT / "themes-data.json"
@@ -47,14 +47,8 @@ COMMUNITY_THEMES_URL = (
     "https://raw.githubusercontent.com/obsidianmd/obsidian-releases"
     "/master/community-css-themes.json"
 )
-GH_TOKEN = os.environ.get("GH_TOKEN", "")
-API_WORKERS  = 8
+GH_TOKEN     = os.environ.get("GH_TOKEN", "")
 HASH_WORKERS = 16
-
-_API_INTERVAL = 0.25
-_api_lock     = Lock()
-_api_last     = [0.0]
-
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -71,11 +65,6 @@ def _fetch(url: str, github_api: bool = False) -> object:
         req.add_header("X-GitHub-Api-Version", "2022-11-28")
         if GH_TOKEN:
             req.add_header("Authorization", f"Bearer {GH_TOKEN}")
-        with _api_lock:
-            wait = _API_INTERVAL - (time.time() - _api_last[0])
-            if wait > 0:
-                time.sleep(wait)
-            _api_last[0] = time.time()
 
     for attempt in range(3):
         try:
@@ -206,7 +195,6 @@ def main():
     if BROKEN_FILE.exists():
         broken = json.loads(BROKEN_FILE.read_text())
 
-    state_lock   = Lock()
     needs_hash:   list[tuple] = []
     updated_data: dict        = dict(existing)
 
@@ -217,8 +205,19 @@ def main():
             "since": broken.get(tid, {}).get("since") or datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         }
 
-    def fetch_one(args):
-        tid, theme = args
+    # Phase 1: fetch latest revs sequentially (API rate limits make parallelism counterproductive)
+    total   = len(themes)
+    stop_hb = Event()
+
+    def heartbeat():
+        while not stop_hb.wait(30):
+            print(f"  [progress] {i}/{total} checked ...", flush=True)
+
+    print(f"Phase 1: fetching latest revs ({total} themes) ...")
+    hb = Thread(target=heartbeat, daemon=True)
+    hb.start()
+
+    for i, (tid, theme) in enumerate(themes.items(), 1):
         owner_repo = theme["repo"]
         owner, repo = owner_repo.split("/", 1)
         cached = existing.get(tid, {})
@@ -226,57 +225,34 @@ def main():
         try:
             rev = get_latest_rev(owner, repo)
         except Exception as e:
-            with state_lock:
-                mark_broken(tid, owner_repo, str(e))
-            return f"  {tid}  ERROR: {e}"
+            print(f"  [{i}/{total}] {tid}  ERROR: {e}", flush=True)
+            mark_broken(tid, owner_repo, str(e))
+            continue
 
         if not rev:
-            with state_lock:
-                mark_broken(tid, owner_repo, "could not determine latest rev (no releases, tags, or commits)")
-            return f"  {tid}  (no rev found)"
+            print(f"  [{i}/{total}] {tid}  (no rev found)", flush=True)
+            mark_broken(tid, owner_repo, "could not determine latest rev (no releases, tags, or commits)")
+            continue
 
+        broken.pop(tid, None)
         hash_current     = cached.get("rev") == rev and cached.get("hash")
         metadata_current = "name" in cached
 
-        if hash_current and not metadata_current:
+        if hash_current and metadata_current:
+            print(f"  [{i}/{total}] {tid}  cached @ {rev}", flush=True)
+            updated_data[tid] = {**cached, "repo": owner_repo}
+        elif hash_current and not metadata_current:
+            print(f"  [{i}/{total}] {tid}  backfilling metadata @ {rev}", flush=True)
             manifest = fetch_manifest_content(owner, repo, rev)
-            with state_lock:
-                broken.pop(tid, None)
-                updated_data[tid] = {
-                    **cached,
-                    "repo":        owner_repo,
-                    "name":        manifest.get("name", ""),
-                    "description": manifest.get("description", ""),
-                }
-            return f"  {tid}  backfilled metadata @ {rev}"
-
-        with state_lock:
-            broken.pop(tid, None)
-            if hash_current:
-                updated_data[tid] = {**cached, "repo": owner_repo}
-                return f"  {tid}  cached @ {rev}"
-            else:
-                needs_hash.append((tid, owner_repo, owner, repo, rev))
-                return f"  {tid}  needs update -> {rev}"
-
-    # Phase 1: fetch latest revs in parallel
-    total      = len(themes)
-    done_count = [0]
-    stop_hb    = Event()
-
-    def heartbeat():
-        while not stop_hb.wait(30):
-            print(f"  [progress] {done_count[0]}/{total} checked ...", flush=True)
-
-    print(f"Phase 1: fetching latest revs ({API_WORKERS} workers, {total} themes) ...")
-    hb = Thread(target=heartbeat, daemon=True)
-    hb.start()
-
-    with ThreadPoolExecutor(max_workers=API_WORKERS) as pool:
-        futures = {pool.submit(fetch_one, item): item[0] for item in themes.items()}
-        for future in as_completed(futures):
-            done_count[0] += 1
-            print(f"  [{done_count[0]}/{total}]{future.result()}", flush=True)
+            updated_data[tid] = {
+                **cached,
+                "repo":        owner_repo,
+                "name":        manifest.get("name", ""),
+                "description": manifest.get("description", ""),
+            }
+        else:
+            print(f"  [{i}/{total}] {tid}  needs update -> {rev}", flush=True)
+            needs_hash.append((tid, owner_repo, owner, repo, rev))
 
     stop_hb.set()
 

@@ -15,20 +15,21 @@ on:
     - cron: '0 1 * * 1' # weekly Monday 1am
 
 jobs:
-  update:
+  update-plugins:
     runs-on: ubuntu-latest
-    timeout-minutes: 360
+    timeout-minutes: 300
     permissions:
-      contents: write
-      pull-requests: write
+      contents: read
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    outputs:
+      changed: ${{ steps.update.outputs.changed }}
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/determinate-nix-action@v3
 
       - name: Update plugins-data.json
-        id: plugins
+        id: update
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
@@ -38,8 +39,28 @@ jobs:
             python3 scripts/update_plugins_data.py
           fi
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: plugins-data
+          path: |
+            plugins-data.json
+            broken-plugins.json
+
+  update-themes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: read
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    outputs:
+      changed: ${{ steps.update.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/determinate-nix-action@v3
+
       - name: Update themes-data.json
-        id: themes
+        id: update
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
@@ -49,24 +70,47 @@ jobs:
             python3 scripts/update_themes_data.py
           fi
 
-      #- name: Generate PACKAGES.md
-      #  if: steps.plugins.outputs.changed == 'true' || steps.themes.outputs.changed == 'true'
-      #  run: python3 scripts/generate_docs.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: themes-data
+          path: |
+            themes-data.json
+            broken-themes.json
+
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: [update-plugins, update-themes]
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: plugins-data
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: themes-data
 
       - name: Create pull request
-        if: steps.plugins.outputs.changed == 'true' || steps.themes.outputs.changed == 'true'
+        if: needs.update-plugins.outputs.changed == 'true' || needs.update-themes.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b update/obsidian-data
-          git add plugins-data.json themes-data.json broken-plugins.json broken-themes.json PACKAGES.md
-          git commit -m "chore: update plugins, themes, and package docs"
+          git add plugins-data.json themes-data.json broken-plugins.json broken-themes.json
+          git commit -m "chore: update plugins and themes data"
           git push origin update/obsidian-data --force-with-lease
           gh pr create \
             --title "Update Obsidian plugins and themes data" \
-            --body "Auto-generated update to plugins-data.json, themes-data.json, and PACKAGES.md." \
+            --body "Auto-generated update to plugins-data.json and themes-data.json." \
             --base main \
             --head update/obsidian-data \
           || echo "PR already exists"
