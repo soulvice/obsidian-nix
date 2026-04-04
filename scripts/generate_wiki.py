@@ -4,6 +4,7 @@ Generate GitHub Wiki pages for obsidian-nix.
 
 Reads plugins-data.json and themes-data.json from the repo root, fetches
 community-plugin-stats.json live, and writes markdown files to an output directory.
+Works with partially-populated data files — only packaged entries are shown.
 
 Usage:
     python3 scripts/generate_wiki.py [output_dir]
@@ -25,7 +26,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-REPO_ROOT   = Path(__file__).parent.parent
+REPO_ROOT    = Path(__file__).parent.parent
 PLUGINS_DATA = REPO_ROOT / "plugins-data.json"
 THEMES_DATA  = REPO_ROOT / "themes-data.json"
 STATS_URL = (
@@ -49,7 +50,7 @@ def fmt_downloads(n: int) -> str:
 
 
 def fmt_date(ts: int) -> str:
-    return datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%b %d, %Y")
+    return datetime.fromtimestamp(ts / 1000, tz=timezone.utc).strftime("%b %d, %Y")
 
 
 # ── Row builders ──────────────────────────────────────────────────────────────
@@ -66,9 +67,9 @@ def _desc(entry: dict) -> str:
 
 
 def plugin_row(nix_id: str, entry: dict, stats: dict) -> str:
-    s        = stats.get(nix_id, {})
-    dl       = fmt_downloads(s["downloads"]) if "downloads" in s else "—"
-    updated  = fmt_date(s["updated"]) if "updated" in s else "—"
+    s       = stats.get(nix_id, {})
+    dl      = fmt_downloads(s["downloads"]) if "downloads" in s else "—"
+    updated = fmt_date(s["updated"]) if "updated" in s else "—"
     return f"| {_name_cell(entry, nix_id)} | `{nix_id}` | {dl} | {updated} | {_desc(entry)} |"
 
 

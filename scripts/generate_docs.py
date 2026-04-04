@@ -30,7 +30,7 @@ def fmt_downloads(n: int) -> str:
 
 
 def fmt_date(ts: int) -> str:
-    return datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%b %d, %Y")
+    return datetime.fromtimestamp(ts / 1000, tz=timezone.utc).strftime("%b %d, %Y")
 
 
 def plugin_row(nix_id: str, entry: dict, stats: dict) -> str:
