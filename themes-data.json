@@ -1023,10 +1023,10 @@
   },
   "hidden-grotto": {
     "repo": "HotAndCold245/Hidden-Grotto",
-    "rev": "e267e9c036892c8fb87dccd20170d7dd63a5aaf8",
-    "hash": "sha256-h85Gn+hiP3Hkj2kH4A2L7D9WZOWeKdfefg8CiX9fbl4=",
     "name": "Hidden Grotto",
-    "description": ""
+    "description": "",
+    "rev": "6a9eea0ed101396e4cbae2c237b3363fa227ea7c",
+    "hash": "sha256-qhacRVVPtS+Gb3Ef6tteKUCDwlTr+boQ8CC3Ti+O5wU="
   },
   "higlighter": {
     "repo": "lukauskas/obsidian-highlighter-theme",
@@ -2633,10 +2633,10 @@
   },
   "transparent": {
     "repo": "Oczko24/Obsidian-transparent",
-    "rev": "c1f3761affcb1ed43214e165dcba90aace40f8cc",
-    "hash": "sha256-mmwpCmns5pClZgkppKfSPRNy7v32RcCDtPpmvfqsB/8=",
     "name": "Transparent",
-    "description": ""
+    "description": "",
+    "rev": "e1cc228ff77f01843b92f306474bcb4890cf03c7",
+    "hash": "sha256-WXnwMLrYkoLuIPRXB1ROk/39foBuLvG7m+bF6REtc1g="
   },
   "true-black": {
     "repo": "kraasch/true-black",
