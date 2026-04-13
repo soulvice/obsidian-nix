@@ -220,8 +220,8 @@
     "repo": "flowing-abyss/obsidian-base16-default-dark",
     "name": "Base16 Default Dark",
     "description": "",
-    "rev": "v3.7.1",
-    "hash": "sha256-jdt7CepkMJz90YlHRGxrFaOViDayrM2lBMU/cpS3whM="
+    "rev": "v3.7.3",
+    "hash": "sha256-ppjvKGa7J8XACgiI2D78JBdKUqzYGV6tDmnz+ulYO88="
   },
   "base2tone": {
     "repo": "deathau/Base2Tone-For-Obsidian.md",
@@ -316,10 +316,10 @@
   },
   "brainhack": {
     "repo": "Spekulucius/obsidian-brainhack",
-    "rev": "2e15ff96e97f593111d9f8840e4af597be545b71",
-    "hash": "sha256-6eBK6gsZmiD7Ysb/Nr9s31OJfz9skD3eHY3aDDhb1m4=",
     "name": "Brainhack",
-    "description": ""
+    "description": "",
+    "rev": "dc38adfd3fb6576cebfb0a46e6be0a5bd0309fe5",
+    "hash": "sha256-vp/ex1qhXOfB6thI47/UE0qWJ0Obbfas+0OXz1VUdRU="
   },
   "brutalism": {
     "repo": "abrahambahez/Brutalism",
@@ -330,10 +330,10 @@
   },
   "brutalist": {
     "repo": "DuckTapeKiller/Brutalist",
-    "rev": "v4.0.0",
-    "hash": "sha256-ijAj7Y3rvzlLOdYkzh8KHXbunY7oWGnzuKqtxuJbUfs=",
     "name": "Brutalist",
-    "description": ""
+    "description": "",
+    "rev": "v4.0.2",
+    "hash": "sha256-TAuF/Rxo/pZMm5vuWqqocxTAe1/fgnEA+5N4vA0bfpE="
   },
   "bubble-space": {
     "repo": "Emrie-Candera/Bubble-Space-Theme",
@@ -960,10 +960,10 @@
   },
   "glass-robo": {
     "repo": "lorens-osman-dev/Glass-Robo",
-    "rev": "3.2.9",
-    "hash": "sha256-x6+QLUvrdj27yqbOT+aV4n8HBAADUcQ4K6fICeDnP1k=",
     "name": "Glass Robo",
-    "description": ""
+    "description": "",
+    "rev": "4.0.1",
+    "hash": "sha256-ekIqF+2PDop/EJF/vPfdDmRFEbslIACe6SF03QyukR0="
   },
   "golden-topaz": {
     "repo": "shaggyfeng/obsidian-Golden-Topaz-theme",
@@ -1093,10 +1093,10 @@
   },
   "improved-potato": {
     "repo": "DMeurer/improved-potato",
-    "rev": "15d148232c272a33f7ec8f738e38ea39991eb8d5",
-    "hash": "sha256-eul9STUqu5yfs8Q3UNhdoAQbFHGS1QpswroubRQGtto=",
     "name": "Improved Potato",
-    "description": ""
+    "description": "",
+    "rev": "987aa01a5f2a71aa6b9cc6695ea331154dcc9b89",
+    "hash": "sha256-v5q4Lhf/j3uZQD/4qxFay1YZlU/rUjm1tGFTflOqfrM="
   },
   "ink": {
     "repo": "harmtemolder/obsidian-ink",
@@ -1114,10 +1114,10 @@
   },
   "iridium": {
     "repo": "kyffa/Iridium",
-    "rev": "1.8.13",
-    "hash": "sha256-/s05jA0adctSt++xLPWabe5RcE3DwrdbnWi7Cz0Cp/g=",
     "name": "Iridium",
-    "description": ""
+    "description": "",
+    "rev": "1.8.14",
+    "hash": "sha256-WVr3tvPu+sPSUTmt7L+8Ccpx9ehR1zF3H+Ju68ZGeUs="
   },
   "its-theme": {
     "repo": "SlRvb/Obsidian--ITS-Theme",
@@ -1520,10 +1520,10 @@
   },
   "neuborder": {
     "repo": "sq1000000/NeuBorder",
-    "rev": "2026.02.18",
-    "hash": "sha256-GgAovUQ7Ly/zUNlyY2N5MD9d8+VdH7NOsuu6C6oQw64=",
     "name": "NeuBorder",
-    "description": ""
+    "description": "",
+    "rev": "2026.04.10",
+    "hash": "sha256-RDHrLGVPsLCJ7H6h/IGRAKsT93qzI+aX0GqS1ndXcVY="
   },
   "neumorphism": {
     "repo": "LennZone/Neumorphism",
@@ -2367,10 +2367,10 @@
   },
   "simply-colorful": {
     "repo": "LorenzoPegorari/SimplyColorful",
-    "rev": "v0.5.2",
-    "hash": "sha256-E7kO7lnUP78FHEOuQgRcj9nOg5oTZF/ohjSo2YMa6gY=",
     "name": "Simply Colorful",
-    "description": ""
+    "description": "",
+    "rev": "v0.5.3",
+    "hash": "sha256-uR0u8Ekwd1JPq+yqV42VJq5mtcBPmKE/rC9G9xzUvVU="
   },
   "sodalite": {
     "repo": "tomzorz/Sodalite",
@@ -2647,10 +2647,10 @@
   },
   "typewriter": {
     "repo": "crashmoney/obsidian-typewriter",
-    "rev": "v2.2.4",
-    "hash": "sha256-oHnaNME3Qy1VFeRjpe77/51kk7NLaj8GeV2ZwtfBPyU=",
     "name": "Typewriter",
-    "description": ""
+    "description": "",
+    "rev": "v2.2.5",
+    "hash": "sha256-YBpK/utAW8RPyUNiPFxjokbDdNATHI3Hw0HwRTH4HEU="
   },
   "typomagical": {
     "repo": "hungsu/typomagical-obsidian",
