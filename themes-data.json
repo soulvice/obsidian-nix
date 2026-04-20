@@ -220,8 +220,8 @@
     "repo": "flowing-abyss/obsidian-base16-default-dark",
     "name": "Base16 Default Dark",
     "description": "",
-    "rev": "v3.7.3",
-    "hash": "sha256-ppjvKGa7J8XACgiI2D78JBdKUqzYGV6tDmnz+ulYO88="
+    "rev": "v3.7.19",
+    "hash": "sha256-L5dVA9aGobsIfNBqaMW3JRftwNLPJFomJdPpG43hhGI="
   },
   "base2tone": {
     "repo": "deathau/Base2Tone-For-Obsidian.md",
@@ -295,10 +295,10 @@
   },
   "border": {
     "repo": "Akifyss/obsidian-border",
-    "rev": "02e7581ee6b5387f9c71781a9cb73fb5450c7fca",
-    "hash": "sha256-HSroS9mIed0FTQPll/Qi5Oe6DAhbcvKFlDPCbAOOr98=",
     "name": "Border",
-    "description": ""
+    "description": "",
+    "rev": "389b3cf7f1a11ea61c7ed8dabf4a619f22803c5e",
+    "hash": "sha256-gLp9SqN9vG4aCIx1HjKaIW7nopGKgrda/hi2dgH7+Eo="
   },
   "borealis": {
     "repo": "juanchiparra/obsidian-borealis",
@@ -332,8 +332,8 @@
     "repo": "DuckTapeKiller/Brutalist",
     "name": "Brutalist",
     "description": "",
-    "rev": "v4.0.2",
-    "hash": "sha256-TAuF/Rxo/pZMm5vuWqqocxTAe1/fgnEA+5N4vA0bfpE="
+    "rev": "v4.0.3",
+    "hash": "sha256-HWuf4hiOgXOPiMiqhZY0IJfkKK5eySAmFsZhEwM2asM="
   },
   "bubble-space": {
     "repo": "Emrie-Candera/Bubble-Space-Theme",
@@ -715,10 +715,10 @@
   },
   "ebullientworks": {
     "repo": "ebullient/obsidian-theme-ebullientworks",
-    "rev": "1.1.1",
-    "hash": "sha256-8TnqfsB0JQpbuPCpE+Tc1mnQXMm25qEslI/+0k8V67A=",
     "name": "Ebullientworks",
-    "description": ""
+    "description": "",
+    "rev": "2.0.0",
+    "hash": "sha256-dpl1W+kzv9c6wYJo39JyIIb3D1EuwqXCsMjrKd9ekl0="
   },
   "eldritch": {
     "repo": "eldritch-theme/obsidian",
@@ -1268,10 +1268,10 @@
   },
   "maple": {
     "repo": "subframe7536/obsidian-theme-maple",
-    "rev": "v1.4.7",
-    "hash": "sha256-A0g1+w+9cFDn8nN7MK1EBvSa9VrGKwZjw14owkKvmJY=",
     "name": "Maple",
-    "description": ""
+    "description": "",
+    "rev": "v1.4.11",
+    "hash": "sha256-5JFS22RvWYUycizQA3ObYPp8Trd9Hh1cPUMHHqOeSuk="
   },
   "marathon": {
     "repo": "Spekulucius/obsidian-marathon",
@@ -1352,10 +1352,10 @@
   },
   "minimal-dracula": {
     "repo": "druxorey/minimal-dracula-for-obsidian",
-    "rev": "721264411941eabc73b84f78ee2d6acda118de8e",
-    "hash": "sha256-vavRHKqBRgFyAidV4aczbDSKSYWFSnTSB3k6djG6UlY=",
     "name": "Minimal Dracula",
-    "description": ""
+    "description": "",
+    "rev": "25079c7ea22a07d3b5627ea2fca93a275393d2cb",
+    "hash": "sha256-hiLdM5wE9CFv4rebXh0TwLO2JJ07fne4fyMR2FBkMQA="
   },
   "minimal-edge": {
     "repo": "hariiy-sys/Obsidian-Minimal-Edge",
@@ -1380,10 +1380,10 @@
   },
   "minimalists-paradise": {
     "repo": "bellebasso/Minimalists-Paradise",
-    "rev": "7b172617ce1ff96846593acc305419b536cbc2de",
-    "hash": "sha256-aci+vYvulTI3zujgCrPx+Qi20b8VxxIZWfI4wtHDUX4=",
     "name": "Minimalists Paradise",
-    "description": ""
+    "description": "",
+    "rev": "96560513ac66e0dd6ec93cd6ec76599dd7cb3e4e",
+    "hash": "sha256-7DemN+gu8R2sd0rJ+ztINHW5YIK6RG4PV1K4DezXMQg="
   },
   "mint-breeze": {
     "repo": "Quinta0/Mint-Breeze",
@@ -1522,8 +1522,8 @@
     "repo": "sq1000000/NeuBorder",
     "name": "NeuBorder",
     "description": "",
-    "rev": "2026.04.10",
-    "hash": "sha256-RDHrLGVPsLCJ7H6h/IGRAKsT93qzI+aX0GqS1ndXcVY="
+    "rev": "2026.04.16",
+    "hash": "sha256-Om/GcC9VDafKnfK0M+KTAmebYUvfEE1d6gvdNk3u1hk="
   },
   "neumorphism": {
     "repo": "LennZone/Neumorphism",
@@ -1835,10 +1835,10 @@
   },
   "oxygen": {
     "repo": "davidvkimball/obsidian-oxygen",
-    "rev": "0.2.8",
-    "hash": "sha256-u1dDNBt887qcVGPvvTyUucHyhjfXktz0fzGzUchTyrg=",
     "name": "Oxygen",
-    "description": ""
+    "description": "",
+    "rev": "0.2.9",
+    "hash": "sha256-cF04p/c7LDe43PGqJN/WJcEKRN2PF+CYFW4MAMaAlBE="
   },
   "pale": {
     "repo": "hariiy-sys/obsidian-Pale",
@@ -2535,10 +2535,10 @@
   },
   "terraflow": {
     "repo": "dubefab/obsidian-TerraFlow",
-    "rev": "4.5.0",
-    "hash": "sha256-PvbmwVAPK9/yIqUjl3sO/z0exa3222ONulgL1ESpm9Q=",
     "name": "TerraFlow",
-    "description": ""
+    "description": "",
+    "rev": "4.5.1",
+    "hash": "sha256-nhFEMOJookNu0JCiNQ0/mibpS+cU9SAcS3VR6RmTQS0="
   },
   "theme-that-shall-not-be-named": {
     "repo": "ChopTV/Obsidian-Theme-That-Shall-Not-Be-Named",
@@ -2682,10 +2682,10 @@
   },
   "ultra-lobster": {
     "repo": "7368697661/Ultra-Lobster",
-    "rev": "c89e85b0cbac00dc40ad2f6636ba26acfd36ded0",
-    "hash": "sha256-gqol3c3io2lfwT83kNI+MHOx7F33WXayOHOSMm/J+vI=",
     "name": "Ultra Lobster",
-    "description": ""
+    "description": "",
+    "rev": "312becd5f625055e49a4f6bbeb98d1008177ffb2",
+    "hash": "sha256-MG/eXikVOSqXW8MiaU3NLqSuUwc6zbDydWsjtGMJM/U="
   },
   "underwater": {
     "repo": "Seniblue/Underwater",
