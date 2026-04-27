@@ -1,1 +1,7 @@
-{}
+{
+  "night-owl": {
+    "repo": "AstroAir/obsidian-night-owl",
+    "error": "could not determine latest rev (no releases, tags, or commits)",
+    "since": "2026-04-27T04:43:15Z"
+  }
+}

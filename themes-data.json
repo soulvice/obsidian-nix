@@ -332,8 +332,8 @@
     "repo": "DuckTapeKiller/Brutalist",
     "name": "Brutalist",
     "description": "",
-    "rev": "v4.0.3",
-    "hash": "sha256-HWuf4hiOgXOPiMiqhZY0IJfkKK5eySAmFsZhEwM2asM="
+    "rev": "4.0.4",
+    "hash": "sha256-paLTrkqFPCcLOkDl+RzQxhc6CgS20Lbew2WUXIL8e5g="
   },
   "bubble-space": {
     "repo": "Emrie-Candera/Bubble-Space-Theme",
@@ -351,10 +351,10 @@
   },
   "camena": {
     "repo": "splendidissimemendax/Camena",
-    "rev": "46937e93f27c2a53b7b0d12d246ac7ae38086bd4",
-    "hash": "sha256-vlud5rh0QVJuHaFEfZe4qPclFwg4+TyM0ehqtH/MsA8=",
     "name": "Camena",
-    "description": ""
+    "description": "",
+    "rev": "cddfaf272513c4f40e634060116339e325c533ac",
+    "hash": "sha256-AoBh8aptxlY5Dom9IVXg9KGFF6sFlmid7iR6Ud/eqmI="
   },
   "carbon": {
     "repo": "vhbelvadi/obsidian-carbon",
@@ -946,10 +946,10 @@
   },
   "githubdhc": {
     "repo": "ScottKirvan/GitHubDHC",
-    "rev": "v2.1.0",
-    "hash": "sha256-B0iNM6Dj8TAS2HBcEVNkiQfhG83R3td5QVokCtZl26g=",
     "name": "GitHubDHC",
-    "description": ""
+    "description": "",
+    "rev": "v2.1.2",
+    "hash": "sha256-335YOQd162kBrUaGnGRWiRQ8fZztG9gXXaEm1FzRDA0="
   },
   "gitsidian": {
     "repo": "ismailgunacar/gitsidian",
@@ -1270,8 +1270,8 @@
     "repo": "subframe7536/obsidian-theme-maple",
     "name": "Maple",
     "description": "",
-    "rev": "v1.4.11",
-    "hash": "sha256-5JFS22RvWYUycizQA3ObYPp8Trd9Hh1cPUMHHqOeSuk="
+    "rev": "v1.4.14",
+    "hash": "sha256-DMYzJ6zh8jDgcIEqyzR2z3C9l+QAhhR2M7ymk4K+TZg="
   },
   "marathon": {
     "repo": "Spekulucius/obsidian-marathon",
@@ -2163,7 +2163,7 @@
     "description": ""
   },
   "rift": {
-    "repo": "NoahBoos/obsidian-rift",
+    "repo": "rifts-obsidian-laboratory/rift",
     "rev": "1.1.0",
     "hash": "sha256-aeeHJzd0NbdK+kqJVSK7/FjWVr4Sg91xxXlUQY/TbMo=",
     "name": "Rift",
@@ -2549,10 +2549,10 @@
   },
   "things": {
     "repo": "colineckert/obsidian-things",
-    "rev": "2.1.20",
-    "hash": "sha256-qdNCxsL2nnkv8tN3o0SSYwye9NBBOAPai5LT/2jo+Ao=",
     "name": "Things",
-    "description": ""
+    "description": "",
+    "rev": "2.2.0",
+    "hash": "sha256-ls+1B4ypIaZ4Db6CHWFPiA/tDs2KmCBZP432yu4PFAY="
   },
   "things-3": {
     "repo": "MrParalloid/obsidian-things",
@@ -2635,8 +2635,8 @@
     "repo": "Oczko24/Obsidian-transparent",
     "name": "Transparent",
     "description": "",
-    "rev": "e1cc228ff77f01843b92f306474bcb4890cf03c7",
-    "hash": "sha256-WXnwMLrYkoLuIPRXB1ROk/39foBuLvG7m+bF6REtc1g="
+    "rev": "d14982aed5a3e4d0dfdaeb5afaa385f666b11bdf",
+    "hash": "sha256-JKqr9EEJ3z/eixB+PzUbbyjX6anTLh53O1OMR9bN8X0="
   },
   "true-black": {
     "repo": "kraasch/true-black",
@@ -2684,8 +2684,8 @@
     "repo": "7368697661/Ultra-Lobster",
     "name": "Ultra Lobster",
     "description": "",
-    "rev": "312becd5f625055e49a4f6bbeb98d1008177ffb2",
-    "hash": "sha256-MG/eXikVOSqXW8MiaU3NLqSuUwc6zbDydWsjtGMJM/U="
+    "rev": "12ebe9c2d8411240d963f530cb57b55836891a8c",
+    "hash": "sha256-vMlCQxe/gl6l/x2yxMGwe4RyFvVfeCxgvjHQSxT2ddw="
   },
   "underwater": {
     "repo": "Seniblue/Underwater",
@@ -2870,7 +2870,7 @@
     "description": ""
   },
   "xscriptor": {
-    "repo": "xscriptordev/obsidian",
+    "repo": "xscriptor/obsidian",
     "rev": "1.0.0",
     "hash": "sha256-7HHt5NVMuxCy4yqBkIscOur1OmSh5aazMkGmQIANZ0g=",
     "name": "Xscriptor Theme",
