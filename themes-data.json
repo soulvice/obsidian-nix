@@ -332,8 +332,8 @@
     "repo": "DuckTapeKiller/Brutalist",
     "name": "Brutalist",
     "description": "",
-    "rev": "4.0.4",
-    "hash": "sha256-paLTrkqFPCcLOkDl+RzQxhc6CgS20Lbew2WUXIL8e5g="
+    "rev": "v4.0.6",
+    "hash": "sha256-1ff7Gqg4SxaakINFNikbEzS1k5mp/2GZhKUUcLURup8="
   },
   "bubble-space": {
     "repo": "Emrie-Candera/Bubble-Space-Theme",
@@ -962,8 +962,8 @@
     "repo": "lorens-osman-dev/Glass-Robo",
     "name": "Glass Robo",
     "description": "",
-    "rev": "4.0.1",
-    "hash": "sha256-ekIqF+2PDop/EJF/vPfdDmRFEbslIACe6SF03QyukR0="
+    "rev": "4.0.2",
+    "hash": "sha256-AswYLSckLUljqfZUHMOWpjurSbtzO7ePEkLk8/YwwaE="
   },
   "golden-topaz": {
     "repo": "shaggyfeng/obsidian-Golden-Topaz-theme",
@@ -1522,8 +1522,8 @@
     "repo": "sq1000000/NeuBorder",
     "name": "NeuBorder",
     "description": "",
-    "rev": "2026.04.16",
-    "hash": "sha256-Om/GcC9VDafKnfK0M+KTAmebYUvfEE1d6gvdNk3u1hk="
+    "rev": "2026.05.02",
+    "hash": "sha256-U7zB/TPCKye05KFKLMxhl54AD1XCp5ESKLT+syT6hgk="
   },
   "neumorphism": {
     "repo": "LennZone/Neumorphism",
@@ -2537,8 +2537,8 @@
     "repo": "dubefab/obsidian-TerraFlow",
     "name": "TerraFlow",
     "description": "",
-    "rev": "4.5.1",
-    "hash": "sha256-nhFEMOJookNu0JCiNQ0/mibpS+cU9SAcS3VR6RmTQS0="
+    "rev": "4.5.3",
+    "hash": "sha256-2VJspaNXLgwHE7AR//jBTdwnNeuHAzyfuF4psR8UalY="
   },
   "theme-that-shall-not-be-named": {
     "repo": "ChopTV/Obsidian-Theme-That-Shall-Not-Be-Named",
@@ -2551,8 +2551,8 @@
     "repo": "colineckert/obsidian-things",
     "name": "Things",
     "description": "",
-    "rev": "2.2.0",
-    "hash": "sha256-ls+1B4ypIaZ4Db6CHWFPiA/tDs2KmCBZP432yu4PFAY="
+    "rev": "2.2.3",
+    "hash": "sha256-2j7Xd/q3PmCSBH1rfW9/rMmqF0UMAr5rtHZ/Ii3/g30="
   },
   "things-3": {
     "repo": "MrParalloid/obsidian-things",
@@ -2635,8 +2635,8 @@
     "repo": "Oczko24/Obsidian-transparent",
     "name": "Transparent",
     "description": "",
-    "rev": "d14982aed5a3e4d0dfdaeb5afaa385f666b11bdf",
-    "hash": "sha256-JKqr9EEJ3z/eixB+PzUbbyjX6anTLh53O1OMR9bN8X0="
+    "rev": "dff36adf4fd9673face14b382c40c9bf61fdbbd4",
+    "hash": "sha256-N9e7VwAi8kx8rHJK5m8eBfqwRp+iAh8mZHWIgzDB2Bo="
   },
   "true-black": {
     "repo": "kraasch/true-black",
