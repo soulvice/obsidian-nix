@@ -273,12 +273,12 @@
   },
   "advanced-ruby": {
     "repo": "peter-yanase/obsidian-advanced-ruby",
-    "version": "2.0.0",
-    "mainJs": "sha256-IFaLL+DW2b+Fja5fJgOwdftM9CNa2DWtKRXR8IDnHNk=",
-    "manifest": "sha256-WJMZ8v54zN1BPuTnDae1b1uRVDbDNXX0Hqg15607D8U=",
-    "stylesCss": "sha256-O0HgI5XFN/xo/kHSezmpCI9W8v61XRkoGjhMwJqjL7Y=",
     "name": "Advanced Ruby",
-    "description": "Enable complex, language-independent ruby annotation rendering."
+    "description": "Enable complex, language-independent ruby annotation rendering.",
+    "version": "2.0.1",
+    "mainJs": "sha256-PU7K+BpFtrlJw/CbqBHVbMLCUgkfR3tJ+Mz74a3kyPw=",
+    "manifest": "sha256-8rXHwtTbvE8Ex++lHQWeyEuyH3l9myFA9pq6rI24mo4=",
+    "stylesCss": "sha256-O0HgI5XFN/xo/kHSezmpCI9W8v61XRkoGjhMwJqjL7Y="
   },
   "age-encrypt": {
     "repo": "Mr-1311/obsidian-age-encrypt",
@@ -385,11 +385,11 @@
   },
   "ai-image-analyzer": {
     "repo": "Swaggeroo/obsidian-ai-image-analyzer",
-    "version": "1.2.1",
-    "mainJs": "sha256-USIXvvW5tR2iycR62E3sBe64tBBWglsuvX7tPULUcKc=",
-    "manifest": "sha256-Pownac1UiNFh/fqkwSz5BK4eoBJ/uabit2E/tMwzoKA=",
     "name": "AI image analyzer",
-    "description": "Analyze images with AI to get keywords of the image."
+    "description": "Analyze images with AI to get keywords of the image.",
+    "version": "1.2.2",
+    "mainJs": "sha256-XPtMG6V2Z6+GDNhu7hMW7rRNNFpjobZe/bZeS0LzxcY=",
+    "manifest": "sha256-P2qMZs697ppFejSyQVVTZuohKbJAxdsIwPeS8FDm9iI="
   },
   "ai-image-ocr": {
     "repo": "rootiest/obsidian-ai-image-ocr",
@@ -580,9 +580,9 @@
     "repo": "adrianlyjak/obsidian-aloud-tts",
     "name": "Aloud",
     "description": "Highlight and speak text from your notes. Converts text to speech in real-time with lifelike voices.",
-    "version": "0.15.0",
-    "mainJs": "sha256-/e2QYq/smY31k5vpHz9kZzfF8Vp4u799oBPDTKMuk6w=",
-    "manifest": "sha256-Rl8xDNLk++9XG9yhvOe9KggH7SZIxpJIlRnbcyMaEb4=",
+    "version": "0.15.1",
+    "mainJs": "sha256-Kq49X7x2bItfk+DohziiMJ5REDn6goGaFy76OEeybtQ=",
+    "manifest": "sha256-K0GgA8oLQlCXquUzI/4MEgNu5FmWwT9jPIPQpcJlQbA=",
     "stylesCss": "sha256-SUB2cGkd61Gw0uWShqQakOU/pGr0Y125AthZYPUBKBE="
   },
   "alpha-bullet": {
@@ -605,12 +605,12 @@
   },
   "always-color-text": {
     "repo": "Kazi-Aidah/always-color-text",
-    "version": "1.15.0",
-    "mainJs": "sha256-YNPUDL5e4Ij7C9wXVscdyqrKqiJ35y+bMgu2K7QJkDA=",
-    "manifest": "sha256-GwH9xdI4mags+RmDr+Ci5puzq4Sea1KLqKqeIoZvu08=",
-    "stylesCss": "sha256-FoqvtTwBgKMz6PD5nm0l9FIJQjSzuAZvp2xJrR38Zb0=",
     "name": "Always Color Text",
-    "description": "Automatically Colors & Highlights Text across the Vault."
+    "description": "Automatically Colors & Highlights Text across the Vault.",
+    "version": "1.16.1",
+    "mainJs": "sha256-j6Gt34UwLcPRmNoGzx3W5O9Pjwli5fjDEYGMWnIxbd8=",
+    "manifest": "sha256-P8jSGOd8PWJ9xtPkNQL4MBwcIbCoAfJFKsWVNVpbdCY=",
+    "stylesCss": "sha256-Lj2ZJeUxbTkCXNaPRaFWC8wzgEE4MD4eJa5a0JVtVbU="
   },
   "alx-folder-note-folderv": {
     "repo": "aidenlx/alx-folder-note-folderv",
@@ -792,9 +792,9 @@
     "repo": "bandantonio/obsidian-apple-books-highlights-plugin",
     "name": "Apple Books - Import Highlights",
     "description": "Import your Apple Books highlights and notes to Obsidian.",
-    "version": "1.8.0",
-    "mainJs": "sha256-UcoumSFaU62jMS2o7nuV6amqKhCFoVExcKKwR7w2NY4=",
-    "manifest": "sha256-ZrmuaafhL6j61ADXZJGOxPJM5xjt9cd2GRTtpLr6q6o=",
+    "version": "1.8.1",
+    "mainJs": "sha256-gaq7bIyEzvDR7RuJb9/UVfUYWK+XVdbm9ZEzRfhycf4=",
+    "manifest": "sha256-qzqZW8IdCMm+WwZwN7/KaRGkdFQtD71jn6YGjc5V2iU=",
     "stylesCss": "sha256-qNneo/XgzSJZXMenK3bdjSlLIN8DRWadW/+ONwDDBAs="
   },
   "aprils-automatic-timelines": {
@@ -1251,9 +1251,9 @@
     "repo": "uppinote20/obsidian-auto-note-importer",
     "name": "Auto Note Importer",
     "description": "Automatically import notes from an external database like Airtable into your Vault.",
-    "version": "0.9.0",
-    "mainJs": "sha256-DUyZZCeAFm4LDXeWBYRfhK31qy9L3AHwks16DtZ2Vjs=",
-    "manifest": "sha256-pT7eMOZjyLyt5a7mG2EgAlN8r50wBaX1/MQHKWDs9qg=",
+    "version": "0.10.0",
+    "mainJs": "sha256-FdHshAsIt48OeYDzAIJgZRLYlf0/KzRg5VF+kex1dyU=",
+    "manifest": "sha256-zd/l8opZuupheBKRcZ+SmMCPtwvyr2cymDE6AMObq8I=",
     "stylesCss": "sha256-P16qLghzZOes/vpabddB5HFjwv+/uPmFsOMFOkFlPuk="
   },
   "auto-note-mover": {
@@ -1316,12 +1316,12 @@
   },
   "auto-tasks": {
     "repo": "jamiefdhurst/obsidian-auto-tasks",
-    "version": "0.8.0",
-    "mainJs": "sha256-6SHQmozXTawwyhWJ7YQkOJAURFH25f/kphND7BERplI=",
-    "manifest": "sha256-64Gm25ycLH62j1YoRzMw/0cZcxhGzu+FfmRuEhoyEYY=",
-    "stylesCss": "sha256-FrRbeg+XngoDbgECdh7JyKGc+ejAqsWDY55c5O1+l5U=",
     "name": "Auto Tasks",
-    "description": "Combine periodic notes with tags and tasks to automatically manage your daily, weekly and project TODO lists. Requires the Periodic Notes and Tasks plugins."
+    "description": "Combine periodic notes with tags and tasks to automatically manage your daily, weekly and project TODO lists. Requires the Periodic Notes and Tasks plugins.",
+    "version": "0.8.1",
+    "mainJs": "sha256-6SHQmozXTawwyhWJ7YQkOJAURFH25f/kphND7BERplI=",
+    "manifest": "sha256-cmYBWNPy8zP7j2OU5RbNuPvM5aY2Z/82eHc1a6G461k=",
+    "stylesCss": "sha256-FrRbeg+XngoDbgECdh7JyKGc+ejAqsWDY55c5O1+l5U="
   },
   "auto-template-trigger": {
     "repo": "numeroflip/obsidian-auto-template-trigger",
@@ -1557,12 +1557,12 @@
   },
   "banyan": {
     "repo": "ratiger/obsidian-banyan",
-    "version": "1.4.2",
-    "mainJs": "sha256-QrmaGe4TXkdGoUT+eUa/36COmF7dL+Gkzj2FVMmXd1E=",
-    "manifest": "sha256-5XI+8umFrwRAMFUfSe7mPjo6g9OTpyDkS73WLGgI1FE=",
-    "stylesCss": "sha256-9NNMZtZtp0SrLzJNy8u0gJ1CgpAXC9xtTiy03GLvf3U=",
     "name": "Banyan",
-    "description": "A card-based homepage to browse, organize, and navigate notes effortlessly with multi-tag filtering."
+    "description": "A card-based homepage to browse, organize, and navigate notes effortlessly with multi-tag filtering.",
+    "version": "1.4.3",
+    "mainJs": "sha256-moH2xSa3R5aEQEeC9crg7MxraHcw4to8HiUHa7Z+B74=",
+    "manifest": "sha256-Of45e97ZVc7VEASE1g6xJsV2t2HwPz58AxEghKcps9g=",
+    "stylesCss": "sha256-cVtAaIeLTchAjBRDdeIAcyHMjZZg01EVNZ5QpnhFchA="
   },
   "barcode-generator": {
     "repo": "noxonad/obsidian-barcode-generator",
@@ -2009,12 +2009,12 @@
   },
   "bookmarks-caller": {
     "repo": "namikaze-40p/obsidian-bookmarks-caller",
-    "version": "0.6.5",
-    "mainJs": "sha256-9fS+Wa68Tm6lWaayJdgIq2RTIrsihbpOm82rcaPY8w4=",
-    "manifest": "sha256-oS/0dZZ/c5G71wlFETJLl2bS+ptrmwdFGG58QUzsmW0=",
-    "stylesCss": "sha256-uhqO92dWQl2yQM49n4628ZH3mr9JY3Y+c+/eEz6jRLQ=",
     "name": "Bookmarks Caller",
-    "description": "Easily open bookmarks."
+    "description": "Easily open bookmarks.",
+    "version": "0.6.6",
+    "mainJs": "sha256-9fS+Wa68Tm6lWaayJdgIq2RTIrsihbpOm82rcaPY8w4=",
+    "manifest": "sha256-zwdboUjjB9+3bNQONHWcwKb1HHEWNYIV+b7K9ntN3wU=",
+    "stylesCss": "sha256-uhqO92dWQl2yQM49n4628ZH3mr9JY3Y+c+/eEz6jRLQ="
   },
   "booknav": {
     "repo": "jemberton/obsidian-booknav-plugin",
@@ -2117,10 +2117,10 @@
     "repo": "SkepticMystic/breadcrumbs",
     "name": "Breadcrumbs",
     "description": "Add structured hierarchies to your notes",
-    "version": "4.8.2",
-    "mainJs": "sha256-PCka3lZ5VawGftgL2t3++Y/e0/ajK8PSsOlrAL0qmv0=",
-    "manifest": "sha256-MdQw26Tum2l9EMrtxpQ5duTHMIyVWLiqiuX+T0Vq7W0=",
-    "stylesCss": "sha256-FMFkivqLstadXZdQD1JDPNi/+CfePAT6z/irSr31/dk="
+    "version": "4.9.0",
+    "mainJs": "sha256-qPHnAwBoRbMGXjVSrWPyU+xPiqXNJ5BMl+/uLBSeJ9c=",
+    "manifest": "sha256-I3PubglPN9muimnadfilmYTfpfquz2HGJ2qAxdRXqHA=",
+    "stylesCss": "sha256-NPEw6Wne5ZDDC7eQ2SQqusMwqOyLITURJ24spZlG2Ss="
   },
   "break-page": {
     "repo": "corentin-godefroy/Obsidian-BreakPage",
@@ -2869,12 +2869,12 @@
   },
   "chord-sheets": {
     "repo": "olvidalo/obsidian-chord-sheets",
-    "version": "1.6.6",
-    "mainJs": "sha256-vC7s9cEhcmppEEdRHAuBsNbrQW8VGGi8W48Kn4ZFLcA=",
-    "manifest": "sha256-oWFRXOqcI4YcXwfCr+pFp9kSkgPz747c+p+DDv6c0DE=",
-    "stylesCss": "sha256-1LkOzzJaNIR2u1nJJbJyHbVya5w+wL3BqfX8d94ICzw=",
     "name": "Chord Sheets",
-    "description": "Work with chord sheets (chords over lyrics) in your Vault: Chord diagrams, transpose, autoscroll and more. Works in live preview and reading mode."
+    "description": "Work with chord sheets (chords over lyrics) in your Vault: Chord diagrams, transpose, autoscroll and more. Works in live preview and reading mode.",
+    "version": "1.7.0",
+    "mainJs": "sha256-J/JtYy1LrmVBMuQ5dkDhayct9HANX6Q+lcyDFo40FAo=",
+    "manifest": "sha256-tCy3zvIm7YlCvybyKBjjRzKEPb2UjyL9eEmLrL/P7L4=",
+    "stylesCss": "sha256-1LkOzzJaNIR2u1nJJbJyHbVya5w+wL3BqfX8d94ICzw="
   },
   "christmas": {
     "repo": "Matse2005/Obsidian-Christmas",
@@ -2999,12 +2999,12 @@
   },
   "cliplet": {
     "repo": "namikaze-40p/obsidian-cliplet",
-    "version": "0.3.4",
-    "mainJs": "sha256-pKY8FTYKmlGKauAmM7W8K50zihkwEz1pEcTyxDYRpdc=",
-    "manifest": "sha256-6uVKlFum5AQ19daoOJVPPh0CTn5qBKQ3Zzic2TPQg8M=",
-    "stylesCss": "sha256-Y+JiPGn+SYkUHrCOon/pmn3L9UUAhPrCn8nDZEBUs5Y=",
     "name": "Cliplet",
-    "description": "A clipboard and snippet manager \u2014 your own, separate from the OS clipboard."
+    "description": "A clipboard and snippet manager \u2014 your own, separate from the OS clipboard.",
+    "version": "0.3.5",
+    "mainJs": "sha256-pKY8FTYKmlGKauAmM7W8K50zihkwEz1pEcTyxDYRpdc=",
+    "manifest": "sha256-ykS7X/j9YFsNnMfXY1ENh6lz1onHAXGXfZhgo9eFifU=",
+    "stylesCss": "sha256-Y+JiPGn+SYkUHrCOon/pmn3L9UUAhPrCn8nDZEBUs5Y="
   },
   "clipper-catalog": {
     "repo": "soundslikeinfo/obsidian-clipper-catalog",
@@ -3427,12 +3427,12 @@
   },
   "come-through": {
     "repo": "mntno/obsidian-come-through",
-    "version": "0.6.0",
-    "mainJs": "sha256-cAbLOYcQivFEV0dVIsJ7iyqwhBxzCh7dJBlGbu8rKaI=",
-    "manifest": "sha256-vZOJKoQYG3HJv6+dMAALrIn6NwCSUQaETv6LjPra0Hg=",
-    "stylesCss": "sha256-UDFDwLftsJ3USrkhMh8s4ikT4lOmAEYV/yzRXvQnEJc=",
     "name": "Come Through",
-    "description": "Drill flashcards using spaced repetition."
+    "description": "Drill flashcards using spaced repetition.",
+    "version": "0.6.1",
+    "mainJs": "sha256-StTnMciD668xOewlAHmd++B3/2YPYR0Ln4toG99x9bY=",
+    "manifest": "sha256-uWeUcjSO9pneWzEDREteIYYpSie4mHS0FODbsqARZRA=",
+    "stylesCss": "sha256-5poWAzM19JYI6R9xViUgepAu1AczKqO5hTBMSaT+SCc="
   },
   "command-block-list": {
     "repo": "RyotaUshio/obsidian-command-block-list",
@@ -3453,12 +3453,12 @@
   },
   "command-tracker": {
     "repo": "namikaze-40p/obsidian-command-tracker",
-    "version": "0.5.3",
-    "mainJs": "sha256-+FXFqDxzQh09AvVnPPi6vwl+Q8Td8ewImcyuE9JWYAQ=",
-    "manifest": "sha256-Sincu93yt4/LHTg/qHnnz7niT8sVbVU3hS39Vylsq6w=",
-    "stylesCss": "sha256-7EJ9HHD0gZgT+Whrw5e+fz/KgGEufysBpEdkymsovl8=",
     "name": "Command Tracker",
-    "description": "Track the number of times the command is used."
+    "description": "Track the number of times the command is used.",
+    "version": "0.5.4",
+    "mainJs": "sha256-+FXFqDxzQh09AvVnPPi6vwl+Q8Td8ewImcyuE9JWYAQ=",
+    "manifest": "sha256-wwjCt+G8b9Z35RTJ4rUYU0yWOiUPot4HJY4L4+I1roc=",
+    "stylesCss": "sha256-7EJ9HHD0gZgT+Whrw5e+fz/KgGEufysBpEdkymsovl8="
   },
   "commando-command-repeater": {
     "repo": "qaptoR/Commando",
@@ -4333,9 +4333,9 @@
     "repo": "Raven-Pensieve/obsidian-custom-icons",
     "name": "Custom Icons",
     "description": "Enhance your workspace with customizable icons for documents and folders.",
-    "version": "2.0.3",
-    "mainJs": "sha256-GgH0PX74ZfyxsHQoomneMiJarraQzRQq9xWWR7hLhqU=",
-    "manifest": "sha256-PEDUBhrsH+M/vRxWJypRZOsz1B61UsNFxs2W6TzqdhU=",
+    "version": "2.0.4",
+    "mainJs": "sha256-BoSNzVQoiOZNtgrlWTvOCJCR2mYHhfaVOQoxNiROnhg=",
+    "manifest": "sha256-wenyqPiggJ1rtY+thwhGNDtlGzeVHCVI6hpPU8OR1Qg=",
     "stylesCss": "sha256-oxwCp/DK5Ua8oF04wBM2r3RyeQPJJoYqjOwL1UdajG0="
   },
   "custom-slides": {
@@ -4473,9 +4473,9 @@
     "repo": "ChenziqiAdam/Daily-News-Briefing",
     "name": "Daily News Briefing",
     "description": "Get AI-powered daily news summaries in your vault. Features customizable topics, smart filtering, and automated scheduling.",
-    "version": "1.11.8",
-    "mainJs": "sha256-57Hh+azDQSk0g/P/89A2SQmug5T9fQd0BEb6mHHFoMQ=",
-    "manifest": "sha256-swpCs6mYRXHmJbymlaunpFBg/gUZVaUyQnp9HIDK+Cc=",
+    "version": "1.11.10",
+    "mainJs": "sha256-QlylQgXU31bzZTNPoxbg1asTccyufYn9jEjXooV12Rg=",
+    "manifest": "sha256-qJusB7lgN7+ZRf5ev6WqeV/73lZShKJvs4zAKdagkf8=",
     "stylesCss": "sha256-LBNqPrg//yT7vSX+1h0Zm7hhMRtSwfw/1t4LWQeVg1k="
   },
   "daily-note-automater": {
@@ -4725,12 +4725,12 @@
   },
   "date-inserter": {
     "repo": "namikaze-40p/obsidian-date-inserter",
-    "version": "0.6.8",
-    "mainJs": "sha256-6o94D4LQvl5+uhYfDEF0ESzwrZXoszv242pBhB5uIGs=",
-    "manifest": "sha256-TZTHpQsmQA8nAYj1ptz7cO8nRspZgOBJyGUWV4evPlU=",
-    "stylesCss": "sha256-Aj5XpWvv8arcBvzFLJI6TFBgiXw8tPkdFfvAQBmvJ/4=",
     "name": "Date Inserter",
-    "description": "Insert a date at the cursor position using a calendar."
+    "description": "Insert a date at the cursor position using a calendar.",
+    "version": "0.6.9",
+    "mainJs": "sha256-6o94D4LQvl5+uhYfDEF0ESzwrZXoszv242pBhB5uIGs=",
+    "manifest": "sha256-tTxQNPuh2XeW1lTs9j2fIJy+BU2bODfT7I12v5JHHg4=",
+    "stylesCss": "sha256-Aj5XpWvv8arcBvzFLJI6TFBgiXw8tPkdFfvAQBmvJ/4="
   },
   "date-range-expander": {
     "repo": "mildeveloper/obsidian-date-range-expander",
@@ -4788,10 +4788,10 @@
     "repo": "dscherdi/decks",
     "name": "Decks",
     "description": "Spaced repetition flashcards with FSRS algorithm. Supports cloze deletions and image occlusion using native markdown.",
-    "version": "1.7.6",
-    "mainJs": "sha256-7Og1stWV24UOXwx/gf0H0n69hvKWUpEmqJcfMGeJOEo=",
-    "manifest": "sha256-Ca4/HbgEeNZ+nUXWGcWyzdjTkxtQPDksJ34DpUpBN+M=",
-    "stylesCss": "sha256-gjNwpUaevILFXa7OXGlsUSPOLjQokMy++G4kVSHQjXA="
+    "version": "1.8.1",
+    "mainJs": "sha256-AjU7fOM+PA9th9TovCZStDp3Oche+uhVJx4mLbvzHfc=",
+    "manifest": "sha256-jOSwwC0cxdiZthHgFCtpTxN4zFE61esOgZVSxPVhLZM=",
+    "stylesCss": "sha256-3u9cjUZ9PxsUmrdfXuPcU5nECi/vqYLFypmR8rGtHss="
   },
   "deepl": {
     "repo": "friebetill/obsidian-deepl",
@@ -5103,10 +5103,10 @@
     "repo": "lorens-osman-dev/double-row-toolbar",
     "name": "Double row toolbar",
     "description": "Adds a second row to the toolbar on mobile devices, allowing for more quick access buttons.",
-    "version": "1.0.2",
-    "mainJs": "sha256-sHYiofy016AoaJIhsWlkb4z1xNAjEOFMXQpMlpqhLLA=",
-    "manifest": "sha256-FurCCUKPCArNCQ1iv8Ok3S/Umn1X4PALDCWgblz5htA=",
-    "stylesCss": "sha256-w9CnldsGNY/vNk/RdlAVdARPKmzbyNnrGMbmY/9HepY="
+    "version": "1.0.3",
+    "mainJs": "sha256-wC+espy7hWFQ+npl5kDlWmjuxcrHbtCMIAgbpRRLlDw=",
+    "manifest": "sha256-9l59BBk2jpLEfiJxfknNi2fogPTW3kETYSHQs6sWn6s=",
+    "stylesCss": "sha256-9D8vdapElwdNzKj3rEw+kEuy3fSuGICcEPwX6KamJDk="
   },
   "double-switch": {
     "repo": "carlrobert/double-switch",
@@ -5296,9 +5296,9 @@
     "repo": "Moyf/easy-copy",
     "name": "Easy Copy",
     "description": "Easily copy the text within inline code, bold text (and many other formats), or quickly generate an elegant link to a heading.",
-    "version": "1.5.3",
-    "mainJs": "sha256-IgPJvFsM6IQVAQ5IKZNqls3tWrEUeBxaS90uufp/8Ps=",
-    "manifest": "sha256-5kXz4J7+zfcTP6/vNgKKDET/DApgpIIaZ1Dh/ELvLAU=",
+    "version": "1.6.0",
+    "mainJs": "sha256-8WHcDtmR08G3x/i9G4g1qliP7/KjY7ujqlooIfB80a0=",
+    "manifest": "sha256-4jsM002eF6l1GS44qVDHVYtUyCmxcdgDcPFweyf/kuc=",
     "stylesCss": "sha256-f103T7rEnyqpmRcuAEVvllLbx3yaINEDoTgljneJfRA="
   },
   "easy-fonts": {
@@ -5367,10 +5367,10 @@
     "repo": "Enthalpiex/Eccirian-Encrypt",
     "name": "Eccirian Encrypt",
     "description": "Next-generation file encryption solution based on modern cryptography.",
-    "version": "1.0.13",
-    "mainJs": "sha256-prBnEEZ8HYOfkkipJaj3EQ4ykffiKOloaWgYjOYRuvo=",
-    "manifest": "sha256-MEdfEv5fC4/zR+5nKPapaiu1e8QiCfsxdbio8E8n69w=",
-    "stylesCss": "sha256-yuggaA4HqH0EsBEcZfMpMm5Cp1LObiPNcQtOQLP7yog="
+    "version": "1.1.0",
+    "mainJs": "sha256-UmnwMpf2HZrCMiusuRY3OZu6Y3EQAuIhvlZD4ARvDmY=",
+    "manifest": "sha256-WCKhAwruOqkZnYIT3waaEwx4gma165Vj8c7vzmLkTZs=",
+    "stylesCss": "sha256-J8TGuGzlj3boklO7XVQ2c8U3DaGbkXbl2Ycs3pJ+W6s="
   },
   "edge-tts": {
     "repo": "travisvn/obsidian-edge-tts",
@@ -5614,12 +5614,12 @@
   },
   "enhanced-canvas": {
     "repo": "RobertttBS/obsidian-enhanced-canvas",
-    "version": "1.0.22",
-    "mainJs": "sha256-pAAiDI0Wl0pypjl+FWZ5aP3qcKPouvcG1AdpH2QHUuM=",
-    "manifest": "sha256-mDKbbSguBUpJgg6fMng1oJcZfJTId/Pq3z4/qef20jE=",
-    "stylesCss": "sha256-N4SwkPjgWZ8aVpCoSG075qU44AWeVP345DVJSFWl1lM=",
     "name": "Enhanced Canvas",
-    "description": "When creating links on Canvas, automatically add properties and Markdown links to notes. A command automatically creates canvas links based on Markdown links, and it adjusts all links to use the shortest path."
+    "description": "When creating links on Canvas, automatically add properties and Markdown links to notes. A command automatically creates canvas links based on Markdown links, and it adjusts all links to use the shortest path.",
+    "version": "1.0.24",
+    "mainJs": "sha256-JsD+2FIzx+iBAKZzUJYBnE8x//prruRMCSSiixSIheI=",
+    "manifest": "sha256-gMYUzgQoWqk/9n0+qcp6GELhIUWwK1K8gDt0RLVkmt4=",
+    "stylesCss": "sha256-N4SwkPjgWZ8aVpCoSG075qU44AWeVP345DVJSFWl1lM="
   },
   "enhanced-copy": {
     "repo": "Mara-Li/obsidian-enhanced-copy",
@@ -6264,9 +6264,9 @@
     "repo": "Nexus-JPF/note-companion",
     "name": "Note Companion (prev. File Organizer 2000)",
     "description": "AI-powered note organization and chat. Requires subscription or self-hosting with your own API keys.",
-    "version": "3.6.19",
-    "mainJs": "sha256-z5RcRzyKkP5WFDrgAL3rdWsLvCHtgbBXASFArEyyhiM=",
-    "manifest": "sha256-9qBT/lu6k9dF4FaJNaKnSKlgNQT5AvPRAKwk+lZjwgQ=",
+    "version": "3.6.20",
+    "mainJs": "sha256-ht7WotqP+M5hJj6uFgvEPq5TsDIHTh+MWWXP3bHAFsA=",
+    "manifest": "sha256-dRbHas6o8Ji1La2OHQr0Y51+1bcvuBo9pru2HsAUKHM=",
     "stylesCss": "sha256-XwG+l9rLezyM7rmRTHG9eaiJTqZ2PK7QhrK/CIUxaac="
   },
   "fill-in-the-blank": {
@@ -6348,12 +6348,12 @@
   },
   "fix-require-modules": {
     "repo": "mnaoumov/obsidian-codescript-toolkit",
-    "version": "11.7.2",
-    "mainJs": "sha256-yEhskKRnFgP4fBWhi9HRhsg8vawcnl3VCHxyQlEJbyY=",
-    "manifest": "sha256-On9oYN8YBIsNsQcscckw8Tagy3TyOiVSdKgHJCWMZIY=",
-    "stylesCss": "sha256-bSOMRpN2rVJJvNXNw4eNXr1ymT+4wCbjzZMAdNtFoE8=",
     "name": "CodeScript Toolkit",
-    "description": "Allows to do a lot of things with JavaScript/TypeScript scripts from inside the app."
+    "description": "Allows to do a lot of things with JavaScript/TypeScript scripts from inside the app.",
+    "version": "13.0.1",
+    "mainJs": "sha256-MEOp/xcQynLKHVAklZw04JzN5wmRJ5JMkRQfpJpWw1w=",
+    "manifest": "sha256-g1LOaXSuIlnotazr44N4A8anmE1BQ5GyHHnxsstu+HU=",
+    "stylesCss": "sha256-bSOMRpN2rVJJvNXNw4eNXr1ymT+4wCbjzZMAdNtFoE8="
   },
   "flashcard-gen": {
     "repo": "chloedia/Obsidian_Quiz_Generator",
@@ -6703,18 +6703,18 @@
     "repo": "bgrundmann/obsidian-fountain",
     "name": "Fountain",
     "description": "Write screenplays in Fountain format with live screenwriting formatting, index cards, PDF export, rehearsal mode, scene numbers, snippets, and margin marks.",
-    "version": "0.29.0",
-    "mainJs": "sha256-tJCpDj79AHGGml3tw0QZy7t76buIbwIubDegkcS8ZFQ=",
-    "manifest": "sha256-uhWhT0nFTfGzacKoKhQIqbWENIbB7Jmnk7djm/ewI34=",
-    "stylesCss": "sha256-tLFvA0Bgofc1Z2XqMY/LJXnIvHDVTzsBOag2nym3iw4="
+    "version": "0.34.1",
+    "mainJs": "sha256-JHMD16qGudEonqjo1O/e9l5GORYjlpWN8b1MxylI7RA=",
+    "manifest": "sha256-7djXF9JWi76JDgxP8KzvwagH1hySOCUjk4sWozcDt7k=",
+    "stylesCss": "sha256-48svcgRCGDvCyGpfl9JoaNECi8lvrtUzoT6UBfxv7Ug="
   },
   "fountain-editor": {
     "repo": "chuangcaleb/obsidian-fountain-editor",
     "name": "Fountain Editor",
     "description": "Fountain (screenplay) syntax highlighting in the editor",
-    "version": "1.4.4",
-    "mainJs": "sha256-N8tWxQ0rLUHguqDBi/GL4221MQK8vOdqXgy+ke4z4Ik=",
-    "manifest": "sha256-elV13gG7vxLErPj5pF/Ya4jadPpJhIFWSaJ46hSMxmY=",
+    "version": "1.4.6",
+    "mainJs": "sha256-maiISb/LdL7PYfrAaDFS1vWuAlv/xMN9xbBKBZg2liQ=",
+    "manifest": "sha256-3ijfXcn4RWopoV04EfW2p5akhETuiTB9HSNYE7WYZzU=",
     "stylesCss": "sha256-7CsMXwyznh/Rl6UyT47UBmWui7Jw5v1Y9ia79YOVtNA="
   },
   "freeform": {
@@ -6904,10 +6904,10 @@
     "repo": "allenhutchison/obsidian-gemini",
     "name": "Gemini Scribe",
     "description": "Interact with Gemini and use your notes as context.",
-    "version": "4.7.0",
-    "mainJs": "sha256-q5jp6FWPagEh7DgB7dmqGFuYc/lHe0bSiETyzJHYC60=",
-    "manifest": "sha256-NXUev0flilXbyAj5i5f/d2Oke9zVfO61wYUXtM7feJE=",
-    "stylesCss": "sha256-DXUNIPXlD5ixvh8vo3di+Fy1+1R32ray9CJtvo/xbMg="
+    "version": "4.8.0",
+    "mainJs": "sha256-UdoqEKXJA3ZFbbZcDazfwRvj567bTxeqS0orLrgIB80=",
+    "manifest": "sha256-OCCEJHOFVuyeNMmFRHscpGeQYQaVV/peZF5oQw9MaWM=",
+    "stylesCss": "sha256-9eqrtZbx4bhroNbGVatzIURb5zpuD1Hr12ODTBf0M0Y="
   },
   "gemmy": {
     "repo": "ericaxu/gemmy",
@@ -7042,12 +7042,12 @@
   },
   "git-file-explorer": {
     "repo": "MateusMolina/obsidian-git-file-explorer",
-    "version": "0.7.1",
-    "mainJs": "sha256-g9jkrd5W5C58wBZGgXViZ9PH7dpawwEH3HlpxlFc3cM=",
-    "manifest": "sha256-l2pqepF7dlesKaRGwr2e1IXeKJ12GGYLWsBZbQYia+s=",
-    "stylesCss": "sha256-MCl0cl7Za8Wc2VBkM1konSrPG6SpA3aaNYWy4Uo8GvI=",
     "name": "Git File Explorer",
-    "description": "Add relevant git information to detected git repostitories in the file explorer."
+    "description": "Add relevant git information to detected git repostitories in the file explorer.",
+    "version": "0.8.0",
+    "mainJs": "sha256-diPM8Ktg0ygpR1S3K5HGE8JJ2RiMxGkIZ9D3tl+XJlQ=",
+    "manifest": "sha256-QSjI2144WphPlePCGT5CLHiy/lbhMLibInIe1QBr/KE=",
+    "stylesCss": "sha256-QUWAxqxkbM31BH9oNyYubmpwhyFC10he93O7WkWj9dk="
   },
   "git-integration": {
     "repo": "noradroid/obsidian-git-integration",
@@ -7387,9 +7387,9 @@
     "repo": "tomelliot/obsidian-granola-sync",
     "name": "Granola Sync",
     "description": "Sync Granola notes to your vault.",
-    "version": "2.0.19",
-    "mainJs": "sha256-+DaG6027uWYSecyCvjZXOoUBBMPOMJfQMk9rZf60WjI=",
-    "manifest": "sha256-qJh9HWEryvlEXzbSeK6POlG0o76Bqw8Ewg2E//Ip5uA="
+    "version": "2.0.21",
+    "mainJs": "sha256-6hRjL1CrOjCvMKJWaYz6xcb8W3wG8BAjs6GTuTggF1w=",
+    "manifest": "sha256-I0uHYtmX4aygmz3kllErPFOOb5iBHm4IBJEVNwEavk0="
   },
   "graph-analysis": {
     "repo": "SkepticMystic/graph-analysis",
@@ -8039,11 +8039,11 @@
   },
   "hoarder-sync": {
     "repo": "jhofker/obsidian-hoarder",
-    "name": "Hoarder Sync",
-    "description": "Sync your Hoarder bookmarks",
-    "version": "2.0.0",
+    "name": "Karakeep (Hoarder) Sync",
+    "description": "Sync your Karakeep (Hoarder) bookmarks",
+    "version": "2.0.1",
     "mainJs": "sha256-1zDnbcgKuClM3T03+AOjU6tLBtfPP/mm37Nr8NNCbpA=",
-    "manifest": "sha256-Wqy+WiWmB2oJGVPixUHgtEBkD3BV+DsvWLUX5OKXH3E=",
+    "manifest": "sha256-DHCyAoUXpBt8f22LYyfVlKu35jUu5V+SDBgQUY7jD4E=",
     "stylesCss": "sha256-RHNMV2/lqVo9udNn8y9Cu3iCu/N/AI4GvT4crWGABIY="
   },
   "home-tab": {
@@ -8484,12 +8484,12 @@
   },
   "image-upload-toolkit": {
     "repo": "addozhang/obsidian-image-upload-toolkit",
-    "version": "1.6.0",
-    "mainJs": "sha256-n2XGc64G1gfwX96uqBCFQotsHJfVIAilwtxRi5Eox1w=",
-    "manifest": "sha256-LnMrfyt3KAibUTDmtvLbMzwA7XpX2Bo//xiHFGjORk4=",
-    "stylesCss": "sha256-8jbGBO341uolYD7WbG7dKvP3+rfzE1D3GOXEDftbJzM=",
     "name": "Image Upload Toolkit",
-    "description": "Upload local images to remote store (Imgur, Gyazo, AliYun OSS, Imagekit, Amazon S3, TencentCloud COS, Qiniu Kodo, GitHub, Cloudflare R2 and Backblaze B2)."
+    "description": "Upload local images to remote store (Imgur, Gyazo, AliYun OSS, Imagekit, Amazon S3, TencentCloud COS, Qiniu Kodo, GitHub, Cloudflare R2 and Backblaze B2).",
+    "version": "1.6.1",
+    "mainJs": "sha256-aPb7Jv8gKSgsG4LfmS6qloQOfVnWVVOPcZb8d5/71Xg=",
+    "manifest": "sha256-cpQlHP4+bBpWXS4yjRJHQbKRDhkWZn+VawQYMl/BPO8=",
+    "stylesCss": "sha256-8jbGBO341uolYD7WbG7dKvP3+rfzE1D3GOXEDftbJzM="
   },
   "image-uploader-for-note": {
     "repo": "yy4382/obsidian-image-upload",
@@ -8555,11 +8555,11 @@
   },
   "img2html": {
     "repo": "0x1DA9430/img2html",
-    "version": "1.0.2",
-    "mainJs": "sha256-5yftJ1iT0OynqnVw00r0mGKMLDOGDLdQQMqZlFqR90I=",
-    "manifest": "sha256-/ajkgfF3bxXpz8EbZ6qSRrmpjct5wDF4iBtiseRSvIE=",
     "name": "Image to HTML",
-    "description": "Paste images as HTML format instead of wikilink or markdown format"
+    "description": "Paste images as HTML format instead of wikilink or markdown format",
+    "version": "1.1.0",
+    "mainJs": "sha256-4RxvassC/GgZ9J8qL1wLv1jQCRUFPbp7MB+DcZzrbIo=",
+    "manifest": "sha256-5ALiMlp7nbRFcI+CS6CPGr46AnyyCEockbZ2itEWH7Y="
   },
   "imgbb-uploader": {
     "repo": "jordanhandy/obsidian-imgbb-uploader",
@@ -8726,12 +8726,12 @@
   },
   "infranodus-graph-view": {
     "repo": "noduslabs/infranodus-obsidian-plugin",
-    "version": "0.9.4",
-    "mainJs": "sha256-e/rbLGACSFpk94hR8y0qnJnwi544F2fSSDVP4P7aerI=",
-    "manifest": "sha256-ky7wOKCkf2mtgdUJsBLksDInNqVs6D5gmTvPjSKClmU=",
-    "stylesCss": "sha256-DSFy0LtIBMyvf8M07LKj7z7FLcqA8GlsWk7IvYDKH8s=",
     "name": "InfraNodus AI Graph View",
-    "description": "Interactive 3D graph view: text analysis, topic modeling, gap detection, and AI."
+    "description": "Interactive 3D graph view: text analysis, topic modeling, gap detection, and AI.",
+    "version": "0.9.5",
+    "mainJs": "sha256-v7SBkacTlaX4Rf/I3ishM5XzKoqDVInpyNMq61Emjl8=",
+    "manifest": "sha256-Vg594+OST51IxMLRnKOAiHgV9cs5szBHSO+qM+Wgt6A=",
+    "stylesCss": "sha256-DSFy0LtIBMyvf8M07LKj7z7FLcqA8GlsWk7IvYDKH8s="
   },
   "initiative-tracker": {
     "repo": "Obsidian-TTRPG-Community/initiative-tracker",
@@ -8755,10 +8755,10 @@
     "repo": "uglyboy-tl/obsidian-ink-player",
     "name": "Ink Player",
     "description": "Playing interactive fiction powered by Inkle's ink engine",
-    "version": "2.1.0",
-    "mainJs": "sha256-+ojGtLhT4Ytccxf+ivuLcobVirdHxBDw1FM8kgbkZao=",
-    "manifest": "sha256-t8gsW0PYPKMl0oVSaKhusCvFt05n87h1AxtI/g+foLo=",
-    "stylesCss": "sha256-OCMZlMtgCtNBr/d+fWsqQvp2AAcWISfdL00npxEUD2U="
+    "version": "2.3.0",
+    "mainJs": "sha256-mjv+pddTbm8y7Afo/KHUJY80rXDSYhXRreZn+qH4Igc=",
+    "manifest": "sha256-PuUUFWSM6a+NKk+aq+M/7R1RAw8ZFX99Vz8VYCrcElQ=",
+    "stylesCss": "sha256-P7EkKJhyP7CsKZIcklgTwR2oOUXLVRkSQu2v5Saeonc="
   },
   "inkporter": {
     "repo": "AmadeussSystem/Inkporter",
@@ -9097,10 +9097,10 @@
     "repo": "Alamion/obsidian-jira-sync",
     "name": "Jira Issue Manager",
     "description": "Get Jira issues, create and update them. Issue status and worklog management.",
-    "version": "1.5.1",
-    "mainJs": "sha256-qb1dsxSIEavbFi5mJCKkwVc7Y5JLmcKfF8+51zrNYPs=",
-    "manifest": "sha256-8F4YV3FZ0k/6/eR/fIy/C/ggiZ+FvtpO6ZnHa6C9lz0=",
-    "stylesCss": "sha256-+5fYKNzlAUivGsn5fitq9bYRr9hhlx5I2hgJbZVVe1w="
+    "version": "1.6.0",
+    "mainJs": "sha256-isNKfOzeGqXZ1Fv+avZsF0UK8E8e8yhOcbJfTT3HCsA=",
+    "manifest": "sha256-2rIx2PlLLWHHOZKzOnq/o3x4CU5H2M2rdHUa1/9KPYY=",
+    "stylesCss": "sha256-qDp6GT2SuPCtydWQSwLFkL2SUJPIAZCSc3HDc7WCZmA="
   },
   "jisage-japanese-indentation": {
     "repo": "Telehakke/jisage-japanese-indentation",
@@ -9113,12 +9113,12 @@
   },
   "journal-folder": {
     "repo": "chfourie/obsidian-journal-folder",
-    "version": "1.3.0",
-    "mainJs": "sha256-PCB8bm+HOGtHmIiQAl5LAsDws1PBcoDAsmtCwgf6yak=",
-    "manifest": "sha256-xiZ1dnL8iJQSyIQzgCPxbbtv21SgMlYfL7bpq/QKLhM=",
-    "stylesCss": "sha256-8wiJy/dU9YunTdLtCFdRSw9p/P7Vm9bFUbic4L591y0=",
     "name": "Journal Folder",
-    "description": "Utilities for folder-based journaling"
+    "description": "Utilities for folder-based journaling",
+    "version": "2.1.0",
+    "mainJs": "sha256-J3C2DNlKe8aoZS1GDlQSymC79fPtyqjTHFO0GNlJxOY=",
+    "manifest": "sha256-IcNq4ojJZBttwezT2bd+00EawxhAeSmAtlIdyecfnL8=",
+    "stylesCss": "sha256-10CjV92c5pUsAz+7CMr27I3jYGgneUDjVZ/w1eJlV84="
   },
   "journal-review": {
     "repo": "Kageetai/obsidian-plugin-journal-review",
@@ -9201,12 +9201,12 @@
   },
   "jura-links": {
     "repo": "justanotherjurastudent/Jura-Links",
-    "version": "1.5.1",
-    "mainJs": "sha256-TucRKYBoJx4t82Dsb3xJgkyY+wtc2WxFd9JXtDhrCPk=",
-    "manifest": "sha256-B/raCP6padDg1UiyhfuD4ycjV0/7QGmIahi/89xRDF8=",
-    "stylesCss": "sha256-eJcw5AH0JJNjLm+PcA1/xhFqb04z+f/Ea413ztwMhpo=",
     "name": "Jura Links",
-    "description": "Verlinke deine notierten Gesetzesnormen, Aktenzeichen und Zeitschriften-Fundstellen mit Gesetzesanbietern."
+    "description": "Verlinke deine notierten Gesetzesnormen, Aktenzeichen und Zeitschriften-Fundstellen mit Gesetzesanbietern.",
+    "version": "1.5.2",
+    "mainJs": "sha256-BgQQ1BsOBCGRqqOCohpDu0kNhy/EwO6cIP9WlNbYihY=",
+    "manifest": "sha256-utMq0RyolDr8gueyoRbtlCORYr1+HvZKR/W6P2jzJ2I=",
+    "stylesCss": "sha256-eJcw5AH0JJNjLm+PcA1/xhFqb04z+f/Ea413ztwMhpo="
   },
   "just-share-please": {
     "repo": "Ellpeck/ObsidianJustSharePlease",
@@ -9239,9 +9239,9 @@
     "repo": "xiwcx/obsidian-bases-kanban",
     "name": "Kanban Bases View",
     "description": "A kanban-style drag-and-drop custom view for Bases.",
-    "version": "0.8.2",
-    "mainJs": "sha256-DgRbVzQgU0OrtEIoP+yO6OtVrmpSbQ3unwSV48hth6I=",
-    "manifest": "sha256-OGlTRKh8xNXenzZm5qHvncXkWmffd9R/Sk99WtVNo8o=",
+    "version": "0.8.3",
+    "mainJs": "sha256-8Y3XKGSSvZMU037UbfJX+y3JupO6rfOVJV+o1Bp35Kg=",
+    "manifest": "sha256-E3MxHHy8HoUOLbIgCtZ2P+sDAm3A3PA/JEDQHJxPl9Y=",
     "stylesCss": "sha256-xEumWjjis1/X4PGpWpvIhNdxV7W2pFWMXkHUVqczGN8="
   },
   "kanban-status-updater": {
@@ -9583,12 +9583,12 @@
   },
   "latex-panel-helper": {
     "repo": "myluster/Obsidian-LaTeX-Helper",
-    "version": "1.0.0",
-    "mainJs": "sha256-vm5pEN6AmZ7S41cvU0I0HTT6OMG1SL8cDOi9DMODpio=",
-    "manifest": "sha256-d1qS2Dh44h4/i8dqG5wA5QdE2ll0POENcBjBTeRJfac=",
-    "stylesCss": "sha256-dEwF0BAAAgDiAHG6TKcNMt0sx40XA9m8GJ1gpUmnXeI=",
     "name": "LaTeX Panel Helper",
-    "description": "Provides a convenient panel with categorized LaTeX symbols, real-time search, and a pop-out window to enhance your mathematical note-taking efficiency!"
+    "description": "Provides a convenient panel with categorized LaTeX symbols, real-time search, and a pop-out window to enhance your mathematical note-taking efficiency!",
+    "version": "1.1.0",
+    "mainJs": "sha256-Nt/+kHCP//FnB6uGBcXqhACx6/sw33Deb5JTrHLlk9Q=",
+    "manifest": "sha256-85o3V6ocfo8ozsqi4T5PX8oa7scZqXG9CsNOMEm2jBc=",
+    "stylesCss": "sha256-dEwF0BAAAgDiAHG6TKcNMt0sx40XA9m8GJ1gpUmnXeI="
   },
   "latex-render": {
     "repo": "jvsteiner/obsidian-latex-render",
@@ -9735,10 +9735,10 @@
     "repo": "mProjectsCode/obsidian-lemons-search-plugin",
     "name": "Lemons Search",
     "description": "A blazingly fast fuzzy finder with file preview.",
-    "version": "0.5.3",
-    "mainJs": "sha256-HTJmVBM+O2prOaFG3Sz5NSW4rqLOFL7/Ie4g9DS7Rro=",
-    "manifest": "sha256-8abr/Mz6vkoZ8R2qQxX3az0ACeTAFLXfZYQOz8Y7xCI=",
-    "stylesCss": "sha256-75ZF695d6iZMwTkMDQjoI8p+KiGv/W97NvpuCfmPbNk="
+    "version": "0.5.5",
+    "mainJs": "sha256-cTYcN6FasS3w7hILc56ce8A/d7dW62DrE3a1yIwq/90=",
+    "manifest": "sha256-j8g1g1idldPP+BwjmXYGfGeOJNWjarfb1g0iIXUWX1Y=",
+    "stylesCss": "sha256-bLPg9rT+OrF8xfO+bbhfVkyGdfojZpAMrsRRDXAgsb0="
   },
   "letterboxd-rss-sync": {
     "repo": "Fleker/letterboxd-for-obsidian",
@@ -10872,10 +10872,10 @@
     "repo": "mdfriday/obsidian-friday-plugin",
     "name": "Friday",
     "description": "Write anywhere. Publish everywhere. Sync your notes, publish instantly, turn Markdown into websites.",
-    "version": "26.4.1",
-    "mainJs": "sha256-MATRii8gsI9//UJu7ihoj5J9F2vmZuhf/7ZOpA/+Vk4=",
-    "manifest": "sha256-IQnIJKZH5S/zROb8sIa45d8c7LuGEqMQL4krz5laOB4=",
-    "stylesCss": "sha256-GMckBNQyFrjePzv86l1O3+fCcBasGUjOsV/SVgNDSSw="
+    "version": "26.5.2",
+    "mainJs": "sha256-/nqmzYwoPEw2JwSv/CsnhG/tKVCfZjd8t+D9M/noQSs=",
+    "manifest": "sha256-xFp4IVQdMkHasZd1RDbJlAiG5wIsGxzdgUKcyGnvTvE=",
+    "stylesCss": "sha256-5d0MAfi3wOGEpV5O+LnI8YDScSl9nIK3C1tiauiPQuo="
   },
   "mdx": {
     "repo": "yulei-chen/obsidian-mdx",
@@ -10905,12 +10905,12 @@
   },
   "media-extended": {
     "repo": "aidenlx/media-extended",
-    "version": "4.1.5",
-    "mainJs": "sha256-hnW+2RSOUiBvVMTr/46BkwjLgihOwh1teaFwwJo5ZAg=",
-    "manifest": "sha256-BAhoPLfRMn6BQu242i74B4V/Bgg6Yy8NZu6PMXb+9FE=",
-    "stylesCss": "sha256-wmelgNFBQNksZx+XbGGhT/r9QOwyYfimUQHRuz6p7i4=",
     "name": "Media Extended",
-    "description": "Media(Video/Audio) Playback Enhancement for Obsidian.md"
+    "description": "Media(Video/Audio) Playback Enhancement for Obsidian.md",
+    "version": "4.2.3",
+    "mainJs": "sha256-k9yl2cFcNReSR9vaPNF+CyEtVTKBWgiavBr9ueCaEPM=",
+    "manifest": "sha256-ett6o97fY5v84iNShpTFfFQHpBXqM6wum4UM/b76THg=",
+    "stylesCss": "sha256-NHm5BDUthOKwSMTfuItg7/hjgtY1ywOtcz84oEcSUsU="
   },
   "media-notes": {
     "repo": "jemstelos/obsidian-media-notes",
@@ -11222,12 +11222,12 @@
   },
   "mindmap": {
     "repo": "OneCalmCloud/obsidian-mindmap",
-    "version": "0.3.4",
-    "mainJs": "sha256-531lulngpuvtN884SRSD7vpoGNz/SGsJtJUpE9BROIw=",
-    "manifest": "sha256-mA31iA93L9592fNFE0cqip7fN+OMw65GQ6DP30rhyyY=",
-    "stylesCss": "sha256-cTJuj832HU5R9KdvSvL2gqgFLc4Pgz1qho3zqt+5auc=",
     "name": "Mindmap",
-    "description": "Create notes with Mindmaps."
+    "description": "Create notes with Mindmaps.",
+    "version": "1.0.1",
+    "mainJs": "sha256-3J85Kefm/TYnEhCEsp2N+gPv4NziDTSsPDPOD4fiieU=",
+    "manifest": "sha256-U9EJVO1uOmdWk0ggwZaDEuZUuSwQj2tZSKW76uYkeJU=",
+    "stylesCss": "sha256-nFZ85lCjbYWeSH6HXbBCFNY+BJSNeF/grY2AHwjkSNc="
   },
   "mini-rag": {
     "repo": "jjwheatley/mini-rag",
@@ -11389,9 +11389,9 @@
     "repo": "likemuuxi/obsidian-modal-opener",
     "name": "Modal Opener",
     "description": "Open files and links in modal windows, or create and edit compatible files in modal windows.",
-    "version": "1.3.0",
-    "mainJs": "sha256-n66rIu7Z5lerAW7vKl22T4JViVTtNmvGwMsofy1bkd8=",
-    "manifest": "sha256-uxov745rICKlKscH0spSe5OpDFqOI5Nz0zR9FvHuYPs=",
+    "version": "1.3.1",
+    "mainJs": "sha256-NhCb5u5BedkDgnXSt21yYHen+m5U6SbPl34EBv1aRU0=",
+    "manifest": "sha256-Frapsfn9QzXWSP6bTxzZi2tKkTyDSL9hoE/6NPZLE0w=",
     "stylesCss": "sha256-oEoZNEj+fkXFVZn/qSKbE190ANnlVQZn9lJ82DlGJYw="
   },
   "modalforms": {
@@ -11959,10 +11959,10 @@
   "nexus-ai-chat-importer": {
     "repo": "Superkikim/nexus-ai-chat-importer",
     "name": "Nexus AI Chat Importer",
-    "description": "Import AI conversations from ChatGPT, Claude, Le Chat, and Perplexity exports into Obsidian.",
-    "version": "1.6.2",
-    "mainJs": "sha256-rmL3a4hzqGupVa+QjZP1phhZTedHemoKYHNtHRAbkes=",
-    "manifest": "sha256-s/2hYEIB1Ka+VjnitpXuuSIvNOCV3eENxx/tc2B+VyM=",
+    "description": "Import and organize AI chat exports from ChatGPT, Claude, Mistral Le Chat, Perplexity, and more in your local vault, so you stay in control of your data.",
+    "version": "1.6.3",
+    "mainJs": "sha256-DXbG5wpFJLT5Cm5sNL1EeS6rqblt88R06NLRly5hn6A=",
+    "manifest": "sha256-KAbs0vZ3T6R9wT4Tp8mCu1DFVt3FmcFuwuk7OHR/00U=",
     "stylesCss": "sha256-iW0K7bknQ+2K3QZEpxj0YSK2SFA14lmTp4vaxkuu7mA="
   },
   "nifty-links": {
@@ -12104,9 +12104,9 @@
     "repo": "zigholding/obsidian-notechain-plugin",
     "name": "Note Chain",
     "description": "File sorting and hierarchical indentation display in the File Explorer. MCP Server, easyapi, and more.",
-    "version": "1.3.7",
-    "mainJs": "sha256-t0rAoF/13UM0E+PoarvPB+/8wY47hVOyuDC4w8GvbDI=",
-    "manifest": "sha256-FyWRqgD23d6ptDqcxwQ/vlUlKfswduUjZgYDZA6/+v0=",
+    "version": "1.3.9",
+    "mainJs": "sha256-GiHQOzxhJJoFzrTwFhKv5YSIhL3wilbjIjc3bWdz23Y=",
+    "manifest": "sha256-/gonO5leHlkSE1YZd1YwgMl4rnBXkCvM4rr9O70bRGI=",
     "stylesCss": "sha256-WIOclbmG5ggHKYi+H7f9tu9ZklCUeh7GGlZw8qBN/Co="
   },
   "note-codes": {
@@ -12306,9 +12306,9 @@
     "repo": "sunbooshi/note-to-mp",
     "name": "NoteToMP",
     "description": "Send notes to WeChat MP drafts, or copy notes to WeChat MP editor, perfect preservation of note styles, support code highlighting, line numbers in code, and support local image uploads.",
-    "version": "2.1.1",
-    "mainJs": "sha256-s1fzqo5lGUnlcuIGEI8U526c+0B5eMDawGMqLp/DI2E=",
-    "manifest": "sha256-wN8ILNk7AHpOqli2QLWDZjBk/lrDppD7CLxlAgt6ZcM=",
+    "version": "2.2.0",
+    "mainJs": "sha256-/iNaeQMFlbZcXK/FMEMwn5KGuJ3Pw4Tbgj7NnoIE8mU=",
+    "manifest": "sha256-V5MKq4lrqzWfzNg3VkRcPo+jFLm/17WDQrp71jJTC2c=",
     "stylesCss": "sha256-5OSj9XscwqFe2pmjbRIcMaGgAiojyYiJ64UuvCs2TA0="
   },
   "note-to-red": {
@@ -12342,19 +12342,19 @@
     "repo": "johansan/notebook-navigator",
     "name": "Notebook Navigator",
     "description": "Replace the default file explorer with a clean two-pane interface featuring folder tree, tag browsing, file previews, keyboard navigation, drag-and-drop, pinned notes, and customizable display options.",
-    "version": "2.6.3",
-    "mainJs": "sha256-77pWtxw/f57eWg/Khx/Ns+40ntWRGEmCIEl4CjawmJo=",
-    "manifest": "sha256-XSz7Gu05ePdkfuyrA3MW84Qgp9sedF1sUBLQOe2/vCs=",
-    "stylesCss": "sha256-z9NSjIQSbsaU5hFdCN3W5dV8W0fDYMnRXE3c2hOtp70="
+    "version": "2.6.4",
+    "mainJs": "sha256-IZGqetkpxW1+eftL+K5WLgC2+mkSkx3pS1WJe2ZUXjw=",
+    "manifest": "sha256-UwGWihJe2J5L4WYracvD8wo4T7O8Q28IbLiKosOF0f4=",
+    "stylesCss": "sha256-bYV5ALg7qkv/OQ/QZdlgleXVUVK5gMonph/JM31GadU="
   },
   "notemd": {
     "repo": "Jacobinwwey/obsidian-NotEMD",
     "name": "Notemd",
     "description": "Enhances notes using LLMs: 1) Processes text to add [[wiki-links]] and create concept notes. 2) Performs web research (Tavily/DuckDuckGo) and summarizes topics. 3) Generates content from note titles. 4) Translates notes/selections. 5) build powerful knowledge graphs Supports multiple LLM providers and customizable output.",
-    "version": "1.8.4",
-    "mainJs": "sha256-08u8Qsyt4LjqOpuyxmNLn8etqToIxL/KqFZnrB037Pk=",
-    "manifest": "sha256-1UnwSN7t8ZmXpSEzJgsMXta6YJW6NH9rCJ6hQnsck24=",
-    "stylesCss": "sha256-Lqr72r/8lL5oaxhcy0I+M74CF9XieZhFH4Op1Bp4qO0="
+    "version": "1.8.6",
+    "mainJs": "sha256-+em2neJLsPWN9dm/rz/bzK3Y8KtoJZRysrD1gfFz6JM=",
+    "manifest": "sha256-G82Krff2ivOjmAoopI3myNKJWcW4ThJx6mmZza8kQlI=",
+    "stylesCss": "sha256-+sgY/xKfn4PcJoz99uihJTRn7QAnyBmESs3QHxV4Tck="
   },
   "notepix": {
     "repo": "AyushParkara/NotePix",
@@ -12413,9 +12413,9 @@
     "repo": "CinquinAndy/notes-to-strapi-export-article-ai",
     "name": "Strapi Exporter AI",
     "description": "Effortlessly export your notes to Strapi CMS with AI-powered handling and SEO optimization.",
-    "version": "3.0.278",
-    "mainJs": "sha256-szERWTVV922cylxEUotdLzrgk0sO8sZ66CuwmBzwdrg=",
-    "manifest": "sha256-Ca9XaZGt4YM1usNXoHRPvtUXnRyuYU31iaaI0UBb944="
+    "version": "3.0.287",
+    "mainJs": "sha256-XW03F4UgYPWaDsW7vz/NYZBBq8ofrFBLjAvUO+RasIU=",
+    "manifest": "sha256-hHXzNtTl4OxJa9X3PjNSPhRqLaIY54H1/Fcb3V5LGSI="
   },
   "notes2tweets": {
     "repo": "Tej-Sharma/notes2tweets-obsidian",
@@ -12471,11 +12471,11 @@
   "nova": {
     "repo": "shawnduggan/nova",
     "name": "Nova",
-    "description": "Your AI writing partner that edits exactly where you want - select text and transform, or chat at cursor position.",
-    "version": "1.5.5",
-    "mainJs": "sha256-OnFxnJr34xstzLpF12bxNL7FiAGJ0UYBe0jgg0HSdzk=",
-    "manifest": "sha256-/AU1FkYz6qq6R9lU2mAcRITkq/Oz63t5H5CBBx37bd4=",
-    "stylesCss": "sha256-VZBqJDiuJPrYduYektIYULo29HHumYeaEw9r4I6yGnQ="
+    "description": "AI writing editor, native to Obsidian. Sharpen your prose, refine selected text, write at the cursor, and review local clarity checks.",
+    "version": "1.6.0",
+    "mainJs": "sha256-ZFKMrUh2HjknxjZQVJ0nkd90CwUTvY0y372pZLKjhAc=",
+    "manifest": "sha256-Lask2n9wg7ENkgrwvtZGSGZeZKL+b/J7mraoVBW9dW0=",
+    "stylesCss": "sha256-2pyC1jzWXj8liUt70BSfCKMmAS2w1iplYdAZQNDs+v8="
   },
   "novel-word-count": {
     "repo": "isaaclyman/novel-word-count-obsidian",
@@ -12526,10 +12526,10 @@
     "repo": "nutstore/obsidian-nutstore-sync",
     "name": "Nutstore Sync",
     "description": "Sync your vault with Nutstore/\u575a\u679c\u4e91 using WebDAV protocol.",
-    "version": "1.2.1",
-    "mainJs": "sha256-l3AhDGcDTylaeMrrgbXdYE3aBGnOEtXrm8fb/imb3bU=",
-    "manifest": "sha256-XsS/53v6oX58jCBv/5XWy1X4AeKCZVr/52WGpU6kIZ4=",
-    "stylesCss": "sha256-5zJjHHpaGYfrhwlNRlvEiDUIJNwd8hYwBXvFpTquwC4="
+    "version": "1.2.2",
+    "mainJs": "sha256-OQ5xJL37U8kYESa034dfwV2X1DMgLngTzElsVwstp2w=",
+    "manifest": "sha256-JQg3fNmWrZEjDMclYUte781A12S1MPu5g3p49Bv9D34=",
+    "stylesCss": "sha256-S8+n1BvUhZV5up3avKEBcgvonXqcAjxzSk7TUnp/Xt4="
   },
   "nyanbar": {
     "repo": "xhyabunny/nyanbar",
@@ -12592,6 +12592,15 @@
     "manifest": "sha256-C4WLKgIDadBFke2xPCqXSP4g5cWYAml6nuziPG7BV10=",
     "name": "Obligator",
     "description": "A fully featured replacement for the built-in daily notes plugin. Obligator functions like a virtual bullet journal by copying over unchecked to-do items to your new daily note, along with adding any scheduled items you've set up"
+  },
+  "oblogger": {
+    "repo": "loftTech/obsidian-oblogger",
+    "name": "oblogger",
+    "description": "tagger explorer and frontmatter logger",
+    "version": "1.0.0",
+    "mainJs": "sha256-FrgLDkgzhxsQA6NKFgLTX/tqIrjbQUIyZgBbaHN90eg=",
+    "manifest": "sha256-HA5j9QtvFUfulrQ5NFQA0gcKRnlm/DVLZq4uVAUeURo=",
+    "stylesCss": "sha256-FF49tP9U4iXE7PkVmuY7oMVNRzjXDK91nIaxLDpI4fw="
   },
   "obs-text-wrapper": {
     "repo": "smx0/obs-text-wrapper",
@@ -12944,12 +12953,12 @@
   },
   "obsidian-bible-reference": {
     "repo": "tim-hub/obsidian-bible-reference",
-    "version": "26.03.28",
-    "mainJs": "sha256-97lJJCRGlaS8+D2qVcUPZyaMF+nmwW+z0DjXkX/ffkY=",
-    "manifest": "sha256-MgylQSJqbo6aJWBRSxzvYYoFB9tdLzTvrmgdVTybzzo=",
-    "stylesCss": "sha256-oqSoJCREVrzMtKF7w3vN+wxaBB9J6MTeh59VwwaGZfM=",
     "name": "Bible Reference",
-    "description": "Taking Bible Study note in Obsidian.md application easily. Automatically suggesting Bible Verses as references. "
+    "description": "Taking Bible Study note in Obsidian.md application easily. Automatically suggesting Bible Verses as references. ",
+    "version": "26.05.08",
+    "mainJs": "sha256-6U4taymQf8tSVBga/JKMMedbk83AEXvdt4xtj55qeew=",
+    "manifest": "sha256-LEZw9VmTKvrxkmi9pTUnXh0Gy2Kke1tAtMjsj+ft9z4=",
+    "stylesCss": "sha256-oqSoJCREVrzMtKF7w3vN+wxaBB9J6MTeh59VwwaGZfM="
   },
   "obsidian-binary-file-manager-plugin": {
     "repo": "qawatake/obsidian-binary-file-manager-plugin",
@@ -13526,12 +13535,12 @@
   },
   "obsidian-dynbedded": {
     "repo": "MMoMM-org/obsidian-dynbedded",
-    "version": "1.2.1",
-    "mainJs": "sha256-MZ6zfZXiFBM31f+1RJthId2IeqEZDny/0vvwHdiLgsU=",
-    "manifest": "sha256-K15kp/JsfiPTSZ2JXKm3Fbb3uHHZ5V6eDBBPTd4sexw=",
-    "stylesCss": "sha256-WtLFNtVX2+k0GVDfrabMVD7KHkoAc48t1KH8pyS9G/Y=",
     "name": "Dynbedded",
-    "description": "Dynamic Embeds for Obsidian.md"
+    "description": "Dynamic Embeds for Obsidian.md",
+    "version": "1.2.3",
+    "mainJs": "sha256-Mozzu3XRnTbwa/YFESPbfyNpTGMw9WoeGUGRopFat8g=",
+    "manifest": "sha256-3YM7ppPeo1MrghwxY9pUt6TTAZDsBzdEH+X5Usuyexo=",
+    "stylesCss": "sha256-asfVwqB4Z0sTYlgWlsdaDAsrcNwKiwT2NjXeMddo9hA="
   },
   "obsidian-echarts": {
     "repo": "cumany/obsidian-echarts",
@@ -14208,9 +14217,9 @@
     "repo": "obsidianmd/obsidian-importer",
     "name": "Importer",
     "description": "Import data from Notion, Evernote, Apple Notes, Microsoft OneNote, Google Keep, Bear, Roam, Textbundle, CSV, and HTML files.",
-    "version": "1.8.5",
-    "mainJs": "sha256-2UtsOn61Jw6EbX+LFTKh4h8LR8NscB8d3lJcAvMAsCA=",
-    "manifest": "sha256-/frfDPtQj7J410XSsHIqJcbgLoIDkn5DsoWW6Rq+Zss=",
+    "version": "1.8.6",
+    "mainJs": "sha256-xXjijQFcvzEybqaMKb3EbuenoF+TIZZg5qGbdd+T594=",
+    "manifest": "sha256-8u7b/xC59c7hJfAXx/DLYgxrNcKiombVsB8MwNFnyW8=",
     "stylesCss": "sha256-ARkzdIh0b+cFL3+YQbkt9xUPTi9ky8joJEP6iBKjL+A="
   },
   "obsidian-incremental-writing": {
@@ -14536,9 +14545,9 @@
     "repo": "coddingtonbear/obsidian-local-rest-api",
     "name": "Local REST API",
     "description": "Get, change or otherwise interact with your notes in Obsidian via a REST API.",
-    "version": "3.6.1",
-    "mainJs": "sha256-7z5zqg3VsEXz9GnVnPelpq7XCScNhvh9bISgQFZhsr4=",
-    "manifest": "sha256-f8SUGFKSR6M8mF7oidWjWPEuztG9L+PLCNmruB2TiJ0=",
+    "version": "3.6.2",
+    "mainJs": "sha256-NMK/q8jPHlTQ3ntWdXnQZv2JRrL/rTsPcVjV3ZZB0mM=",
+    "manifest": "sha256-zRWZwcgpD4olub9QGAWBcwfnPNto+bPrS58deg5H8DY=",
     "stylesCss": "sha256-nBHUcyA4Spr5fKZ+eDhPm/4bRlENYR3j58hQdCXSDfs="
   },
   "obsidian-lock-screen-plugin": {
@@ -14649,10 +14658,10 @@
     "repo": "Quorafind/Obsidian-Thino",
     "name": "Thino",
     "description": "Capturing ideas and save them into daily notes. (Closed source)",
-    "version": "3.0.10",
-    "mainJs": "sha256-MXu8GSnfwqqGafZ6EZdVzYWy29r48c/KAG9UtgiLF9c=",
-    "manifest": "sha256-JermdM276xZ7mc4RzAd2UmRy0C81b6ymCNVDkhQyKQw=",
-    "stylesCss": "sha256-N8cCSEO/AhUZETYIqtFtE1/kptAVUwRCda3SmvhIJ20="
+    "version": "3.0.12",
+    "mainJs": "sha256-/tmUWQ/hyUYlutAYahxO0UgmwUyHldEGoQpNzaUMWf4=",
+    "manifest": "sha256-H9ouSBidnYdtUGsZqB6UEylLOJyFKnRTuopmxu8dULI=",
+    "stylesCss": "sha256-xfgZ018WcKIWD5z3gMTtxc2QTEpDP5wCkmpZNPtuZBk="
   },
   "obsidian-meta-bind-plugin": {
     "repo": "mProjectsCode/obsidian-meta-bind-plugin",
@@ -15712,12 +15721,12 @@
   },
   "obsidian-tagfolder": {
     "repo": "vrtmrz/obsidian-tagfolder",
-    "version": "0.18.13",
-    "mainJs": "sha256-DZoB2193U22QYdTmSr80/DMsKV/A0Ny9z62Na97isUU=",
-    "manifest": "sha256-Pyy2ZOqEsgM3MqXTLGUI7QQKAQtC+EVj4v92AQ/d61U=",
-    "stylesCss": "sha256-Z0cQd+TiK51PHWINh4N10qngvt760gLJGw4KGupQk/Y=",
     "name": "TagFolder",
-    "description": "Show tags as folder"
+    "description": "Show tags as folder",
+    "version": "0.18.14",
+    "mainJs": "sha256-pQ+sgK5miyn1+wySu9hFrw9FSm0m8TU31827dm8FCR8=",
+    "manifest": "sha256-lTDFDgP7zjUVLe7gL1fZgovobfPFjuRtPKno1NKX4OY=",
+    "stylesCss": "sha256-Z0cQd+TiK51PHWINh4N10qngvt760gLJGw4KGupQk/Y="
   },
   "obsidian-task-archiver": {
     "repo": "ivan-lednev/obsidian-task-archiver",
@@ -15757,12 +15766,12 @@
   },
   "obsidian-tasks-plugin": {
     "repo": "obsidian-tasks-group/obsidian-tasks",
-    "version": "7.23.1",
-    "mainJs": "sha256-fI3xbq/iMX+mHW3aJHtOi8RQ8F3pp88hXpVaAxiPiE8=",
-    "manifest": "sha256-fLzETXzW22Wkmw2UIw+JvDhC/PioOFqO5ia5jY/UzYQ=",
-    "stylesCss": "sha256-tKlV/OX3z5UzSOVqlOmuyu43FxvZgzeaq79AyPWLLq4=",
     "name": "Tasks",
-    "description": "Track tasks across your vault. Supports due dates, recurring tasks, done dates, sub-set of checklist items, and filtering."
+    "description": "Track tasks across your vault. Supports due dates, recurring tasks, done dates, sub-set of checklist items, and filtering.",
+    "version": "8.0.0",
+    "mainJs": "sha256-ekfMkVdtKniTL5JQc6hojPywa8H9+hlWUEP4q5l5q1Y=",
+    "manifest": "sha256-FQzsEV39g/L5XE7dUV33JU4RAsEWAyvQmY3JDWcThzc=",
+    "stylesCss": "sha256-YoZeAfuvhBhjXA7qzCfU9zUskPB+gbG+OWrNGh9+q7w="
   },
   "obsidian-telegraph-publish": {
     "repo": "reorx/obsidian-telegraph-publish",
@@ -16212,9 +16221,9 @@
     "repo": "zhaohongxuan/obsidian-weread-plugin",
     "name": "Weread",
     "description": "This is obsidian plugin for Tencent weread.",
-    "version": "1.4.0",
-    "mainJs": "sha256-NWShgxb4FimgvdtFOytRVUscjsVXK9ZYge+bjTZRacY=",
-    "manifest": "sha256-xD2dJou39oHWfjsHA16b6bjLQuRWnaFbGqA3Zr+bYbA="
+    "version": "1.5.2",
+    "mainJs": "sha256-m9+j/4WeHJmzH3MUL9LxtsuY7+/56usodwTNbjoAU8U=",
+    "manifest": "sha256-5Pfcs5zWLw5MKPLEAhXF0bBMcVW7SHTr/lBvL7BcWhE="
   },
   "obsidian-wikipedia": {
     "repo": "jmilldotdev/obsidian-wikipedia",
@@ -16434,12 +16443,12 @@
   },
   "omnisearch": {
     "repo": "scambier/obsidian-omnisearch",
-    "version": "1.28.2",
-    "mainJs": "sha256-eH6A1hp/SCrkpplAyONPly+esmTFxp3YPFDd3pRYqVg=",
-    "manifest": "sha256-n3Qe1IsQF+/HPmf8fNET6RDLNdrz5rmW6LoCFcVUba4=",
-    "stylesCss": "sha256-twt4bFGomeN2+5NpVPZVkIcJ/jy3RtmPG6H1FxhSris=",
     "name": "Omnisearch",
-    "description": "A search engine that just works"
+    "description": "A search engine that just works",
+    "version": "1.29.0",
+    "mainJs": "sha256-p267UfTMuQ/hxGHuv4YqOOUChd4JJ+zq5MUXZC1uEzE=",
+    "manifest": "sha256-5IjhilK5ddK0mCHNjqAUEDE0fKPRBs6YfTfx1pcbOuw=",
+    "stylesCss": "sha256-gY5rNh5CarOoaKRSSiDfWmQWv2FIdrYe3jQND3jJ68g="
   },
   "on-this-day": {
     "repo": "jose-elias-alvarez/obsidian-on-this-day",
@@ -16857,10 +16866,10 @@
     "repo": "ErrorTzy/obsidian-pandoc-extended-markdown",
     "name": "Pandoc Extended Markdown",
     "description": "Render Pandoc extended markdown syntax: fancy lists, definition lists, example lists with cross-references, superscripts, and subscripts.",
-    "version": "1.6.1",
-    "mainJs": "sha256-uL64LySKOrmUtWbQdxC9kNBSevwxbZ8fxCCZvcNwgjw=",
-    "manifest": "sha256-ETtiGcine7Opje8wxdsC5amxhfYNyMEdry6K8DLdIxI=",
-    "stylesCss": "sha256-sFXzWOXzTTfwmzqrOXdAW/qMHBsEnNHZBQ1eEEt1loE="
+    "version": "1.7.6",
+    "mainJs": "sha256-TQUsU7QUDtXA8UpCt3WYI/Fq0iTdMXwIiylXm73smio=",
+    "manifest": "sha256-ngFLFB9bLWvC7/EZs7EIonVbmxLAKzXCi9EaYP7fmyc=",
+    "stylesCss": "sha256-sD+b06sF47eWmmfT54iEX8U73O3HJytGeFTlX4x4kwU="
   },
   "pane-relief": {
     "repo": "pjeby/pane-relief",
@@ -17114,10 +17123,10 @@
     "repo": "peerdraft/obsidian-plugin",
     "name": "Peerdraft",
     "description": "Real-time, instant collaboration on Obsidian documents or folders. Whether for quick note-taking or building a team knowledge base, Peerdaft syncs with your collaborators' Obsidian vaults and also offers a Web Editor.",
-    "version": "2.16.1",
-    "mainJs": "sha256-UZcCPrH3RQJvxS+t8YgqTtOmleMf9idaebZcLnrgIAc=",
-    "manifest": "sha256-G7JMkaN4FZf7kCtD+c4MOB8FKkV6U1TA9VDBFOCSqIo=",
-    "stylesCss": "sha256-K1RvGZvDoqmWec6EgxLZe5I4ZSkdNeWBLE3aYspye1E="
+    "version": "2.20.0",
+    "mainJs": "sha256-XycAvjlQ+8x8VMf5N3QxcFMCt0eSCCbeouZT/66wcoY=",
+    "manifest": "sha256-MxVvQ9ZcWA+Uoc9wewS7QLcNgajMZVF74RWRy4ImMfU=",
+    "stylesCss": "sha256-iiKHgh0KvsRa8SmplSvkrQSdV5MvEz8xxAY7XEyJvQ4="
   },
   "performosu": {
     "repo": "ruikurenaii/performium",
@@ -17150,9 +17159,9 @@
     "repo": "quanru/obsidian-lifeos",
     "name": "LifeOS",
     "description": "Life management system(Assist in practicing the PARA method with periodic notes and usememos).",
-    "version": "1.25.0",
-    "mainJs": "sha256-5L+VWW0qyPpg9XbjrV1rmBMwxEGnot2yxFqGcGtnEwA=",
-    "manifest": "sha256-cNoN25d9VtJC9lGX74Xt09F5Ot7WhxzADAR70DXR1rs=",
+    "version": "1.25.1",
+    "mainJs": "sha256-uCnFN8l8ETEGQUJic5e4nXTiNPlx3DdGmnRwxv09Png=",
+    "manifest": "sha256-zQ5xfXMoEawdoybpVdHY2CStbsaVB3YuFAkrQUJ/7rc=",
     "stylesCss": "sha256-vg03eYjyUyRqIPn/dEfxoRQnnb8t77+xmJDXF2r+gqo="
   },
   "periodic-table": {
@@ -17211,10 +17220,10 @@
     "repo": "edonyzpc/personal-assistant",
     "name": "Personal Assistant",
     "description": "AI-powered workflows to streamline the automated management of records, callouts, frontmatter, graph views, themes, and plugins in Obsidian.",
-    "version": "1.6.4",
-    "mainJs": "sha256-AscVYNe2eO+sSNI3SkIW1oh0fXyOTXVbM+sJzJk6Qjk=",
-    "manifest": "sha256-2ykmwizDbKNbojWxYPLnewGGnKCt/GWk16gxT/PyzWA=",
-    "stylesCss": "sha256-XmkNB15FvyYO7MnAgKkewgFBWT7/gXDSrUFwtmTcSS0="
+    "version": "1.7.0",
+    "mainJs": "sha256-zTyVXEAugc8MRlDk4EdZ5xr8dqK/MCYW+Z5UVya9vWg=",
+    "manifest": "sha256-8NSqmq5oimZR6vCMFzLIPw9aykBbIbIfo0NNn35ikYM=",
+    "stylesCss": "sha256-nicG/dtFQJQjxY+06FxBbA0Wqf3QGsMB/R2qGMIqEXM="
   },
   "personal-development-plan": {
     "repo": "artemkorsakov/personal-development-plan",
@@ -17340,11 +17349,11 @@
   },
   "pinned-notes": {
     "repo": "vasilcoin002/pinned-notes-plugin-obsidian",
-    "version": "2.0.4",
-    "mainJs": "sha256-vJH5R+A3l2IZr5cl+JwnfErroqq2DFHzqjacSkcxp2g=",
-    "manifest": "sha256-sDA8eXFVFNwkHz8wTVSgTLDf7oZ9sAiGe/yoCBKabW8=",
     "name": "Pinned Notes",
-    "description": "Pin frequently-used notes on Ribbon actions"
+    "description": "Pin frequently-used notes on Ribbon actions",
+    "version": "2.0.5",
+    "mainJs": "sha256-dqPbDVEk6vBT8czMXk7xjG3goJ/IZAsfwRr6Rf26g5E=",
+    "manifest": "sha256-094R6A85x4V73hcd6PTN34sTjnivqbL175z40Vok/Vo="
   },
   "pintora": {
     "repo": "amiaslee/obsidian-pintora",
@@ -17765,12 +17774,12 @@
   },
   "pseudocode-in-obs": {
     "repo": "ytliu74/obsidian-pseudocode",
-    "version": "1.6.4",
-    "mainJs": "sha256-67+K9NUI173lhMmnmfFjSgy2/ryclLF8NShpInH8p3c=",
-    "manifest": "sha256-qiGOLVhhkby7HrSdm/TkMUqGPC8XhxDfU6DeMAXd6xc=",
-    "stylesCss": "sha256-Tenlqh/P3+QNI+s7eiDkaYenYEEvOJCms2rPEKkx314=",
     "name": "Pseudocode",
-    "description": "This is an obsidian plugin that helps to render a LaTeX-style pseudocode inside a code block."
+    "description": "This is an obsidian plugin that helps to render a LaTeX-style pseudocode inside a code block.",
+    "version": "1.6.5",
+    "mainJs": "sha256-jMUiaFLbjzorpi9hiCyUPHb2uq870oaS1Z4Z/Z34xpY=",
+    "manifest": "sha256-AhkWzKj6uC+IRB1a7keuPbsP2kpC7RQdFp2joA32RrU=",
+    "stylesCss": "sha256-Tenlqh/P3+QNI+s7eiDkaYenYEEvOJCms2rPEKkx314="
   },
   "publish-note-to-mowen": {
     "repo": "zhuSilence/obsidian-mowen-plugin",
@@ -18147,18 +18156,18 @@
     "repo": "EricRhysTaylor/Radial-Timeline",
     "name": "Radial timeline",
     "description": "Radial Timeline maps your manuscript across four modes \u2014 Progress, Narrative, Chronologue, and Gossamer \u2014 plus the Inquiry View for higher-level story analysis. Visualize scenes, subplots, structure, chronology, and story shape in one connected workspace.",
-    "version": "6.0.4",
-    "mainJs": "sha256-24r/Hl3/2gRl2h0N8u8pJ5K0uO48IaEyA7Q5x67LRAM=",
-    "manifest": "sha256-TCcHg1NCdQGFKURpPqWIyIugYgr2LEZOc4kVutx0SYQ=",
-    "stylesCss": "sha256-HrJQjhbQdMoWQQ1A920CRIpBTocF3OJTVbb0oRyoRQY="
+    "version": "6.0.5",
+    "mainJs": "sha256-4r238cdXdOHaN5asXH5BuDrT7jWzDPxwj/gV9J6fJBw=",
+    "manifest": "sha256-norHpX4Hy8P3jaFUte9vWOxxFoYLjRNgFqWClbopfNo=",
+    "stylesCss": "sha256-FoG1xzzC7wo6jrUxSE1dcVGySkQBkoNVpJGbDIDlYj8="
   },
   "rainbow-colored-sidebar": {
     "repo": "Kovah/obsidian-rainbow-colored-sidebar",
     "name": "Rainbow-Colored Sidebar",
     "description": "Automatically color your sidebar like a rainbow. No configuration needed. 18 themes included.",
-    "version": "1.4.0",
-    "mainJs": "sha256-HK5Eo5hJYrgpKmXkpPECzhVO0cC1ryvTFBSdBGG+bRE=",
-    "manifest": "sha256-ubuhMtYRVystUDD0Hj7cwx0Doc95VeHhPOZus3isO28=",
+    "version": "1.5.0",
+    "mainJs": "sha256-yZsK+aIovRijJdfl5nZtExYGG3kQx8gjAQuVpLoi7HA=",
+    "manifest": "sha256-WssaR5g3Qmb/HVEECbWTKjTK293gHXbKb5G0999N3iE=",
     "stylesCss": "sha256-R0VR3awqXjfFy2OXi0qRiLlbcYxq8L9nVOoFQtAA1/g="
   },
   "rainbow-folders-fixer": {
@@ -18317,12 +18326,12 @@
   },
   "reason": {
     "repo": "jshph/obsidian-enzyme",
-    "name": "Enzyme",
-    "description": "Surfaces connections across your vault via Enzyme, rendered as a clickable digest of older thinking to revisit.",
-    "version": "0.4.0",
-    "mainJs": "sha256-lkdj8rNqxPr4RK62OwK7eMoM9bv7nEJqWjhP1zGFUnI=",
-    "manifest": "sha256-sDb3vR7BGQRRWu8C7unnLYgWWAKfu5NnXzjUgdUKSkk=",
-    "stylesCss": "sha256-YGtTVX70yIhAyCxMIicWBe7VpDu9o3ijvK7d37gNSDo="
+    "name": "Digest",
+    "description": "Token-efficient writing and thinking agent for your vault",
+    "version": "0.4.3",
+    "mainJs": "sha256-gu/jVfrcZlo7ehSQ+pHwJBhLzPFmgS6+KPkP3Y9IAD8=",
+    "manifest": "sha256-fK1FzCmbRdTULk2sGQ3YDeMxnp0Mr9SXuEhg+hQj0wQ=",
+    "stylesCss": "sha256-DqH08pk7/S9Pz9G0gYDSWgUYcdd0N9DMHoUiGsM++zQ="
   },
   "recent-files-obsidian": {
     "repo": "tgrosinger/recent-files-obsidian",
@@ -18794,10 +18803,10 @@
     "repo": "amatya-aditya/obsidian-rss-dashboard",
     "name": "RSS Dashboard",
     "description": "A dashboard for organizing and consuming RSS feeds, YouTube channels, and podcasts with smart tagging, media playback, and seamless content flow.",
-    "version": "2.2.0-beta.11",
-    "mainJs": "sha256-J0qElMNRNERcgA4KJ7g73mY0E027/1YsMup9hcQ/TiQ=",
-    "manifest": "sha256-fLnXtQuXesyPD3M7QqM+ZeeJX0XLlUtIHeIH2ofPD/o=",
-    "stylesCss": "sha256-uS1S36sXZYRqhEcvEiU6IZgHKSQUv9fAjVDM+dbCILM="
+    "version": "2.2.0",
+    "mainJs": "sha256-GXk9zc387M/UFPiNVx+tYR9vntI7V0zC/8fXcijh1Ps=",
+    "manifest": "sha256-qJUNyrLOTvx8U/on07BOycEgZjag6fseYtOhRdjhbvo=",
+    "stylesCss": "sha256-bUD2rAlWCCWIZ+dVP6M5t64fV1K1GUeYcjEoU5XhPcA="
   },
   "rsync": {
     "repo": "GanapathyRaman/rsync-plugin",
@@ -18975,12 +18984,12 @@
   },
   "script-launcher": {
     "repo": "AlessandroRuggiero/script-launcher",
-    "version": "1.6.0",
-    "mainJs": "sha256-Q0I647XptVV1BDTwWYgZSDP/OKOvu6Eych5WkDPazck=",
-    "manifest": "sha256-xsz3C3BuN/SkVI97TaYjgqJXcL14mW6d3Fwx6170ITk=",
-    "stylesCss": "sha256-oCC99ii+I0OKyWHzmMkWjBlwSAp9JzLwDdZi/FcZmcU=",
     "name": "Script Launcher",
-    "description": "This pulgin allows you to launch scripts from the Obsidian app. You can add scripts shortcuts on your bottom bar and launch them with just one click!"
+    "description": "This pulgin allows you to launch scripts from the Obsidian app. You can add scripts shortcuts on your bottom bar and launch them with just one click!",
+    "version": "1.7.0",
+    "mainJs": "sha256-mIxF42vvBUy+pGf+wOrynQJmhF+DaeIaH54l4o+wiyk=",
+    "manifest": "sha256-Vs91lmkAHntTc1nC9XQPeEbObvkWNJ8oUVKSy7WZ79A=",
+    "stylesCss": "sha256-oCC99ii+I0OKyWHzmMkWjBlwSAp9JzLwDdZi/FcZmcU="
   },
   "scripture-indexer": {
     "repo": "jdrbrn/obsidian-scripture-indexer",
@@ -19500,9 +19509,9 @@
     "repo": "masaki39/simple-citations",
     "name": "Simple Citations",
     "description": "Add & update simple literature notes from Zotero.",
-    "version": "1.5.1",
-    "mainJs": "sha256-no/nLx3949zhpE5+7vDV+qnY8Lgu8OIoYZyCGJIsBIA=",
-    "manifest": "sha256-lQC/wMoOVKYONF3oau8ccqZt3N17JO8EULLo4y/T17c=",
+    "version": "1.6.0",
+    "mainJs": "sha256-IKj/OnrfiBMxOUL6LFRu6n1USEoI+Wydmxb3zWXztCA=",
+    "manifest": "sha256-Enj04w0GWH1qdPHmUXw5XwtlSZTtLKIe023SjcF0T2k=",
     "stylesCss": "sha256-45rDJeUGqoMmyMaOmwJr3HLrr89HateGtCG4V5ZdDcU="
   },
   "simple-code-formatter": {
@@ -19806,12 +19815,12 @@
   },
   "smart-connections": {
     "repo": "brianpetro/obsidian-smart-connections",
-    "version": "4.3.0",
-    "mainJs": "sha256-72xBT5JtacXXhrGHvCwEyTUHG0q2rMF0Z1noyZIkeKY=",
-    "manifest": "sha256-ITCN9z/q1FC+g1bBZ/dpR4Z3JgGLTeH+NLt7S28SxFA=",
-    "stylesCss": "sha256-G+afasCSrObA/coLkiV/aOSqCNWv5ivYEV/kq1mW3sI=",
     "name": "Smart Connections",
-    "description": "Chat with your notes & see links to related content with Local or Remote models."
+    "description": "Chat with your notes & see links to related content with Local or Remote models.",
+    "version": "4.5.0",
+    "mainJs": "sha256-VjRItzwwcQD5Wwrq0xerXwqpblDqEpAFYxLrB17yVHo=",
+    "manifest": "sha256-kxYPrIVhGhy6h8C7A8xYw5GfKwT83ubLQ3O8G6cRsxY=",
+    "stylesCss": "sha256-G+afasCSrObA/coLkiV/aOSqCNWv5ivYEV/kq1mW3sI="
   },
   "smart-connections-visualizer": {
     "repo": "Mossy1022/Smart-Connections-Visualizer",
@@ -19824,12 +19833,12 @@
   },
   "smart-context": {
     "repo": "brianpetro/smart-context-obsidian",
-    "version": "3.1.0",
-    "mainJs": "sha256-l09KoyTdK+AhZd7wPY3y9xXVBYU3NbpzFg5YrYL2lTQ=",
-    "manifest": "sha256-hhacSJXFlR6jVuJMsyZiX/1Mw8XSRnzGbb3liTn2vC0=",
-    "stylesCss": "sha256-LKRRfYPPqqE2F/dS4c4ILTLK79htfh/od4HsjByen78=",
     "name": "Smart Context",
-    "description": "Copy folder contents (Markdown & Canvas files) to the clipboard with a Smart Context approach."
+    "description": "Copy folder contents (Markdown & Canvas files) to the clipboard with a Smart Context approach.",
+    "version": "3.1.1",
+    "mainJs": "sha256-p4yAbjhGNAdpzVI/+047/Rzk1XhY86SsE3PXYu/9Mtw=",
+    "manifest": "sha256-6ECPQ0PTw5mMGAyUJyE2UZbNNKFsu7RayFTlo/rT2tM=",
+    "stylesCss": "sha256-LKRRfYPPqqE2F/dS4c4ILTLK79htfh/od4HsjByen78="
   },
   "smart-day-night-switcher": {
     "repo": "Andrii256/ops_obsidian_smart-day-night-switcher",
@@ -20217,9 +20226,9 @@
     "repo": "h-sphere/sql-seal",
     "name": "SQLSeal",
     "description": "Use SQL in your notes to query your vault files and CSV content.",
-    "version": "0.40.0",
-    "mainJs": "sha256-eatzJHCio9H5DJu3ZWu9MpCNMhl89uo4pDLf0Rjma6c=",
-    "manifest": "sha256-dTS0deHRK7c/j2wUsGidIa2SSdGtstwRBlQCnYLy/Zs=",
+    "version": "0.40.1",
+    "mainJs": "sha256-Q106Mj8Y/PX+uyQGQo9vd9cLB8ZUXqxwnyfbMCj50ds=",
+    "manifest": "sha256-v4uF/U/N9lWGyZxlkpEaaFMhCCo5phnH62jDeJNtnH8=",
     "stylesCss": "sha256-ZylYmhMQV7RHyLsjrfKqEK1vMMWmw8wy5z8/Qzu1vEI="
   },
   "sqlseal-charts": {
@@ -20637,10 +20646,10 @@
     "repo": "abcamus/obsidian-sync-vault-ce",
     "name": "Sync Vault",
     "description": "Professional cloud sync & VFS for Obsidian. Features zero-space VFS, 4K streaming, MCP AI engine, and P2P collaboration. Supports Baidu/Aliyun/Quark/WebDAV/S3.",
-    "version": "1.13.1",
-    "mainJs": "sha256-dFHB13bI0W6XHuLBCx78xjthBbjzrnYoRFOzS9+Wl/Y=",
-    "manifest": "sha256-nynW6HkqbzaluMVU8yxZaEtGQaatbgsOpDXs7jcLpQI=",
-    "stylesCss": "sha256-xthTSL1grfU7Xc32Sp13PbSSEGm1Z8WuBoaWj6ZgYdM="
+    "version": "1.13.3",
+    "mainJs": "sha256-fSRWAwMrOopWF04T5lLSxcb3G4k09SE47IDrTaDkXPY=",
+    "manifest": "sha256-u4Qc+4hlcJonrNvTTzIL17YcW4ZFRMIUS7CJackFmmY=",
+    "stylesCss": "sha256-jSvjZPqXYbExAeR8MWKNhhAt/6P1KYWKHJxAe2r6+rI="
   },
   "syncftp": {
     "repo": "alex-donnan/SyncFTP",
@@ -20765,12 +20774,12 @@
   },
   "tab-selector": {
     "repo": "namikaze-40p/obsidian-tab-selector",
-    "version": "0.9.0",
-    "mainJs": "sha256-8c00YVdHf3gpxmetmgOcfUXYKO4QDkTNm9T8kl4EHZ4=",
-    "manifest": "sha256-+IK/fOAWCfyxFYqiHqyW2dyQg/USlODOJgfAuzDfc6o=",
-    "stylesCss": "sha256-t7UbqlFkW+OYsoR344SU08/di1/A9D1vbwGuyCw4ESw=",
     "name": "Tab Selector",
-    "description": "Quickly switch tabs in various ways."
+    "description": "Quickly switch tabs in various ways.",
+    "version": "0.9.1",
+    "mainJs": "sha256-8c00YVdHf3gpxmetmgOcfUXYKO4QDkTNm9T8kl4EHZ4=",
+    "manifest": "sha256-XbzLqxtOTMsQ06eBc+WOxLw8mUbSWE7/I6WxV+tpRDk=",
+    "stylesCss": "sha256-t7UbqlFkW+OYsoR344SU08/di1/A9D1vbwGuyCw4ESw="
   },
   "tab-shifter": {
     "repo": "jsrozner/obsidian-tab-shifter",
@@ -21018,10 +21027,10 @@
     "repo": "tu2-atmanand/Task-Board",
     "name": "Task Board",
     "description": "Manage all your tasks throughout your vault from a single board and much more...",
-    "version": "1.10.3",
-    "mainJs": "sha256-t3kPqdbKd8h3/JmCn1PcGU6E7DTQrj9lAyNoI2VqS50=",
-    "manifest": "sha256-AWNr6fe9upLwphOzRoeaYCmQicRsej2Cpa379vd+TW8=",
-    "stylesCss": "sha256-zMeHw4E4XJcBOom0pvgSw+WmIbfoqoKpPTzuswW8k38="
+    "version": "1.10.4",
+    "mainJs": "sha256-Qad2eyHRkwTV0nkOWABQ0Qb+vgLCcrKehxtSynTQDFM=",
+    "manifest": "sha256-QI7dBqquABX0OEkcPyv8XWFtiys0lS5fro1PNvqwZcc=",
+    "stylesCss": "sha256-Pj/lS+AKQ/NO40mK4N0RMV8Ci5z8lbYZg7B1cb8/Bdc="
   },
   "task-director": {
     "repo": "cybertramp/obsidian-task-director",
@@ -21106,10 +21115,10 @@
     "repo": "NicoKNL/tasks-map",
     "name": "Tasks Map",
     "description": "A graph view of your tasks.",
-    "version": "0.29.1",
-    "mainJs": "sha256-x/7RSkGCjQfPgYZA5rsgTTEed9AuZlPGxfkUK9q8ahw=",
-    "manifest": "sha256-Hk+rOwUaiUtbIMWSS+Y8URyeKo+u1X0ONdtfoyNyI2w=",
-    "stylesCss": "sha256-jpt5iNErBQFoWxc01NwZfNj7c1cVaKpHRJ79g9TfbOk="
+    "version": "0.31.2",
+    "mainJs": "sha256-NxKpcUc7FlaTSMqJmpeB7DwG92lI9TCEe0zJG8McRVs=",
+    "manifest": "sha256-zlk72ESaM/hacJV0kC/PQdzRRSTU0al4qprUH8Q+LNM=",
+    "stylesCss": "sha256-JHGsdJ54i5LlA60pb1uPEeRK4KziQ6G5LDUomQ26s6k="
   },
   "tasks-packrat-plugin": {
     "repo": "therden/packrat",
@@ -21210,9 +21219,9 @@
     "repo": "SilentVoid13/Templater",
     "name": "Templater",
     "description": "Create and use templates",
-    "version": "2.20.0",
-    "mainJs": "sha256-gezP+Bli2vjsci7S3v95V7P6vuJEr8n7FcOee40pQ+M=",
-    "manifest": "sha256-R/WfFoPsqYvpqftY684883VXry9ZR7R7y6no9UxWfq4=",
+    "version": "2.20.3",
+    "mainJs": "sha256-XM/Bz/PATTZxbZ4cQEQADliKMGRsrbQ/ZjnL67JLRFw=",
+    "manifest": "sha256-b1z962aNpjnaCfviav1dBunm6BRCngvFwg/a56APZKM=",
     "stylesCss": "sha256-99TuW9TsHQMu2h9OHaSB5xPFevlk7B5V0xSU8IYGjR4="
   },
   "templify": {
@@ -21438,11 +21447,11 @@
   },
   "themed-discord-rpc": {
     "repo": "Mouadhbendjedidi/themed-obsidian-discord-rpc",
-    "version": "1.2.1",
-    "mainJs": "sha256-bUmPQu4FOexzdl2ksK7ph9IgRwL8yvBkvVa+UZJvHIA=",
-    "manifest": "sha256-6dYPzEHUYZuQgt0H2iBRUL7WZma0du48FrvDHfDJark=",
     "name": "Themed Discord RPC",
-    "description": "A Customizable Discord RPC"
+    "description": "A Customizable Discord RPC",
+    "version": "1.3.0",
+    "mainJs": "sha256-M8mENA4K9wpPJuOtVd/i09zcde+Ub89tVqtN19MS3ic=",
+    "manifest": "sha256-7VcaV+xeEIm0nIdvhU986ERrBvyb1r0tIWtYxt0as2c="
   },
   "things-logbook": {
     "repo": "liamcain/obsidian-things-logbook",
@@ -21600,9 +21609,9 @@
     "repo": "jacobtread/obsidian-timekeep",
     "name": "Timekeep",
     "description": "Time tracking",
-    "version": "2.0.0",
-    "mainJs": "sha256-77ZaqIPfK0WwVVwrZk23rCmVW7iizayqsKKCD+fouP0=",
-    "manifest": "sha256-xurzT1e80b27ouvj17gIdM17cMzZfbDUBkxrmtIWHow=",
+    "version": "2.1.0",
+    "mainJs": "sha256-QBOiIgFZCHre5plgKmCQ9z/fhzW2+c/JnS+kEPt8XSU=",
+    "manifest": "sha256-BPLx1zxpdv+Wm6YuRyIfsc7SjEst57Dp9QrbZxlbsPQ=",
     "stylesCss": "sha256-jFTFQD6Qxd2RLsQVnCj6WXEoeNzufjQDe45hi5gyBH8="
   },
   "timeline-canvas-creator": {
@@ -21886,10 +21895,10 @@
     "repo": "scross01/obsidian-todoseq",
     "name": "TODOseq",
     "description": "Lightweight keyword-based task tracker using Logseq style keywords.",
-    "version": "0.13.0",
-    "mainJs": "sha256-/D2BsKE3F4h5EhYnCshc4bgNgh8bzpy5b9/rTXrWhZU=",
-    "manifest": "sha256-aLbLw7G8poxGKfkIz14nadmMC5Y2909MxjLQp+ck1v4=",
-    "stylesCss": "sha256-Q8+1kNbQzczj/RTwtZ8PperisJN48IH+5Id3S1M2VKU="
+    "version": "0.13.4",
+    "mainJs": "sha256-8ogRTB8kUXGnliYczLyTBiRBhC+CRto1iC+9butHOZI=",
+    "manifest": "sha256-crOL/knvNASXwzTNqjACIGWHvoylT4KeDK6QtJPGicc=",
+    "stylesCss": "sha256-5yfCOAJabqB4rMYmGQ6LFCokVyIxucxHM37NurQJu3I="
   },
   "todotxt": {
     "repo": "mvgrimes/obsidian-todotxt-plugin",
@@ -22454,9 +22463,9 @@
     "repo": "tadashi-aikawa/obsidian-various-complements-plugin",
     "name": "Various Complements",
     "description": "This plugin enables you to complete words like the auto-completion of IDE",
-    "version": "11.2.0",
-    "mainJs": "sha256-xjwtax+zuVtXTbLsxMeZBYLFI0xH0Bs2ucd3srICPPI=",
-    "manifest": "sha256-cQNVlfdZZ6G/N5uLpTi6HUYR38E2h4LeSeg+HleZE84=",
+    "version": "11.3.0",
+    "mainJs": "sha256-PpuhQJvmT6YwFj0WDqd6be2afqLd+Z7OAfnGNtOsKuc=",
+    "manifest": "sha256-9/0fNrO0KUj/ciHGOmUjabtcRB38Vi4d/1xko2fpyO4=",
     "stylesCss": "sha256-t5rPsrq+3QMptWn+u31QnlsTG+BsWDUmMmJ1ov6c/FQ="
   },
   "vault-2-book": {
@@ -22515,11 +22524,11 @@
   "vault-full-statistics": {
     "repo": "jtprogru/obsidian-vault-full-statistics-plugin",
     "name": "Vault Full Statistics",
-    "description": "Status bar item with vault statistics: number of notes, links, and QoV (Quality of Vault).",
-    "version": "1.5.0",
-    "mainJs": "sha256-yd0vkKvC2xNfObJB62FrkXiPVibfVuKkcF21dz21xQE=",
-    "manifest": "sha256-3F+5wzZdqcf7AAdVHxOuy326L+qRCFCV0C6dK4dZjeY=",
-    "stylesCss": "sha256-J3PjPt7eRMfl67MX4Zk4eWDi3ZbH4X9kTL+JFO6ZWA4="
+    "description": "Vault statistics in the status bar plus a dedicated view with own/source ratio and a 30-day sparkline of how your knowledge base evolves.",
+    "version": "1.14.1",
+    "mainJs": "sha256-48k05hebpaQQx37RPz2zs59lx66DM/LnLKQQ7dZmJfg=",
+    "manifest": "sha256-WJ/+AEVlnOXU+e8guSF1f1H5KP/gmUkS2rVFd8/izNQ=",
+    "stylesCss": "sha256-CdiFBWtxtVBDheX82hwINzcmUYaPo1jM3zmqw5B4fis="
   },
   "vault-llm-assistant": {
     "repo": "brianstm/obsidian-vault-llm-assistant",
@@ -22655,21 +22664,21 @@
   },
   "vertical-tabs": {
     "repo": "oxdc/obsidian-vertical-tabs",
-    "version": "0.16.6",
-    "mainJs": "sha256-onE68u+QikmNhYRIrVCihBzDJGRtYxubn+YfKL7kDqE=",
-    "manifest": "sha256-b191J+GCzoYFfDbIzZOH292asgBN02/MjBM4A2CCoDY=",
-    "stylesCss": "sha256-if3XhoW+j3Or0uEXUwGH2GxQi/Y4svWtqoNa8vVastI=",
     "name": "Vertical Tabs",
-    "description": "Offer an alternative view that displays open tabs vertically, allowing users to group and organize tabs for a better navigation experience."
+    "description": "Offer an alternative view that displays open tabs vertically, allowing users to group and organize tabs for a better navigation experience.",
+    "version": "0.16.8",
+    "mainJs": "sha256-iujDrmArqlYfbnSEWkKgYIyayPKEQut5735UDaTa5SA=",
+    "manifest": "sha256-FbCeUNh35pKGkT2+8LBAEOUc8Ez6POyimy0RCG1aLjE=",
+    "stylesCss": "sha256-eI3+03fGJc/fpwP4NpzcKFqcg/sMj29O+ma60uwZbDg="
   },
   "vertical-timeline-list": {
     "repo": "Jalad25/vertical-timeline-list",
-    "version": "2.1.1",
-    "mainJs": "sha256-NKjxw8iTM9LP6ztBzxjOecY77fSAr7d3nFJkXPrdZn8=",
-    "manifest": "sha256-uOWthdYSrSqMSCK/kYfi4qhzF8zgjC1XWTErPwFOgjM=",
-    "stylesCss": "sha256-wsjv74bRh1N04FfERrQ4YwN3Sn6DBr3Vs6poQhMUTZo=",
     "name": "Vertical Timeline List",
-    "description": "Utilizes task lists to create a timeline... or something resembling a timeline."
+    "description": "Utilizes task lists to create a timeline... or something resembling a timeline.",
+    "version": "3.0.0",
+    "mainJs": "sha256-rkyhT3K9h6CQ27JCXO1mqqIrTRvBskJskMT0Jy6qdUg=",
+    "manifest": "sha256-Ztz6Qmk34ZBgj4T9QGBX/u9op6zVwedHY6aH0+vxhHw=",
+    "stylesCss": "sha256-I4Enmx5h+6DvGQbaubf9dteayqxZ19ZG4aiAnUNibzI="
   },
   "vextab": {
     "repo": "luigman/obsidian-vextab",
@@ -22769,12 +22778,12 @@
   },
   "virtual-footer": {
     "repo": "Signynt/virtual-content",
-    "version": "1.0.27",
-    "mainJs": "sha256-wBTaMPbu0KZS/Z7gLyxupDXSU4GZsmMAByhc10LO9GU=",
-    "manifest": "sha256-A0anKZAWeSVrM9JSChLm7SwXOX8vPPMzp/HKwzgLTxA=",
-    "stylesCss": "sha256-Gwq9UOPET4uTsDiIWFYR7FyRREInyITWiyjJR2yD8+o=",
     "name": "Virtual Content",
-    "description": "Display markdown text (including dataview queries or Obsidian bases) at the bottom, top or in the sidebar for all notes which match a specified rule, without modifying them."
+    "description": "Display markdown text (including dataview queries or Obsidian bases) at the bottom, top or in the sidebar for all notes which match a specified rule, without modifying them.",
+    "version": "1.0.28",
+    "mainJs": "sha256-TaisugUAU8QvBk+YZtYncWrDLlIy9RJ0+/u6iza5PdI=",
+    "manifest": "sha256-zeUpBeCseLR8v+yCO46FDu9nbSEu9UNG9sKY8Fnv6Lk=",
+    "stylesCss": "sha256-ie0m5FF83aJ5KT+NSTbikjAtMhQ31X2PvH8M97u/QtU="
   },
   "virtual-linker": {
     "repo": "vschroeter/obsidian-virtual-linker",
@@ -22964,12 +22973,12 @@
   },
   "wayback-archiver": {
     "repo": "IshizuEitaro/obsidian-wayback-archiver",
-    "version": "1.1.5",
-    "mainJs": "sha256-TDtYmOxrVzsZIs2W7IYzNHD/snEWbEoJAuNIQf8srDw=",
-    "manifest": "sha256-g5Glwa6XIPIM1WaY0jNX2H9C/cOqRHRC9F7ZeuLdZXY=",
-    "stylesCss": "sha256-ZwS4FYejXFKn1giZqzC4bCRvIeiQogCaI1vRhtCFzh4=",
     "name": "Wayback Archiver",
-    "description": "Automatically archives web links via Wayback Machine and appends archived versions in notes."
+    "description": "Automatically archives web links via Wayback Machine and appends archived versions in notes.",
+    "version": "2.0.0",
+    "mainJs": "sha256-uNr8xLDp8WS6NztffDVzdZet60Xwvoxg4tkQhJH2zt8=",
+    "manifest": "sha256-e1axgFTvCvO1EUKSOQ+XqT5GZtkSN3NBiF6U0/Kl4WM=",
+    "stylesCss": "sha256-ZwS4FYejXFKn1giZqzC4bCRvIeiQogCaI1vRhtCFzh4="
   },
   "waypoint": {
     "repo": "IdreesInc/Waypoint",
@@ -23280,9 +23289,9 @@
     "repo": "santiyounger/wpm-reading-time",
     "name": "WPM Reading Time - How Long to Read This Text",
     "description": "Calculate reading time estimates for selected text using your own reading speed in Words Per Minute.",
-    "version": "1.1.8",
-    "mainJs": "sha256-NC2OevzWfHxukjmLskPnQCdS/qNXlolDO6PgCXGc1as=",
-    "manifest": "sha256-lGgqhnbBZm3nZvaq3KpTL29L7zj9/vNEoWYIUMcrbBY=",
+    "version": "1.1.9",
+    "mainJs": "sha256-EYRdUjW5OUwlrlGID/CiW9OHYegdfwEWgmyFMdE+p5s=",
+    "manifest": "sha256-IdX+1M47ZlQnEHD50otJtD7xkca1SK1Ji/qhQbQ8Dow=",
     "stylesCss": "sha256-1soIIbnYyHuDD6ImuP5x6Jh3ql9Us8Tu7VOlHvwDPs4="
   },
   "wrangle-todos": {
@@ -23483,10 +23492,10 @@
     "repo": "Lapis0x0/obsidian-yolo",
     "name": "YOLO",
     "description": "Agent-native AI assistant \u2014 chat, write, search, orchestrate, all in one.",
-    "version": "1.5.7",
-    "mainJs": "sha256-qywuXApcqtnIolodfveMv2iwdMGoQmQ/N5bIyY/Gnac=",
-    "manifest": "sha256-RC2vKDU8baqCH+hCdKvw0HMJ+QZLV5ArVncn48HX+No=",
-    "stylesCss": "sha256-T2vftN+lRPCcm2p7W+FtC0WKlGK07yPZesPo+s6mHJY="
+    "version": "1.5.7.5",
+    "mainJs": "sha256-k+Va9j+prwufCyW/H+KzdydidYYIUSmZ3uzG08pjjrk=",
+    "manifest": "sha256-qCb6R/tAilEjM5zluaCbkMfYFRW5aTyDvkOFplsJP70=",
+    "stylesCss": "sha256-LczcqxQev5Yv4B0JMFYb6TpVKeq6q1J9wcEIDp4BGRE="
   },
   "you-and-your-research": {
     "repo": "neozhang/you-and-your-research",
@@ -23744,11 +23753,11 @@
   },
   "zotlit": {
     "repo": "PKM-er/obsidian-zotlit",
-    "version": "1.1.11",
-    "mainJs": "sha256-NSWIgRvdASfyh9nAbG03rc+wJnGW2bAzs+AtaqL6tTw=",
-    "manifest": "sha256-0C/HnB81iPnuQJvqJTzkEZDbYqAEkQ5RKhPCDH05O+8=",
-    "stylesCss": "sha256-pgowB77ZksguUmV65jB3caWwzTSpOu3e00vVpP4L7lY=",
     "name": "ZotLit",
-    "description": "Plugin to integrate with Zotero, create literature notes and insert citations from a Zotero library."
+    "description": "Plugin to integrate with Zotero, create literature notes and insert citations from a Zotero library.",
+    "version": "1.1.12",
+    "mainJs": "sha256-warzykbpep+89lMi65RxG3IYmkzuwtwAreeCmGCzS+k=",
+    "manifest": "sha256-Tygd9w6+62b25rhm+n3RQkG2TlE1BSsFtJ3VvQ3C1MU=",
+    "stylesCss": "sha256-pgowB77ZksguUmV65jB3caWwzTSpOu3e00vVpP4L7lY="
   }
 }
