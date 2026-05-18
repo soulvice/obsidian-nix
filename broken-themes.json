@@ -3,5 +3,10 @@
     "repo": "AstroAir/obsidian-night-owl",
     "error": "could not determine latest rev (no releases, tags, or commits)",
     "since": "2026-04-27T04:43:15Z"
+  },
+  "purple-haze": {
+    "repo": "antonabbac/obsidian-purple-haze",
+    "error": "could not determine latest rev (no releases, tags, or commits)",
+    "since": "2026-05-18T05:26:35Z"
   }
 }
