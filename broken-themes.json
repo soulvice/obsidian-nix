@@ -8,5 +8,10 @@
     "repo": "antonabbac/obsidian-purple-haze",
     "error": "could not determine latest rev (no releases, tags, or commits)",
     "since": "2026-05-18T05:26:35Z"
+  },
+  "ribbons": {
+    "repo": "ddspog/obsidian-ribbons-theme",
+    "error": "failed to hash archive @ 1.0.5",
+    "since": "2026-06-08T06:31:09Z"
   }
 }
