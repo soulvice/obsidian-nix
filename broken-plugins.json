@@ -1,48 +1,33 @@
 {
-  "advanced-formatting": {
-    "repo": "mohamedsaleh0-0/Advanced-Formatting",
-    "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:46Z"
-  },
   "ai-nutrition-tracker": {
     "repo": "rnaidenov/obsidian-ai-nutrition-tracker-plugin",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:02Z"
+    "since": "2026-09-28T07:08:28Z"
   },
   "android-nomedia": {
     "repo": "calomancer/android.nomedia",
     "error": "no GitHub releases found",
     "since": "2026-04-04T09:46:32Z"
   },
-  "audio-interface": {
-    "repo": "johannes-kaindl/audio-interface",
-    "error": "no GitHub releases found",
-    "since": "2026-08-31T07:45:06Z"
-  },
   "bibtex-manager": {
     "repo": "akopdev/obsidian-bibtex-manager",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:58:59Z"
+    "since": "2026-09-28T07:08:24Z"
   },
   "book-metasearch": {
     "repo": "bongho/obsidian-book-metasearch",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:29Z"
+    "since": "2026-09-28T07:08:56Z"
   },
   "calculator-pro": {
     "repo": "hoangminhcv2000/obsidian-calculator-pro",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:16Z"
-  },
-  "calendar-notes": {
-    "repo": "johannes-kaindl/calendar-notes",
-    "error": "no GitHub releases found",
-    "since": "2026-08-31T07:45:59Z"
+    "since": "2026-09-28T07:08:40Z"
   },
   "calendarplanner": {
     "repo": "lykaunn/CalendarPlanner",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:05Z"
+    "since": "2026-09-28T07:08:31Z"
   },
   "canvas-task-importer": {
     "repo": "jordaeday/canvas-task-importer",
@@ -52,12 +37,12 @@
   "companion-mcp": {
     "repo": "yama662607/obsidian-companion-mcp",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:05Z"
+    "since": "2026-09-28T07:08:30Z"
   },
   "crosspost-studio": {
     "repo": "yorha2b0826/crosspost-studio",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:28Z"
+    "since": "2026-09-28T07:08:55Z"
   },
   "daily-five": {
     "repo": "0libote/daily-five",
@@ -67,12 +52,12 @@
   "daily-note-creator": {
     "repo": "mario-holubar/obsidian-daily-note-creator",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:58:58Z"
+    "since": "2026-09-28T07:08:23Z"
   },
   "flashcard-learning": {
     "repo": "gaetanmuck/obsidian-flashcard-learning",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:58:57Z"
+    "since": "2026-09-28T07:08:22Z"
   },
   "fleeting-notes-obsidian": {
     "repo": "fleetingnotes/fleeting-notes-obsidian",
@@ -89,15 +74,10 @@
     "error": "failed to hash main.js",
     "since": "2026-07-13T05:11:52Z"
   },
-  "health-vitals": {
-    "repo": "johannes-kaindl/health-vitals",
-    "error": "no GitHub releases found",
-    "since": "2026-08-31T07:41:22Z"
-  },
   "hemingway-mode": {
     "repo": "jobedom/obsidian-hemingway-mode",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:58:59Z"
+    "since": "2026-09-28T07:08:23Z"
   },
   "hexo-auto-updater": {
     "repo": "lifeodyssey/obsidian-hexo-auto-update",
@@ -112,22 +92,22 @@
   "hugo-sync": {
     "repo": "crayhuang/Obsidian-Hugo-Sync",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:00Z"
+    "since": "2026-09-28T07:08:25Z"
   },
   "image-share": {
     "repo": "iqijun/obsidian-image-share",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:01Z"
+    "since": "2026-09-28T07:08:26Z"
   },
   "incremental-reading-toolkit": {
     "repo": "kja140/incremental-reading",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:23Z"
+    "since": "2026-09-28T07:08:50Z"
   },
   "infostacker": {
     "repo": "taskscape/InfostackerPlugin",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:58:59Z"
+    "since": "2026-09-28T07:08:24Z"
   },
   "jujutsu-sync": {
     "repo": "daemon-404/obsidian-jujutsu-sync",
@@ -137,32 +117,22 @@
   "kakoune": {
     "repo": "yukaii/codemirror-kakoune",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:34Z"
+    "since": "2026-09-28T07:09:02Z"
   },
   "kindle-transformation": {
     "repo": "tristan0929/Kindle-Transformation",
     "error": "failed to hash manifest.json",
-    "since": "2026-09-21T06:59:05Z"
-  },
-  "koda-agent": {
-    "repo": "johannes-kaindl/koda-agent",
-    "error": "no GitHub releases found",
-    "since": "2026-08-31T07:43:49Z"
-  },
-  "kuro-gamification": {
-    "repo": "johannes-kaindl/kuro-gamification",
-    "error": "no GitHub releases found",
-    "since": "2026-08-31T07:42:07Z"
+    "since": "2026-09-28T07:08:30Z"
   },
   "letterboxd-mirror": {
     "repo": "diego-vicente/obsidian-letterboxd-mirror-plugin",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:08Z"
+    "since": "2026-09-28T07:08:33Z"
   },
   "lightbox": {
     "repo": "jackcipher/obsidian-lightbox",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:07Z"
+    "since": "2026-09-28T07:08:33Z"
   },
   "llm-text-assistant": {
     "repo": "s1t5/LLM-Text-Assistant-Obsidian",
@@ -172,27 +142,22 @@
   "local-graphql": {
     "repo": "twistoy/obsidian-local-graphql",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:58:58Z"
+    "since": "2026-09-28T07:08:23Z"
   },
   "magneto": {
     "repo": "vishal-go/magneto",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:11Z"
+    "since": "2026-09-28T07:08:37Z"
   },
   "media-extended": {
     "repo": "aidenlx/media-extended",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:58:56Z"
+    "since": "2026-09-28T07:08:21Z"
   },
   "memos-ai-sync-plus": {
     "repo": "erbanku/obsidian-memos-ai-sync",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:10Z"
-  },
-  "neurovim": {
-    "repo": "johannes-kaindl/neurovim-obsidian",
-    "error": "no GitHub releases found",
-    "since": "2026-08-31T07:40:44Z"
+    "since": "2026-09-28T07:08:35Z"
   },
   "note-annotations": {
     "repo": "jancbeck/obsidian-note-annotations",
@@ -202,32 +167,32 @@
   "obsidian-fuzzytag": {
     "repo": "adriandersen/obsidian-fuzzytag",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:58:57Z"
+    "since": "2026-09-28T07:08:22Z"
   },
   "obsidian-gitlab-issues": {
     "repo": "benr77/obsidian-gitlab-issues",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:58:57Z"
+    "since": "2026-09-28T07:08:22Z"
   },
   "obsiminal": {
     "repo": "mainhatduy/obsiminal",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:36Z"
+    "since": "2026-09-28T07:09:04Z"
   },
   "page-gallery": {
     "repo": "tokenshift/obsidian-page-gallery",
     "error": "no GitHub releases found",
     "since": "2026-04-04T09:45:30Z"
   },
-  "paperize": {
-    "repo": "johannes-kaindl/obsidian-paperize",
-    "error": "no GitHub releases found",
-    "since": "2026-08-31T07:40:13Z"
-  },
   "pi-ide-context": {
     "repo": "andy8647/pi-ide-context",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:45Z"
+    "since": "2026-09-28T07:09:13Z"
+  },
+  "process-tracker": {
+    "repo": "skrpln/process-tracker",
+    "error": "failed to hash main.js",
+    "since": "2026-09-28T07:09:38Z"
   },
   "progress-clocks": {
     "repo": "tokenshift/obsidian-progress-clocks",
@@ -247,52 +212,42 @@
   "sideband-comments": {
     "repo": "insung/sideband-comments",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:45Z"
+    "since": "2026-09-28T07:09:12Z"
   },
   "solo-ttrpg-notation": {
     "repo": "zeruhur/obsidian-lonelog",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:07Z"
+    "since": "2026-09-28T07:08:33Z"
   },
   "spark": {
     "repo": "crossgen-ai-public/crossgen-spark-obsidian-plugin",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:07Z"
+    "since": "2026-09-28T07:08:32Z"
   },
   "split-web-viewer-modifier": {
     "repo": "hucy/split-link-router",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:03Z"
+    "since": "2026-09-28T07:08:28Z"
   },
-  "three-d-codeblocks": {
-    "repo": "johannes-kaindl/3d-codeblocks",
-    "error": "no GitHub releases found",
-    "since": "2026-08-31T07:42:02Z"
+  "tag-many": {
+    "repo": "joshua-martius/tagmany",
+    "error": "failed to hash main.js",
+    "since": "2026-09-28T07:08:23Z"
   },
   "ticktick-quickadd-task": {
     "repo": "heymoosh/ticktick-quick-add-obsidian",
     "error": "no GitHub releases found",
     "since": "2026-08-31T06:46:51Z"
   },
-  "tinymist": {
-    "repo": "wilfriedago/obsidian-tinymist",
-    "error": "failed to hash manifest.json",
-    "since": "2026-09-21T07:00:07Z"
-  },
-  "transmute": {
-    "repo": "johannes-kaindl/obsidian-transmute",
-    "error": "no GitHub releases found",
-    "since": "2026-08-31T07:42:15Z"
-  },
   "type-zen-mode": {
     "repo": "ilgamgabdullin/obsidian-typezen",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:00Z"
+    "since": "2026-09-28T07:08:25Z"
   },
   "vault-activity": {
     "repo": "daniegee/obsidian-vault-activity",
     "error": "failed to hash main.js",
-    "since": "2026-09-21T06:59:05Z"
+    "since": "2026-09-28T07:08:30Z"
   },
   "vika-sync": {
     "repo": "romantic-black/obsidain-vika-sync",
@@ -307,16 +262,11 @@
   "window-collapse": {
     "repo": "gquental/obsidian-window-collapse",
     "error": "failed to hash manifest.json",
-    "since": "2026-09-21T06:58:56Z"
+    "since": "2026-09-28T07:08:21Z"
   },
-  "xu-view-mode": {
-    "repo": "xcloud-ai/xu-view-mode",
-    "error": "failed to hash manifest.json",
-    "since": "2026-09-21T07:00:11Z"
-  },
-  "yijing-oracle": {
-    "repo": "johannes-kaindl/yijing-oracle",
-    "error": "no GitHub releases found",
-    "since": "2026-08-31T07:40:26Z"
+  "yolo": {
+    "repo": "lapis0x0/obsidian-yolo",
+    "error": "failed to hash main.js",
+    "since": "2026-09-28T07:08:28Z"
   }
 }
