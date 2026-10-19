@@ -45,8 +45,8 @@
     "repo": "dingye0604/AbsolutelyGlass",
     "name": "AbsolutelyGlass",
     "description": "",
-    "rev": "1.0.9",
-    "hash": "sha256-y1bSZMBtdlm6IzYe+EwTlhneJXVtlqriVlukBYN49kA="
+    "rev": "1.0.10",
+    "hash": "sha256-nZ8Sdbr3jNyfn9qNFmENGPJksXXWL7xkOvG/NpXy9Q0="
   },
   "abyssal": {
     "repo": "tazpellegrini/abyssalobsidian",
@@ -54,6 +54,13 @@
     "hash": "sha256-laQDNpcKFEKY9XO1MT1EM7rdnhuEYpJ+TmsJNTWPNc8=",
     "name": "Abyssal",
     "description": ""
+  },
+  "acid-xerox": {
+    "repo": "remriel/acid-xerox-theme",
+    "name": "Acid Xerox",
+    "description": "",
+    "rev": "1.0.5",
+    "hash": "sha256-LIxkDN4Cf0oH5dqs/NtbQqLx0IpjWVW10w9/Om6feDQ="
   },
   "acovia": {
     "repo": "fovlin/obsidian-acovia-theme",
@@ -96,6 +103,13 @@
     "description": "",
     "rev": "1.0.0",
     "hash": "sha256-EpNKZGCkgj5RrsqOW35nCSu4FQYPCTYc3kG9Y0Hrhqc="
+  },
+  "aether-works": {
+    "repo": "anthonyfitzpatrick/obsidian-theme-aether-works",
+    "name": "Aether Works",
+    "description": "",
+    "rev": "1.0.0",
+    "hash": "sha256-WC2M6yqluSFh/m/RFXJOqY1evDKEgEf33RDiSmF65qM="
   },
   "afterglow": {
     "repo": "rikilamadrid/obsidian-afterglow",
@@ -489,6 +503,13 @@
     "rev": "3.2.72",
     "hash": "sha256-8twbdCKRtot/W/xyZRXynWV09v7ESA/Ls6nrWot96kU="
   },
+  "basalt": {
+    "repo": "joostmbakker/obsidian-basalt",
+    "name": "Basalt",
+    "description": "",
+    "rev": "1.1.0",
+    "hash": "sha256-yxV3BWaA8MDL9ILkVZnmjJDbQW8YS7iFyCtvt/8ABxw="
+  },
   "base16": {
     "repo": "snelling-a/obsidian-base16",
     "name": "Base16",
@@ -500,8 +521,8 @@
     "repo": "flowing-abyss/obsidian-base16-default-dark",
     "name": "Base16 Default Dark",
     "description": "",
-    "rev": "4.4.0",
-    "hash": "sha256-LZUUSftjGTG8UuQKStQwfCd0ULDTjKu/2ajUy0zSuIs="
+    "rev": "4.4.1",
+    "hash": "sha256-pFgydldgbRHod7s9YfX1Wx+0Ls2EoD7W88Tun/XarwE="
   },
   "base2tone": {
     "repo": "deathau/Base2Tone-For-Obsidian.md",
@@ -542,8 +563,8 @@
     "repo": "briancbiggs/biggs-obsidian-theme",
     "name": "Biggs",
     "description": "",
-    "rev": "1.1.4",
-    "hash": "sha256-mTjakLZNDi7durmISqu/KFEgID9UqgPIxm35QO2GKsk="
+    "rev": "1.1.6",
+    "hash": "sha256-5qXoUfocGJppdXDMgLWCtiEAWm/r1CmWK7Xv1ODmFU8="
   },
   "bircharoo": {
     "repo": "mattbirchler/bircharoo",
@@ -563,8 +584,8 @@
     "repo": "josecosta-gh/Black-Amethyst",
     "name": "Black Amethyst",
     "description": "",
-    "rev": "1.0.1",
-    "hash": "sha256-MwvKy9fyXrM7UR7NN9r5wAkAQkFFkFxL+oprXVdtPnM="
+    "rev": "1.0.2",
+    "hash": "sha256-slemPPuf7Ac47J42BRRDuD95tdBIa1qhLDfv7T40nso="
   },
   "black-and-white": {
     "repo": "wulflo/obsidian-BlackAndWhite",
@@ -682,22 +703,22 @@
     "repo": "borozdov/obsidian-borozdov",
     "name": "Borozdov",
     "description": "",
-    "rev": "1.1.0",
-    "hash": "sha256-EIqLYKvdwQSxoU/kPqqNQbRntFhXz2HBzEOsUW2tFag="
+    "rev": "1.1.1",
+    "hash": "sha256-ANL1xG14Udl5tcu+8KKc1KQQoTMBwf4M9NL/JwZWzBE="
   },
   "borozdov-console": {
     "repo": "borozdov-obsidian-themes/console",
     "name": "Borozdov Console",
     "description": "",
-    "rev": "1.1.0",
-    "hash": "sha256-2wZBui4Iab+zhhM7WVyeXBQVU+7iHUyn0+4v4Yd/Qhk="
+    "rev": "1.1.1",
+    "hash": "sha256-IDqP3td1kgdaY9NGYbkaJPp5NGB5HcQTFnSm97FHiN4="
   },
   "borozdov-ember": {
     "repo": "borozdov-obsidian-themes/ember",
     "name": "Borozdov Ember",
     "description": "",
-    "rev": "1.1.0",
-    "hash": "sha256-dwbdUDnlPdoo5g7UeFH9hFPmZ7m6paF0/IdMJ7vO1A0="
+    "rev": "1.1.1",
+    "hash": "sha256-/8NJ2m7dTDGvrN8QlIUiVAQInF++u5eJcxtCH7cBXHM="
   },
   "borozdov-folio": {
     "repo": "borozdov-obsidian-themes/folio",
@@ -710,8 +731,8 @@
     "repo": "borozdov-obsidian-themes/gallery",
     "name": "Borozdov Gallery",
     "description": "",
-    "rev": "1.0.1",
-    "hash": "sha256-DADSNLW3RTIAo8RF2tmEQR1g7leNWnUSO5k+Y/Nn7iI="
+    "rev": "1.0.2",
+    "hash": "sha256-sZN5Mgegh8uyHMHGaNcl/XenrJN3PKeXTrhoOdJ4Ur0="
   },
   "borozdov-keepsake": {
     "repo": "borozdov-obsidian-themes/keepsake",
@@ -773,8 +794,8 @@
     "repo": "borozdov-obsidian-themes/palette",
     "name": "Borozdov Palette",
     "description": "",
-    "rev": "1.1.0",
-    "hash": "sha256-+ypi+TkYb05L3o19cODuSkT9YlaK2SKKfyeLkY1MsE0="
+    "rev": "1.1.1",
+    "hash": "sha256-QWWgyze8gBMOjjJKY/058BbN9o/mItcP6QiHmdKuW74="
   },
   "borozdov-passport": {
     "repo": "borozdov-obsidian-themes/passport",
@@ -808,22 +829,22 @@
     "repo": "borozdov-obsidian-themes/sprout",
     "name": "Borozdov Sprout",
     "description": "",
-    "rev": "1.0.1",
-    "hash": "sha256-MF4W7EwD0Y99pWzLDXerfve+z4Y7O6Kgd1yAVqvsaA8="
+    "rev": "1.0.2",
+    "hash": "sha256-kpucGqElFxu2l8quBvVsxGgMu+LFbrCoVeXCf+TsKaA="
   },
   "borozdov-trellis": {
     "repo": "borozdov-obsidian-themes/trellis",
     "name": "Borozdov Trellis",
     "description": "",
-    "rev": "1.1.0",
-    "hash": "sha256-SiwUgyLFCqf0ZAoygpLtT5kcwxUTd1+V3Q8rO5hHaaI="
+    "rev": "1.1.1",
+    "hash": "sha256-u1pryO7vgmIEylHcForqOf14WG7DlF19U3Q9Al4guGI="
   },
   "borozdov-utility": {
     "repo": "borozdov-obsidian-themes/utility",
     "name": "Borozdov Utility",
     "description": "",
-    "rev": "1.1.0",
-    "hash": "sha256-BTICVPJ7xEinY+MEmwUmYA6o+BEA+guxvAu/XB0N1d0="
+    "rev": "1.1.1",
+    "hash": "sha256-OTxNNh9WGFlHUlYiOn6CjBythrHet9VIxQ5W+RNc7oU="
   },
   "bossidian": {
     "repo": "bosselijah/bossidian",
@@ -836,8 +857,8 @@
     "repo": "spekulucius/obsidian-brainhack",
     "name": "Brainhack",
     "description": "",
-    "rev": "f21737de93c4355eb2147df809969bdfa1233d03",
-    "hash": "sha256-GMnebcpfL4+NZ1gbNTCyYw4ltFa+o04I6A5swu35eFM="
+    "rev": "b4d4d273911caff1174a260dd8c08ac6f22ec05e",
+    "hash": "sha256-y05OpT2ZrGhsxuksmE64gShFFMh+Fp4F3XhzVnHvRCc="
   },
   "brutal-gum": {
     "repo": "moyf/obsidian-gumroad-theme",
@@ -866,6 +887,13 @@
     "description": "",
     "rev": "5.0.5",
     "hash": "sha256-oWReQaMmPgIYdzbhhyXII5zxMC0qCXd3qDvpfBXR5Jo="
+  },
+  "brutato": {
+    "repo": "draivika/brutato",
+    "name": "Brutato",
+    "description": "",
+    "rev": "0.1.1",
+    "hash": "sha256-cJfp7kiBB5UOq7W/H4T3HlAL3wiDYcGBnIZ2Dbm35Cs="
   },
   "bubble-space": {
     "repo": "Emrie-Candera/Bubble-Space-Theme",
@@ -1077,6 +1105,13 @@
     "rev": "1.0.2",
     "hash": "sha256-rmivmmAL05xDWumSqrDhQU3ewQfVJjFoR4raWdlrVXg="
   },
+  "city-pop": {
+    "repo": "dlsdgj/citypop",
+    "name": "City Pop",
+    "description": "",
+    "rev": "0.5.0",
+    "hash": "sha256-YTUA7U2DgfesGUk9POZLeGK+Ek3f5Bva5Vu5N5Y6K6Y="
+  },
   "claude": {
     "repo": "arun-gajaraj/claude-theme-for-obsidian",
     "name": "Claude",
@@ -1088,8 +1123,8 @@
     "repo": "kleokl7/Claude-Code-Obsidian-Theme",
     "name": "Claude Code Orange",
     "description": "",
-    "rev": "1.5.3",
-    "hash": "sha256-cKFgukg9N2z2FOfK5Ue+O+EWyvt8wtUlM34rRGf64a0="
+    "rev": "1.6.0",
+    "hash": "sha256-2ReJYuzRm79Bv4PVhFiLL2H+Pkjrd0GLqn0IgOMQlOE="
   },
   "claude-cream": {
     "repo": "tttnny/obsidian-claude-cream",
@@ -1270,8 +1305,8 @@
     "repo": "zjie-wang/obsidian-composed",
     "name": "Composed",
     "description": "",
-    "rev": "1.0.3",
-    "hash": "sha256-O20rh7UKdQucqWVuDX51JPZ7xZdCrxZIS9IVsI57ZC4="
+    "rev": "1.1.1",
+    "hash": "sha256-XQOGuGqaKx9NRuVs+CPDbAQIH371JIQZ23Qh9r5Yjos="
   },
   "composer": {
     "repo": "vran-dev/obsidian-composer",
@@ -1301,6 +1336,13 @@
     "rev": "1.1.0",
     "hash": "sha256-+69usBcBv6t5kbbtQWt02d7cg2ORPPHDYDvLk8/8KDM="
   },
+  "cortex": {
+    "repo": "lowki2/obsidian-cortex-theme",
+    "name": "Cortex",
+    "description": "",
+    "rev": "1.2.2",
+    "hash": "sha256-He2+4/Mc6CCRCcXFAc9bll/j1MTETJ9ByDNK8UcYmnk="
+  },
   "cosmic": {
     "repo": "kaymade/cosmic",
     "name": "Cosmic",
@@ -1326,8 +1368,8 @@
     "repo": "mariomile/obsidian-cosmos-theme",
     "name": "Cosmos",
     "description": "",
-    "rev": "1.4.2",
-    "hash": "sha256-JClR7Y34Ujwne/HITeU9QQY0/S6z8ANu/lmIJ9uCV4M="
+    "rev": "1.6.9",
+    "hash": "sha256-hw6kDSno3+WGfZ5/FmKpyR6L6Rj1+JJta07lrahnn+0="
   },
   "countryside-dark-claude": {
     "repo": "peter-squentz/obsidian-countryside-dark-claude",
@@ -1351,11 +1393,11 @@
     "description": ""
   },
   "cozy-journal": {
-    "repo": "omshirse/obsidian_cozy_journal",
+    "repo": "omkarshirse/obsidian_cozy_journal",
     "name": "Cozy Journal",
     "description": "",
-    "rev": "1.2.1",
-    "hash": "sha256-5YkN+0hcK+rCTEs3u6PpdlACH6RBLwSQskrqhLA91BM="
+    "rev": "1.2.6",
+    "hash": "sha256-La+AS5+ySGai9/rjgkCj6ZAbaz+IASGkPzacRDgtFxM="
   },
   "crafted": {
     "repo": "seyhunak/CraftedObsidianTheme",
@@ -1550,8 +1592,8 @@
     "repo": "rokokol/ddlc-obsidian-theme",
     "name": "DDLC",
     "description": "",
-    "rev": "1.0.1",
-    "hash": "sha256-5cj4NCvbl3nowQBOg163ycXadO3OuyVGAA8qBSQQ+qs="
+    "rev": "1.0.2",
+    "hash": "sha256-VIb/LWzIRrqf3PhzMBaUH9Q7RmywhRA9ynsmoY0/lmg="
   },
   "dedication": {
     "repo": "modigaphemelo/Dedication-obsidian-theme",
@@ -1753,7 +1795,7 @@
     "repo": "jopp-gh/Obsidian-Dune84",
     "name": "Dune",
     "description": "",
-    "rev": "2.6.26",
+    "rev": "2.6.30",
     "hash": "sha256-ZEFjTZy9BoWNTfW/q2WjLIGfbB7qlHBTATqj0JZpPLo="
   },
   "dunite": {
@@ -1910,6 +1952,13 @@
     "rev": "1.0.1",
     "hash": "sha256-no1fpZapqb7ARAJPbYioqBkw8TYNacDWZ/QoVyicwnI="
   },
+  "engineering-notebook": {
+    "repo": "theluckystrike/notemods-theme-engineering-notebook",
+    "name": "Engineering Notebook",
+    "description": "",
+    "rev": "1.0.3",
+    "hash": "sha256-K2bCEyhf55ZAvP/ZYLEEyeakVmpxC5kLbMPD4zTBLuY="
+  },
   "enhanced-canvas": {
     "repo": "jimcsuen/Enhanced-Canvas-Theme-for-Obsidian",
     "name": "Enhanced Canvas",
@@ -2056,6 +2105,13 @@
     "hash": "sha256-oHGP2jeRK3H8BSLs68CT97ch6zs5OWjAKkgk9wg30+s=",
     "name": "Feather",
     "description": ""
+  },
+  "finding-aid": {
+    "repo": "theluckystrike/notemods-theme-finding-aid",
+    "name": "Finding Aid",
+    "description": "",
+    "rev": "1.0.4",
+    "hash": "sha256-MPr1JUlNy9UPCJxNVG7+LW/czGPxZexhLEH257Fg9oQ="
   },
   "firefly": {
     "repo": "lazercaveman/obsidian-firefly-theme",
@@ -2229,8 +2285,8 @@
     "repo": "erulmu/freecolors",
     "name": "FreeColors",
     "description": "Customizable Obsidian theme featuring an external HTML Color Engine. Simulate UI elements and Rainbow Folders instantly, then import via JSON.",
-    "rev": "1.0.0",
-    "hash": "sha256-8L8uVNrWoHMzhohAyzWMBwKDA6gAcXh7tNhaUUiy9MI="
+    "rev": "1.0.2",
+    "hash": "sha256-NphWFfLxMwx8ZyfYogCQ/PCoG04nL0WQBDKX3yVAZpw="
   },
   "frost": {
     "repo": "drkpxl/Frost",
@@ -2259,6 +2315,13 @@
     "hash": "sha256-hcrZSdXaRtMvOy+MLvrzScVJO9ZM1/kC0+lHRrNMBDQ=",
     "name": "Future",
     "description": ""
+  },
+  "gallery-marginalia": {
+    "repo": "theluckystrike/notemods-theme-gallery-marginalia",
+    "name": "Gallery Marginalia",
+    "description": "",
+    "rev": "1.0.2",
+    "hash": "sha256-km8Ga/N6CcmZfqAc26ARtfqXaXuddEf/psP+HvO5CLA="
   },
   "garden-gnome-adwaita-gtk": {
     "repo": "oqipodev/garden-gnome-obsidian",
@@ -2331,7 +2394,7 @@
     "hash": "sha256-cSSgw97OZc4eMl9Zwv558Bhd1emthpIMNG8OTX1GYF4="
   },
   "gitsidian": {
-    "repo": "ismailgunacar/gitsidian",
+    "repo": "noodleron/gitsidian",
     "rev": "0fd34ca2838bfe2c2a375bf7a64c370366a7137e",
     "hash": "sha256-5uBhMjCG6RGb08jSNgp78Dc83ecCo4hVTCj6v5/5F1k=",
     "name": "",
@@ -2362,15 +2425,15 @@
     "repo": "ummbition/glass-shelf-theme",
     "name": "Glass Shelf",
     "description": "",
-    "rev": "1.16.4",
-    "hash": "sha256-KR2kkUPhubXs2Q3u5U2kCLXIWMNcXgEmrt0FFMoD/c0="
+    "rev": "2.2.1",
+    "hash": "sha256-T+yIP6ZUO55SZNZmsNhQYsYfbj3xqBT4N6hSsvlqRxg="
   },
   "glassive": {
     "repo": "flyingfolder/obsidian-glassive",
     "name": "Glassive",
     "description": "",
-    "rev": "1.1.10",
-    "hash": "sha256-VtPMCeDwAS5cwY4fdm2mVBLym4KyW1p7XAbMHKk+yVw="
+    "rev": "1.1.17",
+    "hash": "sha256-kXdVezjoMKTtGUu5yRRWIyth9/YrjFL2BQtJW1Vjrbc="
   },
   "glassmind": {
     "repo": "m3hransh/glassmind-obsidian-theme",
@@ -2385,6 +2448,13 @@
     "description": "",
     "rev": "1.0.1",
     "hash": "sha256-3bPLwC3UIMMQxiTyx+lNM7xNqoR7hKLDh8psKwgscy8="
+  },
+  "gogoga": {
+    "repo": "jackweigogoga/gogoga-theme",
+    "name": "gogoga",
+    "description": "",
+    "rev": "0.1.2",
+    "hash": "sha256-S//cZdKjaSR11RQEyp41WNQifWvcba+jrbT0rY8Y3UU="
   },
   "golden-topaz": {
     "repo": "shaggyfeng/obsidian-Golden-Topaz-theme",
@@ -2453,8 +2523,8 @@
     "repo": "elijah7x/theme-h2os",
     "name": "H2 OS",
     "description": "",
-    "rev": "1.3.0",
-    "hash": "sha256-MVwB0ehaxWkqLxIRaEcjyJbKLgz1a9x+1agXbD8h2FU="
+    "rev": "2.1.1",
+    "hash": "sha256-cbIAMNTuT8OTFnA9ryA66DupwdQcjPxroJAzpNS9GRg="
   },
   "hackthebox": {
     "repo": "golam71/obsidian-hackthebox",
@@ -2481,8 +2551,8 @@
     "repo": "ducktapekiller/halftone",
     "name": "Halftone",
     "description": "",
-    "rev": "1.0.3",
-    "hash": "sha256-2EkgLO+FdmionrZxA707GAFH0zWlf7pS/AR31rCxJDo="
+    "rev": "1.0.5",
+    "hash": "sha256-8/b5Vf6iRxCKrzKY+6LgGHoyGuN9fQNYqAYGsyDqaGs="
   },
   "hanabi": {
     "repo": "hanabi-works/hanabi-theme",
@@ -2575,6 +2645,13 @@
     "name": "Hojicha",
     "description": ""
   },
+  "honey-sky": {
+    "repo": "florafan-cs/obsidian-honey-sky",
+    "name": "Honey Sky",
+    "description": "",
+    "rev": "1.2.1",
+    "hash": "sha256-MgoOK2bEuDW3/+p+wr0qDY2eTxjwXsGca/r8hA/DRg0="
+  },
   "hoverpopup": {
     "repo": "cogqod/hoverpopup-obsidian-theme",
     "rev": "2198a475dfb3405af9a8f0589c85bf9a0cec65b0",
@@ -2635,8 +2712,8 @@
     "repo": "julez122/IA-Writer-Mint-Noir-Mobile",
     "name": "IA Writer Mint Noir Mobile",
     "description": "",
-    "rev": "1.0.5",
-    "hash": "sha256-chrPBbmX1zZqtY3SbW3e3x9Z/hMUTi4E4QDlX0OzNhM="
+    "rev": "1.0.6",
+    "hash": "sha256-OxpcGrP+aqHGTeD//fIBFoRLR82BhM5rxrK4l2b4MGk="
   },
   "ib-writer": {
     "repo": "whereiswhere/iB-Writer",
@@ -2663,8 +2740,8 @@
     "repo": "ignorance-shiyao/obsidian-ignorance",
     "name": "Ignorance",
     "description": "",
-    "rev": "1.0.12",
-    "hash": "sha256-O915GdqadWorGvbVs0JR9rnEAt+yvQR3ptX1LOWPSCw="
+    "rev": "1.0.20",
+    "hash": "sha256-WPPebDwK/SEQ47VZiEQyTW9zifVSI9PZO6q5uP3RY38="
   },
   "improved-potato": {
     "repo": "dmeurer/improved-potato",
@@ -2672,6 +2749,13 @@
     "description": "",
     "rev": "987aa01a5f2a71aa6b9cc6695ea331154dcc9b89",
     "hash": "sha256-v5q4Lhf/j3uZQD/4qxFay1YZlU/rUjm1tGFTflOqfrM="
+  },
+  "incident-review": {
+    "repo": "theluckystrike/notemods-theme-incident-review",
+    "name": "Incident Review",
+    "description": "",
+    "rev": "1.0.3",
+    "hash": "sha256-n8vMyK3wshhLF0zydCW699QDaNSQi9A0ZyoLUxawh/8="
   },
   "infosecwarrior-ui": {
     "repo": "infosecwarrior/Infosecwarrior-UI",
@@ -2728,6 +2812,13 @@
     "description": "",
     "rev": "1.0.6",
     "hash": "sha256-KIlr9NSSRA4G+vNbb+/w5xe4mURsM/gHXU1a82ZV8Bw="
+  },
+  "istari": {
+    "repo": "thescholium/istari",
+    "name": "Istari",
+    "description": "",
+    "rev": "1.4.2",
+    "hash": "sha256-mLt8G/b5Uvul0HpbYwTv7p+qsRwZMqtWTzrn0je5BAE="
   },
   "its-theme": {
     "repo": "slrvb/Obsidian--ITS-Theme",
@@ -2820,6 +2911,13 @@
     "rev": "0.8.0",
     "hash": "sha256-bs9Y5hWd4zOsGf8ZLRgvYalQpEOlZP6ta1tENfz00CA="
   },
+  "keyline": {
+    "repo": "badtobad/obsidian-keyline",
+    "name": "Keyline",
+    "description": "",
+    "rev": "0.8.23",
+    "hash": "sha256-uaYfiz3bRdqflY/7huNbDinhOjG7lgFDP7VpVq3Kejc="
+  },
   "khazaf": {
     "repo": "isltanx/obsidian-khazaf",
     "name": "Khazaf",
@@ -2833,6 +2931,13 @@
     "hash": "sha256-NT9Ya7rIsQSc2BrIuN7uGa3G+vlsg0x7rMMxvlr9tgI=",
     "name": "Kiwi Mono",
     "description": ""
+  },
+  "konban": {
+    "repo": "ashotis/konban",
+    "name": "Konban",
+    "description": "",
+    "rev": "1.0.1",
+    "hash": "sha256-sH24Qf9UCGT1Au/P2aXBGuFUi/Xo+0Y7xm8CweR8rIs="
   },
   "kurokula": {
     "repo": "indyandie/kurokula-obsidian-theme",
@@ -2876,12 +2981,26 @@
     "rev": "1.0.4",
     "hash": "sha256-VVkcSTUT3ucp5sK4Rq9SUR6DYGpTCdsfwmuPeEHVPXA="
   },
+  "lareia": {
+    "repo": "ybraz/lareia-theme",
+    "name": "Lareia",
+    "description": "",
+    "rev": "1.0.1",
+    "hash": "sha256-/LLToiYiMIJO6Un1oKfDowiMhgXub6soelns2nBbC7c="
+  },
   "latex": {
     "repo": "benf2004/Obsidian-LaTeX-Theme",
     "rev": "1.1.3",
     "hash": "sha256-4mpOdZvt7wfuiJZdrmWpdDdvZl00aYSsdoLTgOPIKTU=",
     "name": "LaTeX",
     "description": ""
+  },
+  "lathe": {
+    "repo": "ymolodtsov/obsidian-lathe",
+    "name": "Lathe",
+    "description": "",
+    "rev": "1.0.19",
+    "hash": "sha256-OZ/Ex5d7U8XkToH3mhxajO0SbCGIV8wo3A5sa1OTbBk="
   },
   "latsidian": {
     "repo": "howardzhangdqs/Latsidian",
@@ -2936,8 +3055,8 @@
     "repo": "orpheus-21/lexmechanic-theme",
     "name": "Lexmechanic",
     "description": "",
-    "rev": "1.1.2",
-    "hash": "sha256-xjnNZSwea6F3+s+9tvS0Dhaevgb67GUjioKDIdDniYE="
+    "rev": "1.1.3",
+    "hash": "sha256-kjMRRCfc05QKk6GbqUhOMPXBWOMkToVkUTmsVd/EeAU="
   },
   "lick": {
     "repo": "beingbrendan/Lick",
@@ -2978,8 +3097,8 @@
     "repo": "zerokei/Litos",
     "name": "Litos",
     "description": "",
-    "rev": "1.1.3",
-    "hash": "sha256-eaafWMAVANXWeq88suO+YSgcqQvk8kKoM67RWKEeA1Y="
+    "rev": "1.2.0",
+    "hash": "sha256-0bSLZGw1c+86wqnoM02Ek1TZ9IBpGxbKol6zDdyJxHc="
   },
   "lizardmen-zettelkasten": {
     "repo": "dogwaddle/lizardmen-zettelkasten",
@@ -3191,6 +3310,13 @@
     "name": "Matrix",
     "description": ""
   },
+  "matsuba": {
+    "repo": "ishixi233/shittori-obsidian",
+    "name": "Matsuba",
+    "description": "",
+    "rev": "1.0.2",
+    "hash": "sha256-KxyvG2NLFsz/vWbVcTGmfjegnOkFNgnK/bwgNgPCp9o="
+  },
   "memphis": {
     "repo": "dlsdgj/obsidian-Memphis-theme",
     "name": "Memphis",
@@ -3216,8 +3342,8 @@
     "repo": "playerofgames/obsidian-mia-theme",
     "name": "Mia",
     "description": "",
-    "rev": "1.1.3",
-    "hash": "sha256-FfDeF45I9/gD5OxioqPzCAhmqZ34QDr83KzOGX94sx0="
+    "rev": "1.1.6",
+    "hash": "sha256-ZlTEv+O6DJzX0V9Mc8ZOH4xiy6vt/U3Ry9PGeG9qQQ8="
   },
   "miami-wind": {
     "repo": "hanakin/miami-wind-obsidian-theme",
@@ -3254,6 +3380,13 @@
     "rev": "1.0.1",
     "hash": "sha256-vWsyYnU0RGulNTehAZEqKUU2WtyIM4oqAfoV7PVmldQ="
   },
+  "midnight-studio": {
+    "repo": "marcimotoo/midnight-studio-obsidian",
+    "name": "Midnight Studio",
+    "description": "",
+    "rev": "1.0.1",
+    "hash": "sha256-+ekinrWrSai+J4SGKHp6AGUHxZWwmja9vGMm9fM6qTk="
+  },
   "milk-tea": {
     "repo": "artemislin/obsidian-milk-tea-theme",
     "name": "Milk Tea",
@@ -3267,6 +3400,13 @@
     "description": "",
     "rev": "1.0.1",
     "hash": "sha256-uP5BpRZL+PL9+uXMExBrg4G2JbX74rnjzoUufHVtDzc="
+  },
+  "minilite": {
+    "repo": "jrayas/minilite",
+    "name": "minilite",
+    "description": "",
+    "rev": "0.1.3",
+    "hash": "sha256-yPu0VgkvnzhG16VQEhmRybozD7yvdGSLcGc42fPtrqQ="
   },
   "minimal": {
     "repo": "kepano/obsidian-minimal",
@@ -3309,6 +3449,13 @@
     "hash": "sha256-FX8uvDS37hwxuGeR9sFTz5ZPKJg7VskZ8UqhzKuhWEQ=",
     "name": "Minimalist Studio",
     "description": ""
+  },
+  "minimalistk": {
+    "repo": "miqueiasklippel/minimalistk",
+    "name": "MinimalistK",
+    "description": "",
+    "rev": "1.0.0",
+    "hash": "sha256-eyhpmI8EYio///ICCwcybPXQr8+bVhaLOztKs6LxfjU="
   },
   "minimalists-paradise": {
     "repo": "bellebasso/Minimalists-Paradise",
@@ -3387,6 +3534,13 @@
     "rev": "1.4.2",
     "hash": "sha256-/cH2uo9f4F0JRhJ/aiHyoF4D+3mSwdNIoqTA0+pNWKs="
   },
+  "momiji-autumn": {
+    "repo": "na7kaaaa/japanese-autumn-obsidian-theme",
+    "name": "Momiji Autumn",
+    "description": "A Japanese autumn-inspired Obsidian theme with momiji red, warm washi-paper neutrals, gingko gold, and a subtle falling-leaf animation. Supports light and dark palettes.",
+    "rev": "1.0.0",
+    "hash": "sha256-0OTtEU5EHvcG0y6X5X9u1zIfqPKjLzCgNhVwRZ6kiAg="
+  },
   "monkey-king": {
     "repo": "leapsurge/Monkey-King",
     "name": "Monkey King",
@@ -3454,8 +3608,8 @@
     "repo": "ahmedashraafmohamed-hash/Monolith",
     "name": "Monolith",
     "description": "",
-    "rev": "1.3.0",
-    "hash": "sha256-TXR8l1IElzeE5TVmTFWUX4ppRXkF6UVoC3ieK7eXx2g="
+    "rev": "1.3.1",
+    "hash": "sha256-MATXXG3xnieFZvJXrh253ZfEOf9fkxs66Fy4IyHurRU="
   },
   "monospace-dark": {
     "repo": "pearcepunisher/monospace-obsidian",
@@ -3576,6 +3730,13 @@
     "rev": "1.0.2",
     "hash": "sha256-v3F23M+Wyy6s1+6cJ85UD5fpVXWphgmvMSmz7aGAiEQ="
   },
+  "neon-amber-glass": {
+    "repo": "khedrub/neon-amber-glass",
+    "name": "Neon Amber Glass",
+    "description": "",
+    "rev": "1.3.0",
+    "hash": "sha256-sMCAb0O9Bxw2XNyNwUyo60sLU84HVRq/yXDRNX5DGIE="
+  },
   "neon-dracula": {
     "repo": "scbrown/neon-dracula-obsidian",
     "name": "Neon Dracula",
@@ -3660,12 +3821,26 @@
     "rev": "1.3.0",
     "hash": "sha256-IVOSNzEblC61c+znY1+MrwGL23c+e1lhR9pb8KLd+rk="
   },
+  "newsprint": {
+    "repo": "ibehren1/obsidian-newsprint-theme",
+    "name": "Newsprint",
+    "description": "",
+    "rev": "1.0.4",
+    "hash": "sha256-eNskIpOhFo4YMIONds802gFbPIZ7cS9FeXS5GqCEOHQ="
+  },
   "newsprint-by-camus": {
     "repo": "camusz11/obsidian-newsprint",
     "name": "Newsprint by Camus",
     "description": "",
-    "rev": "1.0.2",
-    "hash": "sha256-IiklfFWcqOR754HydvBnqjNHg54qFAXLgS6EEjPZmn4="
+    "rev": "1.0.4",
+    "hash": "sha256-L2klYOm1JuViKX4Gd43YQmCdyeYlXE1jBP1GM9o647A="
+  },
+  "nibble": {
+    "repo": "n3xtb1te/Nibble",
+    "name": "Nibble",
+    "description": "",
+    "rev": "0.1.0",
+    "hash": "sha256-NiVI8TGs641sGtVY2fwlEJmV2wBeqtdK8EFABPcKaM8="
   },
   "nichneumor": {
     "repo": "nichtigott/NichNeumor",
@@ -3692,8 +3867,8 @@
     "repo": "mspirek/night-owl-classic",
     "name": "Night Owl Classic",
     "description": "",
-    "rev": "1.0.3",
-    "hash": "sha256-gdv36eeb64PU8TVrG0OzlrkoBgaTb0Sf3pCEMmx+y74="
+    "rev": "1.0.4",
+    "hash": "sha256-/sidumjprV5vhNZLrW+ZTCX/pla6OdLjbC0Fo46TyYQ="
   },
   "night-owl-native": {
     "repo": "huydnd/night-owl-obsidian-theme",
@@ -4003,6 +4178,13 @@
     "name": "",
     "description": ""
   },
+  "oink-terminal": {
+    "repo": "l0rnwizd7/oink-obsidian",
+    "name": "OINK Terminal",
+    "description": "",
+    "rev": "1.3.3",
+    "hash": "sha256-zTmqthGSOF+yHTbheNxkskH3h3bY8AhwQBvRNb3g2Gs="
+  },
   "oistnb": {
     "repo": "omsandippatil/OISTNB",
     "rev": "36b1e2fd4ed8e126f8770b7603926d17e0b46ffc",
@@ -4041,9 +4223,16 @@
   "olivier-s-theme": {
     "repo": "olivierps/Olivier-s-Theme",
     "name": "Olivier\u2019s Theme",
-    "description": "A typography-first, color-system-driven Obsidian theme with unified accent logic, refined reading/editing ergonomics, and extensive plugin integration (Canvas, Kanban, Metadata Menu, Vertical Tabs, Smart Connections, etc.). [file:1]",
-    "rev": "3.9.3",
-    "hash": "sha256-zJ0A8f5I7fCBCwOeofh6xDi952bpjzn0NIE6zkSWiek="
+    "description": "",
+    "rev": "3.9.7",
+    "hash": "sha256-A0bAq7Vnqn3AqbANIVHjlkyQV8G5vW1wEB29KlGBNNc="
+  },
+  "omarchy": {
+    "repo": "sonlndv/obsidian-omarchy-theme",
+    "name": "Omarchy",
+    "description": "",
+    "rev": "1.5.2",
+    "hash": "sha256-Q7xeKCYkFz1jaPrglsmNn5V+5MoNlN5JjGaj91jd7Vs="
   },
   "omarchy-tokyo-night": {
     "repo": "quanru/obsidian-omarchy-tokyo-night",
@@ -4090,9 +4279,9 @@
   "onepage": {
     "repo": "ivaneye/OnePage",
     "name": "OnePage",
-    "description": "macOS \u539f\u751f \u00d7 \u6781\u5ba2\u611f\u3002\u6696\u767d\u7eb8\u5f20\uff08\u6d45\u8272\uff09\u4e0e\u6696\u68d5\u00b7\u51b7\u951a\uff08\u6697\u8272\uff09\u53cc\u914d\u8272\uff0c\u5f00\u7bb1\u5373\u7528\u3002\u7ee7\u627f Cupertino \u5168\u5957 Style Settings \u81ea\u5b9a\u4e49\uff08\u5f3a\u8c03\u8272/\u5e03\u5c40/\u7f16\u8f91\u5668/\u65e0\u969c\u788d\uff09\u3002",
-    "rev": "1.3.0",
-    "hash": "sha256-fzssaowgL8/dcZbjXgcotbMepuITU44ygf1utWa3jNU="
+    "description": "macOS \u539f\u751f \u00d7 \u6781\u5ba2\u611f\u3002\u6696\u767d\u7eb8\u5f20\uff08\u6d45\u8272\uff09\u4e0e\u6696\u68d5\u00b7\u51b7\u951a\uff08\u6697\u8272\uff09\u53cc\u914d\u8272\uff0c\u5f00\u7bb1\u5373\u7528\u3002\u57fa\u4e8e Cupertino 4.1.0\uff0c\u7ee7\u627f\u5176\u5168\u5957 Style Settings \u81ea\u5b9a\u4e49\uff08\u5f3a\u8c03\u8272/\u5e03\u5c40/\u7f16\u8f91\u5668/\u65e0\u969c\u788d\uff09\u3002",
+    "rev": "2.0.0",
+    "hash": "sha256-9CXcmTYBqn7B4zZL0DNdkPsUJXB2Rf6H0q26LDEbufI="
   },
   "ono-sendai": {
     "repo": "cannibalox/ono-sendai_obsdn",
@@ -4135,6 +4324,13 @@
     "description": "",
     "rev": "1.0.2",
     "hash": "sha256-co/qitu4Mk4Q3YojtDxP/nLm0XIwUaQaYHRohdmrfqY="
+  },
+  "ordo": {
+    "repo": "lubriedev/ordo",
+    "name": "Ordo",
+    "description": "",
+    "rev": "0.3.7",
+    "hash": "sha256-EYdZJoAYqOI8hgdmyjy6Pk5IHn9vrRqnTdIPdJ6wwi8="
   },
   "oreo": {
     "repo": "carols12352/Oreo-theme",
@@ -4185,12 +4381,19 @@
     "rev": "1.5.1",
     "hash": "sha256-rulg0V2cnep5TqBGKGd7GtNSdv2ZhJNPJlZ/99mfxp8="
   },
+  "overworld": {
+    "repo": "dubefab/obsidian-Overworld",
+    "name": "Overworld",
+    "description": "",
+    "rev": "0.2.1",
+    "hash": "sha256-/kwdP0IVsU0oBt0HetxMGlWPslOhCnqLffFjOKfEekI="
+  },
   "owen-graphite": {
     "repo": "towishy/Owen-Graphite",
     "name": "Owen Graphite",
     "description": "",
-    "rev": "3.1.99",
-    "hash": "sha256-kz6gaoYY5ZElkroetEWv61atEhiuVHrYtk78Ige2HtY="
+    "rev": "3.1.106",
+    "hash": "sha256-p3VtkxtOiysA86eqRU+oGfx2TMqPAOMXGb4pgpNfyFg="
   },
   "oxygen": {
     "repo": "davidvkimball/obsidian-oxygen",
@@ -4247,6 +4450,13 @@
     "description": "",
     "rev": "0.2.2",
     "hash": "sha256-7wjfmUVuXzJJaEpN2X+2qLh+1sIukPaBCcThWvJ8OYc="
+  },
+  "paper-feel": {
+    "repo": "raccoon-overlord-dev/obsidian-paper-theme",
+    "name": "Paper feel",
+    "description": "",
+    "rev": "1.0.0",
+    "hash": "sha256-kS27+B4Rm53fDZFs/BZI/eFDNI1Fr8l3xqml089Mhhw="
   },
   "paper-source": {
     "repo": "brightwav3/Paper-Source",
@@ -4945,8 +5155,8 @@
     "repo": "andrwj/obsidian-theme-saffron-ink",
     "name": "Saffron Ink",
     "description": "",
-    "rev": "1.0.2",
-    "hash": "sha256-FHgU5p7mLHBkQsYds6x0vYtVazhoUbQsm6XXkTEP1Qo="
+    "rev": "1.1.0",
+    "hash": "sha256-9l5ZtrgJNG7RraFkZh7rELs7nHRrUlindwGaHN2c5Bo="
   },
   "safi": {
     "repo": "abdulkader-safi/obsidian-safi-theme",
@@ -4980,8 +5190,8 @@
     "repo": "saint0721/saint-red-paper",
     "name": "Saint Red Paper",
     "description": "",
-    "rev": "0.2.9",
-    "hash": "sha256-xeeYwcMgSqbpS0iP9/Ckdaa7O71Efz8oBLBOId2oo3U="
+    "rev": "0.3.0",
+    "hash": "sha256-7Ur1KT8A3C6aueY4DKzxnTYEgMl6TXeqm3IyNSwqkeI="
   },
   "sakurajima": {
     "repo": "daiki48/sakurajima.obsidian",
@@ -5064,8 +5274,8 @@
     "repo": "t-if/sea-slug",
     "name": "Sea Slug",
     "description": "",
-    "rev": "1.1.5",
-    "hash": "sha256-oPy8gdvVHgcgcE/HMqCjKgvLE8WIlmgh+t0xUV7d7Dg="
+    "rev": "1.1.6",
+    "hash": "sha256-RY8+9wOx8hFDeMQvGSC1RK80YyOpswsIXK8QrlJE2lI="
   },
   "seamless-view": {
     "repo": "gustavosz124/Obsidian-Theme-Seamless-View",
@@ -5080,6 +5290,13 @@
     "hash": "sha256-2wDSSsxclIs4Ev03rGTDSoZS/naFOFuqs4N/wxUQXGQ=",
     "name": "Sei",
     "description": ""
+  },
+  "semiotic": {
+    "repo": "1amnotmad/obsidian-semiotic",
+    "name": "Semiotic",
+    "description": "",
+    "rev": "0.1.3",
+    "hash": "sha256-qDNov+BN3HVEqwMTMYD7u8ILGW4KLYHdWZTQmN+ZPag="
   },
   "sequoia": {
     "repo": "michael-andreuzza/sequoia-obsidian",
@@ -5172,6 +5389,13 @@
     "rev": "1.0.0",
     "hash": "sha256-4/i76d/jB77sAoPdqc4whSneqUUEd7x8JafIWGNZOno="
   },
+  "sil-ui": {
+    "repo": "abdulkader-safi/obsidian-sil-ui-theme",
+    "name": "SIL-UI",
+    "description": "",
+    "rev": "1.0.0",
+    "hash": "sha256-CnmVomrMqZL3u/rDT4Vr2YhKmha3st/FJpjhX/ZPaUQ="
+  },
   "silence": {
     "repo": "adoveil/obsidian-silence-theme",
     "name": "Silence",
@@ -5213,6 +5437,13 @@
     "description": "",
     "rev": "v0.5.3",
     "hash": "sha256-uR0u8Ekwd1JPq+yqV42VJq5mtcBPmKE/rC9G9xzUvVU="
+  },
+  "slate": {
+    "repo": "codingjinxx/obsidian-slate-theme",
+    "name": "Slate",
+    "description": "",
+    "rev": "0.1.1",
+    "hash": "sha256-yVmjFzbduuj+c5KL/0ptiyYoZgmcBfVtOAcX1M1QYo0="
   },
   "slatewave": {
     "repo": "kevinlangleyjr/obsidian-slatewave",
@@ -5263,6 +5494,13 @@
     "name": "Solarized",
     "description": ""
   },
+  "solarized-osaka": {
+    "repo": "synaptara/obsidian-solarized-osaka",
+    "name": "Solarized Osaka",
+    "description": "",
+    "rev": "1.0.1",
+    "hash": "sha256-Za8uOHY8hcDD2ebOn5B2FtxePW+K/j+Gr5vHhzem/J4="
+  },
   "soli-deo-gloria": {
     "repo": "godlyman-bit/SoliDeoGloria",
     "rev": "9ff32f52b15b5e3d4daf5c525a88ab8c02a3674b",
@@ -5304,6 +5542,13 @@
     "hash": "sha256-Gvk+7UlmbP7UrPCUhw3YjhX0FxwoX0olKf9vk5W8hnk=",
     "name": "Space",
     "description": ""
+  },
+  "space-to-think": {
+    "repo": "guguthecoder/obsidian-space-to-think",
+    "name": "Space to think",
+    "description": "",
+    "rev": "1.0.2",
+    "hash": "sha256-lehFexWzKbWTjYRnnKRyLZ9G7eqERBb20VnXdWlRBKk="
   },
   "sparkling-day": {
     "repo": "isax785/obsidian-sparkling-day",
@@ -5403,12 +5648,26 @@
     "rev": "1.0.2",
     "hash": "sha256-fnO7+RsuqoAHiGTMPOGvsoy02mDIP6uS0Bp9l1QujI0="
   },
+  "still": {
+    "repo": "letschips/obsidian-still",
+    "name": "Still",
+    "description": "",
+    "rev": "0.6.6",
+    "hash": "sha256-2NizbP4H1ddtglt7bUBttwMYM+qZUUetHnF+X1N2DCY="
+  },
   "stillhaven": {
     "repo": "im3sk/stillhaven-obsidian-theme",
     "name": "Stillhaven",
     "description": "",
-    "rev": "1.6.0",
-    "hash": "sha256-KMJKoJ7dx15yOjhwCwJ3lfvXE+3z3RcDp7llO489Vzk="
+    "rev": "2.0.1",
+    "hash": "sha256-DeTHSZl7xLpIUfLvBszq78hFEs2VQxljqU59P/XaNQM="
+  },
+  "storyboard-frames": {
+    "repo": "theluckystrike/notemods-theme-storyboard-frames",
+    "name": "Storyboard Frames",
+    "description": "",
+    "rev": "1.0.4",
+    "hash": "sha256-VfYdl/zPdJgN/H/tdYQAwZY/SIwkXG27OqxsRV/RavE="
   },
   "stratus": {
     "repo": "techr10n/stratus-obsidian-theme",
@@ -5444,6 +5703,13 @@
     "description": "",
     "rev": "1.1.0",
     "hash": "sha256-yFNN4fw9ZZhLqpXyQk3JphRcj8KQnRSFUq6LxJXa1N8="
+  },
+  "sumi": {
+    "repo": "frworks805/obsidian-sumi",
+    "name": "Sumi",
+    "description": "",
+    "rev": "1.0.2",
+    "hash": "sha256-FCz4WFBaZtdjDEJeWtVe4Mu1XVePkvR5bsWmN1kcPR4="
   },
   "sunbather": {
     "repo": "babidisrc/obsidian-sunbather",
@@ -5501,6 +5767,13 @@
     "rev": "1.2.0",
     "hash": "sha256-U08q27Z2uLa5luh/786LhhprySYyG88iG3dG6tDkSNE="
   },
+  "tahoe": {
+    "repo": "krishnanefx/obsidian-tahoe-theme",
+    "name": "Tahoe",
+    "description": "",
+    "rev": "1.1.3",
+    "hash": "sha256-WBq8Lv9MPNc5xf2m59v5M6efH9rHnJ2SqgedYbL4qDU="
+  },
   "tangerine-neue": {
     "repo": "mattbirchler/tangerine-neue-obsidian",
     "name": "Tangerine Neue",
@@ -5533,8 +5806,8 @@
     "repo": "rbartoli/obsidian-tela-theme",
     "name": "Tela",
     "description": "",
-    "rev": "1.0.0",
-    "hash": "sha256-oRDnqDtN25e34bbsptglq+Kw9S5Y+Mk1Kw120SOAwL4="
+    "rev": "1.1.0",
+    "hash": "sha256-hAnM3gIW6PlS7iHY5mQ0JfbYlRsWXyB2kJnh2WVSNPo="
   },
   "termina": {
     "repo": "xevrion/obsidian-termina",
@@ -5549,6 +5822,13 @@
     "hash": "sha256-Aj86wglhFKbZ5UNIFjcMNNw5vb38ccT9H8c92/SEwos=",
     "name": "Terminal",
     "description": ""
+  },
+  "terminal-notes": {
+    "repo": "theluckystrike/notemods-theme-terminal-notes",
+    "name": "Terminal Notes",
+    "description": "",
+    "rev": "1.0.3",
+    "hash": "sha256-FxuSPQx91KBxuo/h0m5izFeJ0a3RTtvt3p18qZ9+8n0="
   },
   "terminal-workbench": {
     "repo": "real-fruit-snacks/terminal-workbench",
@@ -5568,8 +5848,8 @@
     "repo": "dubefab/obsidian-TerraFlow",
     "name": "TerraFlow",
     "description": "",
-    "rev": "4.16.1",
-    "hash": "sha256-NHEFjjlR0q7Rs500uMPXsGVhZn2WficlYDz6rSdw0Z8="
+    "rev": "4.17.1",
+    "hash": "sha256-78zSmfAxwbiM8C/HJ5ZyvDlQv+EWVJ+RJl6eLOBYR6g="
   },
   "theme-that-shall-not-be-named": {
     "repo": "choptv/Obsidian-Theme-That-Shall-Not-Be-Named",
@@ -5577,6 +5857,13 @@
     "hash": "sha256-aBciFE5p8mIkHi0WRvHaPzwqClcCu1ZbCWLBXUyvL0k=",
     "name": "",
     "description": ""
+  },
+  "thewonderspace": {
+    "repo": "qays3/TheWonderSpace",
+    "name": "TheWonderSpace",
+    "description": "",
+    "rev": "1.0.1",
+    "hash": "sha256-igU5qiiNSdv4MnlUeRKzbfiKC4iAsz0Al9/ByaHqiQ0="
   },
   "things": {
     "repo": "colineckert/obsidian-things",
@@ -5897,8 +6184,8 @@
     "repo": "linuz90/obsidian-verso",
     "name": "Verso",
     "description": "",
-    "rev": "1.0.5",
-    "hash": "sha256-meJaIyX4PGM9vEos3Si/KY4jS4nn5fxsq1/9MfHBIP8="
+    "rev": "1.0.8",
+    "hash": "sha256-kh7Hw6DJdfx80E4Vfss14qh0xDhDAOoTpT2aargSQyE="
   },
   "vesnea-vibe": {
     "repo": "seavalanche/vesnea-obsidian-theme",
@@ -5948,6 +6235,13 @@
     "description": "",
     "rev": "1.0.0",
     "hash": "sha256-dq6IPchU4DShIWQ1YJjSVBhuswekXMQkmVfkqGdyOvE="
+  },
+  "vintage-computer": {
+    "repo": "pakcli/Vintage-Computer",
+    "name": "Vintage Computer",
+    "description": "",
+    "rev": "1.0.5",
+    "hash": "sha256-5v1pPo0opeHJcINQgU/sfTYdMOaiio25ClolzfmBils="
   },
   "violet-evening": {
     "repo": "aitadev/Violet-Evening-for-Obsidian",
@@ -6096,6 +6390,13 @@
     "rev": "1.0.9",
     "hash": "sha256-e6i0rhvNDeGYGuv+/LwJHC38bqlvVb1CLrjPw/cdBQo="
   },
+  "waypoint-atlas": {
+    "repo": "theluckystrike/notemods-theme-waypoint-atlas",
+    "name": "Waypoint Atlas",
+    "description": "",
+    "rev": "1.0.2",
+    "hash": "sha256-5nWCh28VTan1N7dhYDwxI0qATfn7nH47SdHnc/YlwAQ="
+  },
   "weave-surface": {
     "repo": "zhuzhige123/obsidian-weave-surface",
     "name": "Weave Surface",
@@ -6226,8 +6527,8 @@
     "repo": "yosukedesign/yosuke-glass",
     "name": "Yosuke Glass",
     "description": "",
-    "rev": "0.1.3",
-    "hash": "sha256-HJrjwyvMSN3YDjLwN72ijYqSfeJmo/ySZIS98FSn0B8="
+    "rev": "0.1.4",
+    "hash": "sha256-CBGaql89OCKUsci7GVG7muKd9vCoLYtn010qyuEbZu8="
   },
   "yue": {
     "repo": "gixoxyz/YueObsidian",
@@ -6242,6 +6543,13 @@
     "description": "",
     "rev": "1.0.0",
     "hash": "sha256-A1ewT1JIZX57w7/E3KIn+Cp+rdY4q5v2SM15LSfoq8Y="
+  },
+  "zacess": {
+    "repo": "zacesshq/obsidian-theme",
+    "name": "Zacess",
+    "description": "",
+    "rev": "0.1.5",
+    "hash": "sha256-EV8ED1H/fUkKOdiKOV6JXTIWjMeSazo4vltWzWlqT7k="
   },
   "zario": {
     "repo": "nazarioricardo/zario-obsidian",
