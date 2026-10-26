@@ -1,8 +1,18 @@
 {
+  "comic": {
+    "repo": "real-fruit-snacks/obsidian-comic",
+    "error": "could not determine latest rev (no releases, tags, or commits)",
+    "since": "2026-10-26T07:46:36Z"
+  },
   "crafted": {
     "repo": "seyhunak/CraftedObsidianTheme",
     "error": "could not determine latest rev (no releases, tags, or commits)",
     "since": "2026-07-20T05:07:30Z"
+  },
+  "dossier": {
+    "repo": "real-fruit-snacks/obsidian-dossier",
+    "error": "could not determine latest rev (no releases, tags, or commits)",
+    "since": "2026-10-26T07:46:35Z"
   },
   "night-owl": {
     "repo": "AstroAir/obsidian-night-owl",
@@ -13,5 +23,10 @@
     "repo": "antonabbac/obsidian-purple-haze",
     "error": "could not determine latest rev (no releases, tags, or commits)",
     "since": "2026-05-18T05:26:35Z"
+  },
+  "terminal-workbench": {
+    "repo": "real-fruit-snacks/terminal-workbench",
+    "error": "could not determine latest rev (no releases, tags, or commits)",
+    "since": "2026-10-26T07:45:59Z"
   }
 }
